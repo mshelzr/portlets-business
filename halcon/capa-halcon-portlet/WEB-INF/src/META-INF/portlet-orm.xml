@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.AuditoriaCajaSorpresaModelImpl">
+		<attributes>
+			<id name="idAuditoriaCajSorp">
+				<column name="AUCS_IDAUDITORIACAJSORP" />
+			</id>
+			<basic name="idTransaccion">
+				<column name="AUCS_IDTRANSACCION" />
+			</basic>
+			<basic name="tipoDocumento">
+				<column name="AUCS_TIPODOCUMENTO" />
+			</basic>
+			<basic name="numDocumento">
+				<column name="AUCS_NUMDOCUMENTO" />
+			</basic>
+			<basic name="producto1">
+				<column name="AUCS_PRODUCTO1" />
+			</basic>
+			<basic name="producto2">
+				<column name="AUCS_PRODUCTO2" />
+			</basic>
+			<basic name="producto3">
+				<column name="AUCS_PRODUCTO3" />
+			</basic>
+			<basic name="producto4">
+				<column name="AUCS_PRODUCTO4" />
+			</basic>
+			<basic name="codProducto1">
+				<column name="AUCS_CODPRODUCTO1" />
+			</basic>
+			<basic name="codProducto2">
+				<column name="AUCS_CODPRODUCTO2" />
+			</basic>
+			<basic name="codProducto3">
+				<column name="AUCS_CODPRODUCTO3" />
+			</basic>
+			<basic name="codProducto4">
+				<column name="AUCS_CODPRODUCTO4" />
+			</basic>
+			<basic name="IP">
+				<column name="AUCS_IP" />
+			</basic>
+			<basic name="session">
+				<column name="AUCS_SESSION" />
+			</basic>
+			<basic name="fechaHora">
+				<column name="AUCS_FECHAHORA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="UTMSource">
+				<column name="AUCS_UTMSOURCE" />
+			</basic>
+			<basic name="UTMMedium">
+				<column name="AUCS_UTMMEDIUM" />
+			</basic>
+			<basic name="UTMCampaing">
+				<column name="AUCS_UTMCAMPAING" />
+			</basic>
+			<basic name="UTMContent">
+				<column name="AUCS_UTMCONTENT" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.AuditoriaPerfiladorModelImpl">
+		<attributes>
+			<id name="idAuditoriaPer">
+				<column name="AUPF_IDAUDITORIAPER" />
+			</id>
+			<basic name="tipoDocumento">
+				<column name="AUPF_TIPODOCUMENTO" />
+			</basic>
+			<basic name="numeroDocumento">
+				<column name="AUPF_NUMERODOCUMENTO" />
+			</basic>
+			<basic name="perfilador">
+				<column name="AUPF_PERFILADOR" />
+			</basic>
+			<basic name="session">
+				<column name="AUPF_SESSION" />
+			</basic>
+			<basic name="transaccion">
+				<column name="AUPF_TRANSACCION" />
+			</basic>
+			<basic name="monto">
+				<column name="AUPF_MONTO" />
+			</basic>
+			<basic name="tipoCredito">
+				<column name="AUPF_TIPOCREDITO" />
+			</basic>
+			<basic name="IP">
+				<column name="AUPF_IP" />
+			</basic>
+			<basic name="fechaHora">
+				<column name="AUPF_FECHAHORA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="UTMSource">
+				<column name="AUPF_UTMSOURCE" />
+			</basic>
+			<basic name="UTMMedium">
+				<column name="AUPF_UTMMEDIUM" />
+			</basic>
+			<basic name="UTMCampaing">
+				<column name="AUPF_UTMCAMPAING" />
+			</basic>
+			<basic name="UTMContent">
+				<column name="AUPF_UTMCONTENT" />
+			</basic>
+			<basic name="pregunta01">
+				<column name="AUPF_PREGUNTA01" />
+			</basic>
+			<basic name="pregunta02">
+				<column name="AUPF_PREGUNTA02" />
+			</basic>
+			<basic name="pregunta03">
+				<column name="AUPF_PREGUNTA03" />
+			</basic>
+			<basic name="pregunta04">
+				<column name="AUPF_PREGUNTA04" />
+			</basic>
+			<basic name="respuesta01">
+				<column name="AUPF_RESPUESTA01" />
+			</basic>
+			<basic name="respuesta02">
+				<column name="AUPF_RESPUESTA02" />
+			</basic>
+			<basic name="respuesta03">
+				<column name="AUPF_RESPUESTA03" />
+			</basic>
+			<basic name="respuesta04">
+				<column name="AUPF_RESPUESTA04" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.AuditoriaSimuladorModelImpl">
+		<attributes>
+			<id name="idAuditoriaSim">
+				<column name="AUSM_IDAUDITORIASIM" />
+			</id>
+			<basic name="tipoSimulador">
+				<column name="AUSM_TIPOSIMULADOR" />
+			</basic>
+			<basic name="idTransaccion">
+				<column name="AUSM_IDTRANSACCION" />
+			</basic>
+			<basic name="tipoDocumento">
+				<column name="AUSM_TIPODOCUMENTO" />
+			</basic>
+			<basic name="numDocumento">
+				<column name="AUSM_NUMERODOCUMENTO" />
+			</basic>
+			<basic name="moneda">
+				<column name="AUSM_MONEDA" />
+			</basic>
+			<basic name="tipoProducto">
+				<column name="AUSM_TIPOPRODUCTO" />
+			</basic>
+			<basic name="invirtioFondMut">
+				<column name="AUSM_INVIRTIOFONDMUT" />
+			</basic>
+			<basic name="nivelConocimFondMut">
+				<column name="AUSM_NIVELCONOCIMFONDMUT" />
+			</basic>
+			<basic name="reaccionVarMerc">
+				<column name="AUSM_REACCIONVARMERC" />
+			</basic>
+			<basic name="valorBien">
+				<column name="AUSM_VALORBIEN" />
+			</basic>
+			<basic name="montoPrestamo">
+				<column name="AUSM_MONTOPRESTAMO" />
+			</basic>
+			<basic name="cuotaInicial">
+				<column name="AUSM_CUOTAINICIAL" />
+			</basic>
+			<basic name="periodoInvers">
+				<column name="AUSM_PERIODOINVERS" />
+			</basic>
+			<basic name="tasa">
+				<column name="AUSM_TASA" />
+			</basic>
+			<basic name="segDesgrav">
+				<column name="AUSM_SEGDESGRAV" />
+			</basic>
+			<basic name="tipoCuota">
+				<column name="AUSM_TIPOCUOTA" />
+			</basic>
+			<basic name="IP">
+				<column name="AUSM_IP" />
+			</basic>
+			<basic name="fechaHora">
+				<column name="AUSM_FECHAHORA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="UTMSource">
+				<column name="AUSM_UTMSOURCE" />
+			</basic>
+			<basic name="UTMMedium">
+				<column name="AUSM_UTMMEDIUM" />
+			</basic>
+			<basic name="UTMCampaing">
+				<column name="AUSM_UTMCAMPAING" />
+			</basic>
+			<basic name="UTMContent">
+				<column name="AUSM_UTMCONTENT" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.CargaDescuentoModelImpl">
+		<attributes>
+			<id name="idCargaDesc">
+				<column name="CADE_IDCARGADESC" />
+			</id>
+			<basic name="local">
+				<column name="CADE_LOCAL" />
+			</basic>
+			<basic name="descuentoGeneral">
+				<column name="CADE_DESCUENTOGENERAL" />
+			</basic>
+			<basic name="condicionesRestricciones">
+				<column name="CADE_CONDICIONESRESTRICCIONES" />
+			</basic>
+			<basic name="direccion">
+				<column name="CADE_DIRECCION" />
+			</basic>
+			<basic name="idDistrito">
+				<column name="CADE_IDDISTRITO" />
+			</basic>
+			<basic name="distrito">
+				<column name="CADE_DISTRITO" />
+			</basic>
+			<basic name="telefono">
+				<column name="CADE_TELEFONO" />
+			</basic>
+			<basic name="web">
+				<column name="CADE_WEB" />
+			</basic>
+			<basic name="finVigencia">
+				<column name="CADE_FINVIGENCIA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="categoria">
+				<column name="CADE_CATEGORIA" />
+			</basic>
+			<basic name="coordenada">
+				<column name="CADE_COORDENADA" />
+			</basic>
+			<basic name="URLImagen">
+				<column name="CADE_URLIMAGEN" />
+			</basic>
+			<basic name="latitud">
+				<column name="CADE_LATITUD" />
+			</basic>
+			<basic name="longitud">
+				<column name="CADE_LONGITUD" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.CargaSocioRemesaModelImpl">
+		<attributes>
+			<id name="idSocioRemesa">
+				<column name="CASR_IDSOCIOREMESA" />
+			</id>
+			<basic name="empresa">
+				<column name="CASR_EMPRESA" />
+			</basic>
+			<basic name="paisCobertura">
+				<column name="CASR_PAISCOBERTURA" />
+			</basic>
+			<basic name="paginaWeb">
+				<column name="CASR_PAGINAWEB" />
+			</basic>
+			<basic name="telefono">
+				<column name="CASR_TELEFONO" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.CargaTiendaModelImpl">
+		<attributes>
+			<id name="idCargaTienda">
+				<column name="CATI_IDCARGATIENDA" />
+			</id>
+			<basic name="idPtoServicio">
+				<column name="CATI_IDPTOSERVICIO" />
+			</basic>
+			<basic name="idCanal">
+				<column name="CATI_IDCANAL" />
+			</basic>
+			<basic name="idSubCanal">
+				<column name="CATI_IDSUBCANAL" />
+			</basic>
+			<basic name="codDepartamento">
+				<column name="CATI_IDDEPARTAMENTO" />
+			</basic>
+			<basic name="codProvincia">
+				<column name="CATI_IDPROVINCIA" />
+			</basic>
+			<basic name="codDistrito">
+				<column name="CATI_IDDISTRITO" />
+			</basic>
+			<basic name="nomDepartamento">
+				<column name="CATI_DEPARTAMENTO" />
+			</basic>
+			<basic name="nomProvincia">
+				<column name="CATI_PROVINCIA" />
+			</basic>
+			<basic name="nomDistrito">
+				<column name="CATI_DISTRITO" />
+			</basic>
+			<basic name="latitud">
+				<column name="CATI_LATITUD" />
+			</basic>
+			<basic name="longitud">
+				<column name="CATI_LONGITUD" />
+			</basic>
+			<basic name="direccion">
+				<column name="CATI_DIRECCION" />
+			</basic>
+			<basic name="horario">
+				<column name="CATI_HORARIO" />
+			</basic>
+			<basic name="tipoLocacion">
+				<column name="CATI_TIPOLOCACION" />
+			</basic>
+			<basic name="codTienda">
+				<column name="CATI_CODTIENDA" />
+			</basic>
+			<basic name="idLocacion">
+				<column name="CATI_IDLOCACION" />
+			</basic>
+			<basic name="locacion">
+				<column name="CATI_LOCACION" />
+			</basic>
+			<basic name="emailCom">
+				<column name="CATI_EMAILCOM" />
+			</basic>
+			<basic name="telefono">
+				<column name="CATI_TELEFONO" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.CategoriaSubcategoriaModelImpl">
+		<attributes>
+			<id name="idCategoriaSubCat">
+				<column name="CTSC_IDCATEGORIASUBCAT" />
+			</id>
+			<basic name="idCategoriaSubCatPadre">
+				<column name="CTSC_IDCATEGORIASUBCATPADRE" />
+			</basic>
+			<basic name="descripcion">
+				<column name="CTSC_DESCRIPCION" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.ConfiguracionPerfiladorModelImpl">
+		<attributes>
+			<id name="idConfiguracionPerfilador">
+				<column name="CFPF_IDCONFIGURACIONPERFILADOR" />
+			</id>
+			<basic name="tipoVariable">
+				<column name="CFPF_TIPOVARIABLE" />
+			</basic>
+			<basic name="nombreVariable">
+				<column name="CFPF_NOMBREVARIABLE" />
+			</basic>
+			<basic name="codigoClasificacion">
+				<column name="CFPF_CODIGOCLASIFICACION" />
+			</basic>
+			<basic name="codigoVariablePadre">
+				<column name="CFPF_CODIGOVARIABLEPADRE" />
+			</basic>
+			<basic name="valor1">
+				<column name="CFPF_VALOR1" />
+			</basic>
+			<basic name="valor2">
+				<column name="CFPF_VALOR2" />
+			</basic>
+			<basic name="valor3">
+				<column name="CFPF_VALOR3" />
+			</basic>
+			<basic name="estado">
+				<column name="CFPF_ESTADO" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.ConfiguracionProductoModelImpl">
+		<attributes>
+			<id name="idConfiguracionProducto">
+				<column name="CFPR_IDCONFIGURACIONPRODUCTO" />
+			</id>
+			<basic name="idConfiguracionPerfilador">
+				<column name="CFPR_IDCONFIGURACIONPERFILADOR" />
+			</basic>
+			<basic name="idProducto">
+				<column name="CFPR_IDPRODUCTO" />
+			</basic>
+			<basic name="nombreProducto">
+				<column name="CFPR_NOMBREPRODUCTO" />
+			</basic>
+			<basic name="codigoSiebelProducto">
+				<column name="CFPR_CODIGOSIEBELPRODUCTO" />
+			</basic>
+			<basic name="estadoConfiguracion">
+				<column name="CFPR_ESTADOCONFIGURACION" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.FondosMutuosModelImpl">
+		<attributes>
+			<id name="idValorCuota">
+				<column name="FOMU_IDVALORCUOTA" />
+			</id>
+			<basic name="codigoMoneda">
+				<column name="FOMU_CODIGOMONEDA" />
+			</basic>
+			<basic name="tipoFondo">
+				<column name="FOMU_TIPOFONDO" />
+			</basic>
+			<basic name="valorCuota">
+				<column name="FOMU_VALORCUOTA" />
+			</basic>
+			<basic name="fecha">
+				<column name="FOMU_FECHA" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.LogIncidenciasModelImpl">
+		<attributes>
+			<id name="idError">
+				<column name="ERLG_IDERRORLOG" />
+			</id>
+			<basic name="mensajeError">
+				<column name="ERLG_MENSAJEERROR" />
+			</basic>
+			<basic name="parametro">
+				<column name="LOGE_PARAMETRO" />
+			</basic>
+			<basic name="idSessionVisitante">
+				<column name="ERLG_IDSESSIONVISITANTE" />
+			</basic>
+			<basic name="tipoNumDoc">
+				<column name="ERLG_TIPONUMDOC" />
+			</basic>
+			<basic name="IP">
+				<column name="ERLG_IP" />
+			</basic>
+			<basic name="fechaHoraError">
+				<column name="ERLG_FECHAHORAERROR" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="trazaError">
+				<column name="ERLG_TRAZAERROR" />
+			</basic>
+			<basic name="paginaHija">
+				<column name="ERLGPAGINAHIJA" />
+			</basic>
+			<basic name="userId">
+				<column name="ERLG_USERID" />
+			</basic>
+			<basic name="userName">
+				<column name="ERLG_USERNAME" />
+			</basic>
+			<basic name="recursoId">
+				<column name="ERLG_RECURSOID" />
+			</basic>
+			<basic name="recursoName">
+				<column name="ERLG_RECURSONAME" />
+			</basic>
+			<basic name="recursoAction">
+				<column name="ERLG_RECURSOACTION" />
+			</basic>
+			<basic name="createDate">
+				<column name="ERLG_CREATEDATE" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="clienteHost">
+				<column name="ERLG_CLIENTEHOST" />
+			</basic>
+			<basic name="serverName">
+				<column name="ERLG_SERVERNAME" />
+			</basic>
+			<basic name="serverId">
+				<column name="ERLG_SERVERID" />
+			</basic>
+			<basic name="additionalInformation">
+				<column name="ERLG_ADDITIONALINFORMATION" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.OcurrenciaModelImpl">
+		<attributes>
+			<id name="idGestionPeticion">
+				<column name="GEPE_IDGESTIONPETICION" />
+			</id>
+			<basic name="ip">
+				<column name="GEPE_IP" />
+			</basic>
+			<basic name="codigoProducto">
+				<column name="GEPE_CODIGOPRODUCTO" />
+			</basic>
+			<basic name="fecha">
+				<column name="GEPE_FECHA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="estado">
+				<column name="GEPE_ESTADO" />
+			</basic>
+			<basic name="ocurrencia">
+				<column name="GEPE_OCURRENCIA" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.PaisModelImpl">
+		<attributes>
+			<id name="pais_IdPais" />
+			<basic name="codigo">
+				<column name="PAIS_CODIGO" />
+			</basic>
+			<basic name="nombre">
+				<column name="PAIS_NOMBRE" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.ParametroModelImpl">
+		<attributes>
+			<id name="idParametro">
+				<column name="PARM_IDPARAMETRO" />
+			</id>
+			<basic name="idParametroPadre">
+				<column name="PARM_IDPARAMETROPADRE" />
+			</basic>
+			<basic name="valorMonto1">
+				<column name="PARM_VALORMONTO1" />
+			</basic>
+			<basic name="valorMonto2">
+				<column name="PARM_VALORMONTO2" />
+			</basic>
+			<basic name="valorMonto3">
+				<column name="PARM_VALORMONTO3" />
+			</basic>
+			<basic name="dato1">
+				<column name="PARM_DATO1" />
+			</basic>
+			<basic name="dato2">
+				<column name="PARM_DATO2" />
+			</basic>
+			<basic name="dato3">
+				<column name="PARM_DATO3" />
+			</basic>
+			<basic name="dato4">
+				<column name="PARM_DATO4" />
+			</basic>
+			<basic name="num1">
+				<column name="PARM_NUM1" />
+			</basic>
+			<basic name="num2">
+				<column name="PARM_NUM2" />
+			</basic>
+			<basic name="num3">
+				<column name="PARM_NUM3" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.PreguntaFrecuenteModelImpl">
+		<attributes>
+			<id name="idPreguntaFrecuente">
+				<column name="PRFR_IDPREGUNTAFRECUENTE" />
+			</id>
+			<basic name="idCategoriaSubCat">
+				<column name="PRFR_IDCATEGORIASUBCAT" />
+			</basic>
+			<basic name="enunciado">
+				<column name="PRFR_ENUNCIADO" />
+			</basic>
+			<basic name="respuesta">
+				<column name="PRFR_RESPUESTA" />
+			</basic>
+			<basic name="estado">
+				<column name="PRFR_ESTADO" />
+			</basic>
+			<basic name="etiqueta">
+				<column name="PRFR_ETIQUETA" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.ProductoComplementarioModelImpl">
+		<attributes>
+			<id name="idProductoComplementario">
+				<column name="PRCM_IDPRODUCTOCOMPLEMENTARIO" />
+			</id>
+			<basic name="idSolicitudProducto">
+				<column name="PRCM_IDSOLICITUDPRODUCTO" />
+			</basic>
+			<basic name="principalidad">
+				<column name="PRCM_PRINCIPALIDAD" />
+			</basic>
+			<basic name="producto">
+				<column name="PRCM_PRODUCTO" />
+			</basic>
+			<basic name="idProducto">
+				<column name="PRCM_IDPRODUCTO" />
+			</basic>
+			<basic name="idGrupoProducto">
+				<column name="PRCM_IDGRUPOPRODUCTO" />
+			</basic>
+			<basic name="emailSupervisor">
+				<column name="PRCM_EMAILSUPERVISOR" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.SolicitudContactoModelImpl">
+		<attributes>
+			<id name="idSolicitudContacto">
+				<column name="SLCT_IDSOLICITUDCONTACTO" />
+			</id>
+			<basic name="esCliente">
+				<column name="SLCT_ESCLIENTE" />
+			</basic>
+			<basic name="nombres">
+				<column name="SLCT_NOMBRES" />
+			</basic>
+			<basic name="apellidos">
+				<column name="SLCT_APELLIDOS" />
+			</basic>
+			<basic name="email">
+				<column name="SLCT_EMAIL" />
+			</basic>
+			<basic name="tipoDocumento">
+				<column name="SLCT_TIPODOCUMENTO" />
+			</basic>
+			<basic name="ndocumento">
+				<column name="SLCT_NDOCUMENTO" />
+			</basic>
+			<basic name="direccion">
+				<column name="SLCT_DIRECCION" />
+			</basic>
+			<basic name="departamento">
+				<column name="SLCT_DEPARTAMENTO" />
+			</basic>
+			<basic name="provincia">
+				<column name="SLCT_PROVINCIA" />
+			</basic>
+			<basic name="distrito">
+				<column name="SLCT_DISTRITO" />
+			</basic>
+			<basic name="telefono">
+				<column name="SLCT_TELEFONO" />
+			</basic>
+			<basic name="fecha">
+				<column name="SLCT_FECHA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="mensaje">
+				<column name="SLCT_MENSAJE" />
+			</basic>
+			<basic name="moneda">
+				<column name="SLCT_MONEDA" />
+			</basic>
+			<basic name="importe">
+				<column name="SLCT_IMPORTE" />
+			</basic>
+			<basic name="tipoMensaje">
+				<column name="SLCT_TIPOMENSAJE" />
+			</basic>
+			<basic name="tipoTema">
+				<column name="SLCT_TIPOTEMA" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.SolicitudProductoModelImpl">
+		<attributes>
+			<id name="idSolicitudProducto">
+				<column name="SLPR_IDSOLICITUDPRODUCTO" />
+			</id>
+			<basic name="idTipoDocumentoAdq">
+				<column name="SLPR_IDTIPODOCUMENTOADQ" />
+			</basic>
+			<basic name="idTipoDocumento">
+				<column name="SLPR_IDTIPODOCUMENTO" />
+			</basic>
+			<basic name="tipoCredito">
+				<column name="SLPR_TIPOCREDITO" />
+			</basic>
+			<basic name="codigoCanal">
+				<column name="SLPR_CODIGOCANAL" />
+			</basic>
+			<basic name="tipoEnvio">
+				<column name="SLPR_TIPOENVIO" />
+			</basic>
+			<basic name="numeroDocumento">
+				<column name="SLPR_NUMERODOCUMENTO" />
+			</basic>
+			<basic name="apellidoPaterno">
+				<column name="SLPR_APELLIDOPATERNO" />
+			</basic>
+			<basic name="apellidoMaterno">
+				<column name="SLPR_APELLIDOMATERNO" />
+			</basic>
+			<basic name="primerNombre">
+				<column name="SLPR_PRIMERNOMBRE" />
+			</basic>
+			<basic name="segundoNombre">
+				<column name="SLPR_SEGUNDONOMBRE" />
+			</basic>
+			<basic name="fechaNacimiento">
+				<column name="SLPR_FECHANACIMIENTO" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="sexo">
+				<column name="SLPR_SEXO" />
+			</basic>
+			<basic name="rentaMensual">
+				<column name="SLPR_RENTAMENSUAL" />
+			</basic>
+			<basic name="celular">
+				<column name="SLPR_CELULAR" />
+			</basic>
+			<basic name="telefonoCasa">
+				<column name="SLPR_TELEFONOCASA" />
+			</basic>
+			<basic name="telefonoTrabajo">
+				<column name="SLPR_TELEFONOTRABAJO" />
+			</basic>
+			<basic name="anexo">
+				<column name="SLPR_ANEXO" />
+			</basic>
+			<basic name="idEstadoCivilAdq">
+				<column name="SLPR_IDESTADOCIVILADQ" />
+			</basic>
+			<basic name="idEstadoCivil">
+				<column name="SLPR_IDESTADOCIVIL" />
+			</basic>
+			<basic name="RUC">
+				<column name="SLPR_RUC" />
+			</basic>
+			<basic name="razonSocial">
+				<column name="SLPR_RAZONSOCIAL" />
+			</basic>
+			<basic name="situacionLaboral">
+				<column name="SLPR_SITUACIONLABORAL" />
+			</basic>
+			<basic name="idSituacionLaboral">
+				<column name="SLPR_IDSITUACIONLABORAL" />
+			</basic>
+			<basic name="idDepartamento">
+				<column name="SLPR_IDDEPARTAMENTO" />
+			</basic>
+			<basic name="idProvincia">
+				<column name="SLPR_IDPROVINCIA" />
+			</basic>
+			<basic name="idDistrito">
+				<column name="SLPR_IDDISTRITO" />
+			</basic>
+			<basic name="nomDepartamento">
+				<column name="SLPR_DEPARTAMENTO" />
+			</basic>
+			<basic name="nomProvincia">
+				<column name="SLPR_PROVINCIA" />
+			</basic>
+			<basic name="nomDistrito">
+				<column name="SLPR_DISTRITO" />
+			</basic>
+			<basic name="correoElectronico">
+				<column name="SLPR_CORREOELECTRONICO" />
+			</basic>
+			<basic name="direccionEnvio">
+				<column name="SLPR_DIRECCIONENVIO" />
+			</basic>
+			<basic name="placaVehiculo">
+				<column name="SLPR_PLACAVEHICULO" />
+			</basic>
+			<basic name="IdSession">
+				<column name="SLPR_SESSION" />
+			</basic>
+			<basic name="IPCliente">
+				<column name="SLPR_IPCLIENTE" />
+			</basic>
+			<basic name="horarioEnvio">
+				<column name="SLPR_HORARIOENVIO" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaRegistro">
+				<column name="SLPR_FECHAREGISTRO" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="UTMSource">
+				<column name="SLPR_UTMSOURCE" />
+			</basic>
+			<basic name="UTMMedium">
+				<column name="SLPR_UTMMEDIUM" />
+			</basic>
+			<basic name="UTMCampaing">
+				<column name="SLPR_UTMCAMPAING" />
+			</basic>
+			<basic name="UTMContent">
+				<column name="SLPR_UTMCONTENT" />
+			</basic>
+			<basic name="fechaResultadoPreCalif">
+				<column name="SLPR_FECHARESULTADOPRECALIF" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaEnvioLead">
+				<column name="SLPR_FECHAENVIOLEAD" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="fechaEnvioEmailing">
+				<column name="SLPR_FECHAENVIOEMAILING" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="estadoPreCalificacion">
+				<column name="SLPR_ESTADOPRECALIFICACION" />
+			</basic>
+			<basic name="estadoRegLead">
+				<column name="SLPR_ESTADOREGLEAD" />
+			</basic>
+			<basic name="estadoEnvCorreo">
+				<column name="SLPR_ESTADOENVCORREO" />
+			</basic>
+			<basic name="respPreCalificacion">
+				<column name="SLPR_RESPPRECALIFICACION" />
+			</basic>
+			<basic name="descripcionLead">
+				<column name="SLPR_DESCRIPCIONLEAD" />
+			</basic>
+			<basic name="fechaActualizacion">
+				<column name="SLPR_FECHAACTUALIZACION" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="montoProspectado">
+				<column name="SLPR_MONTOPROSPECTADO" />
+			</basic>
+			<basic name="codigoCampania">
+				<column name="SLPR_CODIGOCAMPANIA" />
+			</basic>
+			<basic name="codigoMoneda">
+				<column name="SLPR_CODIGOMONEDA" />
+			</basic>
+			<basic name="nombreSupervisor">
+				<column name="SLPR_NOMBRESUPERVISOR" />
+			</basic>
+			<basic name="respRegLead">
+				<column name="SLPR_RESPREGLEAD" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.TelefonoSolicitudProductoModelImpl">
+		<attributes>
+			<id name="idTelefSolicitudProducto">
+				<column name="TSLP_IDTELEFSOLICITUDPRODUCTO" />
+			</id>
+			<basic name="idSolicitudProducto">
+				<column name="TSLP_IDSOLICITUDPRODUCTO" />
+			</basic>
+			<basic name="tipoTelefono">
+				<column name="TSLP_TIPOTELEFONO" />
+			</basic>
+			<basic name="numeroTelefono">
+				<column name="TSLP_NUMEROTELEFONO" />
+			</basic>
+			<basic name="anexo">
+				<column name="TSLP_ANEXO" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.UbigeoModelImpl">
+		<attributes>
+			<id name="idUbigeo">
+				<column name="UBIG_IDUBIGEO" />
+			</id>
+			<basic name="codigo">
+				<column name="UBIG_CODIGO" />
+			</basic>
+			<basic name="nombre">
+				<column name="UBIG_NOMBRE" />
+			</basic>
+			<basic name="codDepartamento">
+				<column name="UBIG_CODDEPARTAMENTO" />
+			</basic>
+			<basic name="codProvincia">
+				<column name="UBIG_CODPROVINCIA" />
+			</basic>
+			<basic name="codDistrito">
+				<column name="UBIG_CODDISTRITO" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.ext.portlet.halcon.model.impl.ValorCuotaModelImpl">
+		<attributes>
+			<id name="IdValorCuota">
+				<column name="VLCT_IDVALORCUOTA" />
+			</id>
+			<basic name="tipoFondoMutuo">
+				<column name="VLCT_TIPOFONDOMUTUO" />
+			</basic>
+			<basic name="fecha">
+				<column name="VLCT_FECHA" />
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="valorCuota">
+				<column name="VLCT_VALORCUOTA" />
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.ext.portlet.halcon.model.impl.AuditoriaCajaSorpresaImpl" name="AuditoriaCajaSorpresa">
+		<table name="T_AUDITORIA_CAJA_SORPRESA" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.AuditoriaPerfiladorImpl" name="AuditoriaPerfilador">
+		<table name="T_AUDITORIA_PERFILADOR" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.AuditoriaSimuladorImpl" name="AuditoriaSimulador">
+		<table name="T_AUDITORIA_SIMULADOR" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.CargaDescuentoImpl" name="CargaDescuento">
+		<table name="T_CARGA_DESCUENTO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.CargaSocioRemesaImpl" name="CargaSocioRemesa">
+		<table name="T_CARGA_SOCIO_REMESA" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.CargaTiendaImpl" name="CargaTienda">
+		<table name="T_CARGA_TIENDA" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.CategoriaSubcategoriaImpl" name="CategoriaSubcategoria">
+		<table name="T_CATEGORIA_SUBCATEGORIA" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.ConfiguracionPerfiladorImpl" name="ConfiguracionPerfilador">
+		<table name="T_CONFIGURACION_PERFILADOR" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.ConfiguracionProductoImpl" name="ConfiguracionProducto">
+		<table name="T_CONFIGURACION_PRODUCTO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.FondosMutuosImpl" name="FondosMutuos">
+		<table name="T_FONDOS_MUTUOS" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.LogIncidenciasImpl" name="LogIncidencias">
+		<table name="T_ERROR_LOG" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.OcurrenciaImpl" name="Ocurrencia">
+		<table name="T_PETICION" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.PaisImpl" name="Pais">
+		<table name="T_PAIS" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.ParametroImpl" name="Parametro">
+		<table name="T_PARAMETRO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.PreguntaFrecuenteImpl" name="PreguntaFrecuente">
+		<table name="T_PREGUNTA_FRECUENTE" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.ProductoComplementarioImpl" name="ProductoComplementario">
+		<table name="T_PRODUCTO_COMPLEMENTARIO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.SolicitudContactoImpl" name="SolicitudContacto">
+		<table name="T_SOLICITUD_CONTACTO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.SolicitudProductoImpl" name="SolicitudProducto">
+		<table name="T_SOLICITUD_PRODUCTO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.TelefonoSolicitudProductoImpl" name="TelefonoSolicitudProducto">
+		<table name="T_TELEFONO_SOLICITUD_PRODUCTO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.UbigeoImpl" name="Ubigeo">
+		<table name="T_UBIGEO" />
+		<attributes />
+	</entity>
+	<entity class="com.ext.portlet.halcon.model.impl.ValorCuotaImpl" name="ValorCuota">
+		<table name="T_VALOR_CUOTA" />
+		<attributes />
+	</entity>
+</entity-mappings>

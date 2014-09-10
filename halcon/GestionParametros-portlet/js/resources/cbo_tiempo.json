@@ -1,0 +1,7 @@
+[{"id":0,"etiqueta":"Elija Uno", "orden":"0","defecto":"1"},
+{"id":1,"etiqueta":"Una vez", "orden":"1","defecto":"0"},
+{"id":2,"etiqueta":"Una semana", "orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"De 1 a 3 meses", "orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"De 3 meses a un año", "orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"Más de un año", "orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"No Sabe", "orden":"6","defecto":"0"}]

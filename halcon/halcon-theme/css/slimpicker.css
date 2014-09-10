@@ -1,0 +1,157 @@
+
+input.slimpicker{
+	background: #fff url(date.gif) no-repeat top left;
+	border: 1px solid #d4d4d4;
+
+	cursor: pointer;
+	display: block;
+	padding: 3px 24px 3px 3px;
+}
+input:focus.slimpicker{
+	background: #c7c7c7 url(datefocus.gif) no-repeat top left;
+}
+.sp_container{
+	position: absolute;
+	padding: 0;
+	z-index: 500;
+	height: 0;
+	left: 0;
+	top: 0;
+	width: 0;
+}
+.sp_cal{
+	color: #222;
+	background: #fff;
+ 	border: 1px solid #c7c7c7;
+	width: 174px;
+	top:0px;
+	left:142px;
+	position: absolute;
+  }
+.sp_cal .calendar-controls{
+	padding: 0 0 6px 0;
+	float:left;
+}
+.calendar-data-cont {
+	float: left;
+}
+.sp_cal .spnext, .sp_cal .spprevious, .calendar-title .spup, .calendar-title .spdown{
+	cursor: pointer;
+}
+.sp_cal .spprevious, .sp_cal .spnext{
+	border: 1px solid #CCC;
+	float:left;
+	height:18px;
+	width:18px;
+}
+.calendar-title .spup, .calendar-title .spdown{
+	height: 8px;
+	width: 16px;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+}
+.sp_cal .spnext{
+	border-top: none;
+	background: #f6f6f6 url(../images/halcon/next.jpg) no-repeat;
+}
+
+.sp_cal .spprevious{
+	border-left: none;
+	border-top: none;
+	background: #f6f6f6 url(../images/halcon/previous.jpg) no-repeat;
+}
+.sp_cal .spup{
+	background: #f6f6f6 url(../images/halcon/up.jpg) no-repeat;
+}
+
+.sp_cal .spdown{
+	background: #f6f6f6 url(../images/halcon/down.jpg) no-repeat;
+}
+
+.calendar-title .titleMonth, .calendar-title .titleYear{
+	line-height: 18px;
+	float: left;
+	color: #747678;
+}
+.calendar-title .titleMonth {
+	width: 75px;
+	text-align: center;
+}
+.calendar-title .titleYear{
+	padding: 0 6px 0 0;
+	width: 37px;
+	text-align: right;
+}
+.content-btn{
+	float: left;
+}
+
+.sp_cal table{
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #747678;
+}
+.sp_cal th,
+.sp_cal td{
+	width: 18px;
+	height: 17px;
+	text-align: center;
+}
+.sp_cal th{
+ 	text-transform:spuppercase;
+	font-size: 10px;
+	font-weight: bold;
+ }
+.sp_cal thead th{
+	background: #fff;
+
+}
+.sp_cal td a{
+	display: inline-block;
+	font-size: 11px;
+	text-align: center;
+	width:18px;
+	line-height:17px;
+	color: #747678;
+
+ }
+.sp_cal td a:hover{
+	background: #CCC;
+ }
+.sp_empty{
+	background: #fff;
+	color:#cecfcb;
+}
+.sp_today{
+	background: #e1e1e1;
+}
+.sp_selected{
+	background: #ccc;
+}
+.sp_hover,
+.sp_hover a{
+	background: #e1e1e1;
+ }
+
+.sp_calsmall .spprevious {
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+	background: #F6F6F6 url(../images/halcon/previous.jpg) no-repeat;
+}
+
+.sp_calsmall .spnext {
+border-top: none;
+border-bottom: none;
+background: #F6F6F6 url(../images/halcon/next.jpg) no-repeat;
+}
+
+.sp_calsmall .spdown {
+	border-bottom: none;
+	background: #F6F6F6 url(../images/halcon/down.jpg) no-repeat;
+}
+
+.sp_calsmall .calendar-controls{
+	padding: 0;
+}

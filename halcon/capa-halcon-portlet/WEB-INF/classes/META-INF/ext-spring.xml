@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+ <bean id="halconDataSource" lazy-init="true" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+        <property name="targetDataSource">
+            <bean class="com.liferay.portal.dao.jdbc.util.DataSourceFactoryBean">
+                <property name="propertyPrefix" value="jdbc.halcon." />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="halconHibernateSessionFactory" class="com.liferay.portal.spring.hibernate.PortletHibernateConfiguration">
+        <property name="dataSource" ref="halconDataSource" />
+    </bean>
+   
+    <bean id="halconSessionFactory" class="com.liferay.portal.dao.orm.hibernate.PortletSessionFactoryImpl">
+        <property name="dataSource" ref="halconDataSource" />
+        <property name="sessionFactoryClassLoader" ref="portletClassLoader" />
+        <property name="sessionFactoryImplementor" ref="halconHibernateSessionFactory" />
+    </bean>
+    
+</beans>

@@ -1,0 +1,4 @@
+[{"id":46,"etiqueta":"Tradicional","tool":"<b>Tradicional </b> <br /> Elige y compra el auto de tus sueños","orden":"1","defecto":"1"},
+{"id":53,"etiqueta":"Compra Inteligente","tool":"<b>Compra Inteligente</b> <br />Para renovar tu auto cada 2 o tres años","orden":"2","defecto":"0"},
+{"id":51,"etiqueta":"Casi Nuevo","tool":"<b>Casi Nuevo</b> <br /> Puedes financiar autos de hasta 5 años de antigüedad","orden":"3","defecto":"0"},
+{"id":52,"etiqueta":"Especial","tool":"<b>Especial</b> <br /> Si deseas comprar un vehículo para uso comercial","orden":"4","defecto":"0"}]

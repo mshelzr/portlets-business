@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="CategoriaSubcategoria.insertar">
+		<![CDATA[
+		INSERT INTO T_CATEGORIA_SUBCATEGORIA(
+		ctsc_IdCategoriaSubCatPadre,
+		ctsc_Descripcion)
+		VALUES(?,?)
+		]]>
+	</sql>
+</custom-sql>

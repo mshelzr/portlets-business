@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.ext.portlet.halcon.model.AuditoriaCajaSorpresa">
+		<field name="idAuditoriaCajSorp" type="long" />
+		<field name="idTransaccion" type="String" />
+		<field name="tipoDocumento" type="String" />
+		<field name="numDocumento" type="String" />
+		<field name="producto1" type="String" />
+		<field name="producto2" type="String" />
+		<field name="producto3" type="String" />
+		<field name="producto4" type="String" />
+		<field name="codProducto1" type="String" />
+		<field name="codProducto2" type="String" />
+		<field name="codProducto3" type="String" />
+		<field name="codProducto4" type="String" />
+		<field name="IP" type="String" />
+		<field name="session" type="String" />
+		<field name="fechaHora" type="Date" />
+		<field name="UTMSource" type="String" />
+		<field name="UTMMedium" type="String" />
+		<field name="UTMCampaing" type="String" />
+		<field name="UTMContent" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.AuditoriaPerfilador">
+		<field name="idAuditoriaPer" type="long" />
+		<field name="tipoDocumento" type="String" />
+		<field name="numeroDocumento" type="String" />
+		<field name="perfilador" type="String" />
+		<field name="session" type="String" />
+		<field name="transaccion" type="String" />
+		<field name="monto" type="Double" />
+		<field name="tipoCredito" type="String" />
+		<field name="IP" type="String" />
+		<field name="fechaHora" type="Date" />
+		<field name="UTMSource" type="String" />
+		<field name="UTMMedium" type="String" />
+		<field name="UTMCampaing" type="String" />
+		<field name="UTMContent" type="String" />
+		<field name="pregunta01" type="String" />
+		<field name="pregunta02" type="String" />
+		<field name="pregunta03" type="String" />
+		<field name="pregunta04" type="String" />
+		<field name="respuesta01" type="String" />
+		<field name="respuesta02" type="String" />
+		<field name="respuesta03" type="String" />
+		<field name="respuesta04" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.AuditoriaSimulador">
+		<field name="idAuditoriaSim" type="long" />
+		<field name="tipoSimulador" type="String" />
+		<field name="idTransaccion" type="String" />
+		<field name="tipoDocumento" type="String" />
+		<field name="numDocumento" type="String" />
+		<field name="moneda" type="String" />
+		<field name="tipoProducto" type="String" />
+		<field name="invirtioFondMut" type="String" />
+		<field name="nivelConocimFondMut" type="String" />
+		<field name="reaccionVarMerc" type="String" />
+		<field name="valorBien" type="Double" />
+		<field name="montoPrestamo" type="Double" />
+		<field name="cuotaInicial" type="Double" />
+		<field name="periodoInvers" type="String" />
+		<field name="tasa" type="Double" />
+		<field name="segDesgrav" type="String" />
+		<field name="tipoCuota" type="String" />
+		<field name="IP" type="String" />
+		<field name="fechaHora" type="Date" />
+		<field name="UTMSource" type="String" />
+		<field name="UTMMedium" type="String" />
+		<field name="UTMCampaing" type="String" />
+		<field name="UTMContent" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.CargaDescuento">
+		<field name="idCargaDesc" type="long" />
+		<field name="local" type="String" />
+		<field name="descuentoGeneral" type="String" />
+		<field name="condicionesRestricciones" type="String" />
+		<field name="direccion" type="String" />
+		<field name="idDistrito" type="String" />
+		<field name="distrito" type="String" />
+		<field name="telefono" type="String" />
+		<field name="web" type="String" />
+		<field name="finVigencia" type="Date" />
+		<field name="categoria" type="String" />
+		<field name="coordenada" type="String" />
+		<field name="URLImagen" type="String" />
+		<field name="latitud" type="String" />
+		<field name="longitud" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.CargaSocioRemesa">
+		<field name="idSocioRemesa" type="long" />
+		<field name="empresa" type="String" />
+		<field name="paisCobertura" type="String" />
+		<field name="paginaWeb" type="String" />
+		<field name="telefono" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.CargaTienda">
+		<field name="idCargaTienda" type="long" />
+		<field name="idPtoServicio" type="String" />
+		<field name="idCanal" type="String" />
+		<field name="idSubCanal" type="String" />
+		<field name="codDepartamento" type="String" />
+		<field name="codProvincia" type="String" />
+		<field name="codDistrito" type="String" />
+		<field name="nomDepartamento" type="String" />
+		<field name="nomProvincia" type="String" />
+		<field name="nomDistrito" type="String" />
+		<field name="latitud" type="String" />
+		<field name="longitud" type="String" />
+		<field name="direccion" type="String" />
+		<field name="horario" type="String" />
+		<field name="tipoLocacion" type="String" />
+		<field name="codTienda" type="Integer" />
+		<field name="idLocacion" type="Integer" />
+		<field name="locacion" type="String" />
+		<field name="emailCom" type="String" />
+		<field name="telefono" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.CategoriaSubcategoria">
+		<field name="idCategoriaSubCat" type="long" />
+		<field name="idCategoriaSubCatPadre" type="Integer" />
+		<field name="descripcion" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.ConfiguracionPerfilador">
+		<field name="idConfiguracionPerfilador" type="long" />
+		<field name="tipoVariable" type="Long" />
+		<field name="nombreVariable" type="String" />
+		<field name="codigoClasificacion" type="Long" />
+		<field name="codigoVariablePadre" type="Long" />
+		<field name="valor1" type="String" />
+		<field name="valor2" type="String" />
+		<field name="valor3" type="String" />
+		<field name="estado" type="Integer" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.ConfiguracionProducto">
+		<field name="idConfiguracionProducto" type="long" />
+		<field name="idConfiguracionPerfilador" type="Long" />
+		<field name="idProducto" type="Long" />
+		<field name="nombreProducto" type="String" />
+		<field name="codigoSiebelProducto" type="String" />
+		<field name="estadoConfiguracion" type="Integer" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.FondosMutuos">
+		<field name="idValorCuota" type="long" />
+		<field name="codigoMoneda" type="String" />
+		<field name="tipoFondo" type="String" />
+		<field name="valorCuota" type="Double" />
+		<field name="fecha" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.LogIncidencias">
+		<field name="idError" type="long" />
+		<field name="mensajeError" type="String" />
+		<field name="parametro" type="String" />
+		<field name="idSessionVisitante" type="String" />
+		<field name="tipoNumDoc" type="String" />
+		<field name="IP" type="String" />
+		<field name="fechaHoraError" type="Date" />
+		<field name="trazaError" type="String" />
+		<field name="paginaHija" type="String" />
+		<field name="userId" type="String" />
+		<field name="userName" type="String" />
+		<field name="recursoId" type="String" />
+		<field name="recursoName" type="String" />
+		<field name="recursoAction" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="clienteHost" type="String" />
+		<field name="serverName" type="String" />
+		<field name="serverId" type="String" />
+		<field name="additionalInformation" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.Ocurrencia">
+		<field name="idGestionPeticion" type="long" />
+		<field name="ip" type="String" />
+		<field name="codigoProducto" type="String" />
+		<field name="fecha" type="Date" />
+		<field name="estado" type="Integer" />
+		<field name="ocurrencia" type="Integer" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.Pais">
+		<field name="pais_IdPais" type="long" />
+		<field name="codigo" type="String" />
+		<field name="nombre" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.Parametro">
+		<field name="idParametro" type="int" />
+		<field name="idParametroPadre" type="Integer" />
+		<field name="valorMonto1" type="String" />
+		<field name="valorMonto2" type="String" />
+		<field name="valorMonto3" type="String" />
+		<field name="dato1" type="String" />
+		<field name="dato2" type="String" />
+		<field name="dato3" type="String" />
+		<field name="dato4" type="String" />
+		<field name="num1" type="Integer" />
+		<field name="num2" type="Integer" />
+		<field name="num3" type="Integer" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.PreguntaFrecuente">
+		<field name="idPreguntaFrecuente" type="int" />
+		<field name="idCategoriaSubCat" type="Integer" />
+		<field name="enunciado" type="String" />
+		<field name="respuesta" type="String" />
+		<field name="estado" type="Boolean" />
+		<field name="etiqueta" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.ProductoComplementario">
+		<field name="idProductoComplementario" type="long" />
+		<field name="idSolicitudProducto" type="long" />
+		<field name="principalidad" type="String" />
+		<field name="producto" type="String" />
+		<field name="idProducto" type="String" />
+		<field name="idGrupoProducto" type="String" />
+		<field name="emailSupervisor" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.SolicitudContacto">
+		<field name="idSolicitudContacto" type="long" />
+		<field name="esCliente" type="Integer" />
+		<field name="nombres" type="String" />
+		<field name="apellidos" type="String" />
+		<field name="email" type="String" />
+		<field name="tipoDocumento" type="String" />
+		<field name="ndocumento" type="String" />
+		<field name="direccion" type="String" />
+		<field name="departamento" type="String" />
+		<field name="provincia" type="String" />
+		<field name="distrito" type="String" />
+		<field name="telefono" type="String" />
+		<field name="fecha" type="Date" />
+		<field name="mensaje" type="String" />
+		<field name="moneda" type="String" />
+		<field name="importe" type="String" />
+		<field name="tipoMensaje" type="String" />
+		<field name="tipoTema" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.SolicitudProducto">
+		<field name="idSolicitudProducto" type="long" />
+		<field name="idTipoDocumentoAdq" type="Integer" />
+		<field name="idTipoDocumento" type="String" />
+		<field name="tipoCredito" type="Integer" />
+		<field name="codigoCanal" type="String" />
+		<field name="tipoEnvio" type="String" />
+		<field name="numeroDocumento" type="String" />
+		<field name="apellidoPaterno" type="String" />
+		<field name="apellidoMaterno" type="String" />
+		<field name="primerNombre" type="String" />
+		<field name="segundoNombre" type="String" />
+		<field name="fechaNacimiento" type="Date" />
+		<field name="sexo" type="String" />
+		<field name="rentaMensual" type="Double" />
+		<field name="celular" type="String" />
+		<field name="telefonoCasa" type="String" />
+		<field name="telefonoTrabajo" type="String" />
+		<field name="anexo" type="String" />
+		<field name="idEstadoCivilAdq" type="Integer" />
+		<field name="idEstadoCivil" type="String" />
+		<field name="RUC" type="String" />
+		<field name="razonSocial" type="String" />
+		<field name="situacionLaboral" type="String" />
+		<field name="idSituacionLaboral" type="Integer" />
+		<field name="idDepartamento" type="String" />
+		<field name="idProvincia" type="String" />
+		<field name="idDistrito" type="String" />
+		<field name="nomDepartamento" type="String" />
+		<field name="nomProvincia" type="String" />
+		<field name="nomDistrito" type="String" />
+		<field name="correoElectronico" type="String" />
+		<field name="direccionEnvio" type="String" />
+		<field name="placaVehiculo" type="String" />
+		<field name="IdSession" type="String" />
+		<field name="IPCliente" type="String" />
+		<field name="horarioEnvio" type="Date" />
+		<field name="fechaRegistro" type="Date" />
+		<field name="UTMSource" type="String" />
+		<field name="UTMMedium" type="String" />
+		<field name="UTMCampaing" type="String" />
+		<field name="UTMContent" type="String" />
+		<field name="fechaResultadoPreCalif" type="Date" />
+		<field name="fechaEnvioLead" type="Date" />
+		<field name="fechaEnvioEmailing" type="Date" />
+		<field name="estadoPreCalificacion" type="Boolean" />
+		<field name="estadoRegLead" type="Boolean" />
+		<field name="estadoEnvCorreo" type="Boolean" />
+		<field name="respPreCalificacion" type="String" />
+		<field name="descripcionLead" type="String" />
+		<field name="fechaActualizacion" type="Date" />
+		<field name="montoProspectado" type="Double" />
+		<field name="codigoCampania" type="String" />
+		<field name="codigoMoneda" type="String" />
+		<field name="nombreSupervisor" type="String" />
+		<field name="respRegLead" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.TelefonoSolicitudProducto">
+		<field name="idTelefSolicitudProducto" type="long" />
+		<field name="idSolicitudProducto" type="long" />
+		<field name="tipoTelefono" type="String" />
+		<field name="numeroTelefono" type="String" />
+		<field name="anexo" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.Ubigeo">
+		<field name="idUbigeo" type="long" />
+		<field name="codigo" type="String" />
+		<field name="nombre" type="String" />
+		<field name="codDepartamento" type="String" />
+		<field name="codProvincia" type="String" />
+		<field name="codDistrito" type="String" />
+	</model>
+	<model name="com.ext.portlet.halcon.model.ValorCuota">
+		<field name="IdValorCuota" type="long" />
+		<field name="tipoFondoMutuo" type="Integer" />
+		<field name="fecha" type="Date" />
+		<field name="valorCuota" type="Double" />
+	</model>
+</model-hints>

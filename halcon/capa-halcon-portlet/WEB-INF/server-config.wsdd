@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<globalConfiguration>
+		<parameter name="adminPassword" value="admin" />
+		<parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl" />
+		<parameter name="sendXsiTypes" value="true" />
+		<parameter name="sendMultiRefs" value="true" />
+		<parameter name="sendXMLDeclaration" value="true" />
+		<parameter name="axis.sendMinimizedElements" value="true" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="session" />
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter name="scope" value="request" />
+				<parameter name="extension" value=".jwr" />
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+	<handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder" />
+	<handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper" />
+	<handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler" />
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+			<handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+	<service name="Plugin_halcon_AuditoriaCajaSorpresaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.AuditoriaCajaSorpresaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="AuditoriaCajaSorpresaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="AuditoriaCajaSorpresaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_AuditoriaCajaSorpresaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_AuditoriaPerfiladorService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.AuditoriaPerfiladorServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="AuditoriaPerfiladorServiceSoap" />
+		<parameter name="wsdlServiceElement" value="AuditoriaPerfiladorServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_AuditoriaPerfiladorService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_AuditoriaSimuladorService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.AuditoriaSimuladorServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="AuditoriaSimuladorServiceSoap" />
+		<parameter name="wsdlServiceElement" value="AuditoriaSimuladorServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_AuditoriaSimuladorService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_CargaDescuentoService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.CargaDescuentoServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="CargaDescuentoServiceSoap" />
+		<parameter name="wsdlServiceElement" value="CargaDescuentoServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_CargaDescuentoService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_CargaSocioRemesaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.CargaSocioRemesaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="CargaSocioRemesaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="CargaSocioRemesaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_CargaSocioRemesaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_CargaTiendaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.CargaTiendaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="CargaTiendaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="CargaTiendaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_CargaTiendaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_CategoriaSubcategoriaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.CategoriaSubcategoriaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="CategoriaSubcategoriaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="CategoriaSubcategoriaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_CategoriaSubcategoriaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_ConfiguracionPerfiladorService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ConfiguracionPerfiladorServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ConfiguracionPerfiladorServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ConfiguracionPerfiladorServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ConfiguracionPerfiladorService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_ConfiguracionProductoService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ConfiguracionProductoServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ConfiguracionProductoServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ConfiguracionProductoServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ConfiguracionProductoService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_FondosMutuosService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.FondosMutuosServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="FondosMutuosServiceSoap" />
+		<parameter name="wsdlServiceElement" value="FondosMutuosServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_FondosMutuosService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_LogIncidenciasService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.LogIncidenciasServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="LogIncidenciasServiceSoap" />
+		<parameter name="wsdlServiceElement" value="LogIncidenciasServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_LogIncidenciasService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_OcurrenciaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.OcurrenciaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="OcurrenciaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="OcurrenciaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_OcurrenciaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_PaisService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.PaisServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="PaisServiceSoap" />
+		<parameter name="wsdlServiceElement" value="PaisServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_PaisService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_ParametroService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ParametroServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ParametroServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ParametroServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ParametroService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_PreguntaFrecuenteService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.PreguntaFrecuenteServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="PreguntaFrecuenteServiceSoap" />
+		<parameter name="wsdlServiceElement" value="PreguntaFrecuenteServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_PreguntaFrecuenteService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_ProductoComplementarioService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ProductoComplementarioServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ProductoComplementarioServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ProductoComplementarioServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ProductoComplementarioService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_SolicitudProductoService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.SolicitudProductoServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="SolicitudProductoServiceSoap" />
+		<parameter name="wsdlServiceElement" value="SolicitudProductoServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_SolicitudProductoService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_TelefonoSolicitudProductoService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.TelefonoSolicitudProductoServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="TelefonoSolicitudProductoServiceSoap" />
+		<parameter name="wsdlServiceElement" value="TelefonoSolicitudProductoServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_TelefonoSolicitudProductoService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_UbigeoService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.UbigeoServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="UbigeoServiceSoap" />
+		<parameter name="wsdlServiceElement" value="UbigeoServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_UbigeoService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+	<service name="Plugin_halcon_ValorCuotaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ValorCuotaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ValorCuotaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ValorCuotaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ValorCuotaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+</deployment>

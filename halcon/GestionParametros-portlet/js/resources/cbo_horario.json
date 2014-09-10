@@ -1,0 +1,5 @@
+[{"id":0,"etiqueta":"Seleccione", "orden":"0","defecto":"1"},
+{"id":1,"etiqueta":"9:00 am - 1:00 pm", "orden":"1","defecto":"0"},
+{"id":2,"etiqueta":"1:00 pm - 3:00 pm", "orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"3:00 pm - 7:00 pm", "orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"7:00 pm - 9:00 pm", "orden":"4","defecto":"0"}]

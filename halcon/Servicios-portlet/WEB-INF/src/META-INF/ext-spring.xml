@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 
+	<bean id="pinDataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy" lazy-init="true">
+       <property name="targetDataSource">
+       	<bean class="com.liferay.portal.spring.jndi.JndiObjectFactoryBean">
+              <property name="jndiName" value="jdbc/pinPool" />
+        </bean>
+       </property>
+	</bean>
+	-->
+<!-- 	 
+	<bean id="pinDataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy" lazy-init="true">
+		<property name="targetDataSource">
+			<bean class="com.liferay.portal.dao.jdbc.util.DataSourceFactoryBean">
+				<property name="propertyPrefix" value="jdbc.pin." />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="pinHibernateSessionFactory" class="com.liferay.portal.spring.hibernate.PortalHibernateConfiguration" lazy-init="true">
+		<property name="dataSource">
+			<ref bean="pinDataSource" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>./META-INF/portlet-hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="pinSessionFactory" class="com.liferay.portal.dao.orm.hibernate.SessionFactoryImpl" lazy-init="true">
+		<property name="sessionFactoryImplementor">
+			<ref bean="pinHibernateSessionFactory" />
+		</property>
+	</bean>
+	<bean id="pinTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager" lazy-init="true">
+		<property name="dataSource">
+			<ref bean="pinDataSource" />
+		</property>
+		<property name="sessionFactory">
+			<ref bean="pinSessionFactory" />
+		</property>
+	</bean>
+-->
+
+ <bean id="pinDataSource" lazy-init="true" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+        <property name="targetDataSource">
+            <bean class="com.liferay.portal.dao.jdbc.util.DataSourceFactoryBean">
+                <property name="propertyPrefix" value="jdbc.pin." />
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="pinHibernateSessionFactory" class="com.liferay.portal.spring.hibernate.PortletHibernateConfiguration">
+        <property name="dataSource" ref="pinDataSource" />
+    </bean>
+   
+    <bean id="pinSessionFactory" class="com.liferay.portal.dao.orm.hibernate.PortletSessionFactoryImpl">
+        <property name="dataSource" ref="pinDataSource" />
+        <property name="sessionFactoryClassLoader" ref="portletClassLoader" />
+        <property name="sessionFactoryImplementor" ref="pinHibernateSessionFactory" />
+    </bean>
+    
+</beans>

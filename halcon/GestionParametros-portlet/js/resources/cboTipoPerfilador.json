@@ -1,0 +1,8 @@
+[{"id":0,"etiqueta":"seleccione", "orden":"1","defecto":"1"},
+{"id":1,"perfilador":1,"etiqueta":"Necesidad", "orden":"2","defecto":"0"},
+{"id":2,"perfilador":1,"etiqueta":"Monto de Vivienda", "orden":"3","defecto":"0"},
+{"id":3,"perfilador":2,"etiqueta":"Capacidad de Ahorro", "orden":"4","defecto":"0"},
+{"id":4,"perfilador":2,"etiqueta":"Motivación", "orden":"5","defecto":"0"},
+{"id":5,"perfilador":3,"etiqueta":"Necesidad", "orden":"6","defecto":"0"},
+{"id":6,"perfilador":4,"etiqueta":"Ingreso Mensual", "orden":"7","defecto":"0"},
+{"id":7,"perfilador":4,"etiqueta":"Motivación", "orden":"8","defecto":"0"}]

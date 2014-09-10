@@ -1,0 +1,540 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+:focus {
+	outline:0;
+}
+body {
+	line-height:1;
+	color:black;
+	background:white;
+}
+ol, ul {
+	list-style:none;
+}
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+caption, th, td {
+	text-align:left;
+	font-weight:normal;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:"";
+}
+blockquote, q {
+	quotes:"" "";
+}
+a {
+	text-decoration:none;
+}
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#959595;
+	background:url(../images/halcon/bg.jpg) repeat-x;
+}
+.content-milkbox {
+	width:540px;
+	padding:27px 44px 0px 38px;
+	margin: 0 auto;
+}
+.cabecera-lbox {
+	width:540px;
+	height:65px;
+	background:url(../images/halcon/logo-lbox.jpg) no-repeat top left;
+	background-position:0px 0px;
+	border-bottom:1px solid #cccccc;
+	margin:0px auto 0px auto;
+}
+.resul-impre.con-decoration .impre-centro {
+	margin:0px 9px 0px 174px !important;
+}
+#mbox-overlay {
+	background-color: #000;
+	z-index:50000;
+	cursor: pointer;
+}
+#mbox-mainbox {
+	top:10%;
+	background-color: #fff;
+}
+#mbox-filebox {
+	margin:0;
+	padding:0;
+	border:none;
+	overflow:hidden;
+}
+#mbox-filebox img, #mbox-filebox iframe, #mbox-filebox swf {
+	border:none;
+}
+.mbox-filebox-decorations {
+	border:none;
+	padding:0;
+}
+#mbox-bottom {
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #656565;
+	line-height: 1.4em;
+	text-align: left;
+	padding-top:8px;
+	margin:0;
+}
+.mbox-reset {
+	clear:both;
+	height:0;
+	margin:0;
+	padding:0;
+	font-size:0;
+	overflow:hidden;
+}
+.resultado-sol {
+	background:none !important;
+}
+.resul-titulo {
+	height:111px;
+	padding:0px 0px 20px 0px;
+	text-align:center;
+	line-height:18px;
+	width: 407px;
+}
+.resul-titulo em.exito {
+	background-position:-1px -1111px;
+}
+.resul-soli {
+	float:left;
+	width:407px;
+}
+.campos-oblig-dos.tus-datos {
+	width:375px;
+	height:24px;
+	padding:0px 0px 4px 32px;
+	border-bottom:1px solid #dcddde;
+}
+.campos-oblig-dos label {
+	width:152px;
+	float:left;
+	display:block;
+	line-height:12px;
+	padding:9px 0px 0px 0px;
+}
+.campos-oblig-dos.final {
+	height:65px !important;
+	padding:0px 0px 0px 32px;
+	overflow: hidden;
+	width: 375px;
+}
+.resul-aclar {
+	float:left;
+	width:385px;
+	height:61px;
+	padding:39px 11px 0px 11px;
+	color:#a7a9ac;
+	line-height:18px;
+}
+.resul-impre.con-decoration {
+	float:left;
+	width:407px;
+	height:20px !important;
+	line-height:14px;
+}
+#content-lbox h3 {
+	color:#444444;
+	font-size:15px;
+	font-weight:bold;
+}
+#content-lbox {
+	width:407px;
+	padding:26px 68px 0px 65px;
+	float:left;
+	color:#919195;
+	font-size:12px;
+}
+.resul-titulo em {
+	display:block;
+	width:28px !important;
+	height:28px !important;
+	background:url(../images/halcon/sprite-iconos.png) no-repeat center top;
+	margin:0px auto !important;
+	float: none !important;
+}
+.resul-titulo h3 {
+	padding:8px 0px 6px 0px;
+}
+.campos-oblig-dos {
+	float:left;
+}
+.resul-soli h3 {
+	width: 375px;
+	height: 28px;
+	background: #EDEEEE;
+	padding: 13px 0px 0px 32px;
+	float: left
+}
+.campos-oblig-dos p {
+	width: 220px;
+	color: #3E3E3E;
+	float: left;
+	display: block;
+	line-height: 12px;
+	padding: 9px 0px 0px 0px;
+}
+.resul-impre.con-decoration em {
+	width: 18px;
+	height: 16px;
+	display: block;
+	background: url(../images/halcon/sprite-iconos.png) no-repeat;
+	background-position: -1px -1172px;
+	float: left;
+}
+.resul-impre a {
+	margin: 0px 39px 0px 0px;
+	font-size: 11px;
+}
+#content-lbox .resul-titulo a {
+	color: #919195;
+}
+#content-lbox .resul-impre a {
+	color: #0098C3;
+	text-decoration: underline;
+}
+/* CAG Styles */
+#content-lbox-I {
+	color: #919195;
+	float: left;
+	font-size: 12px;
+	padding: 50px 30px 0 10px;
+	width: 407px;
+}
+#content-lbox-I h3 {
+	color:#444444;
+	font-size:15px;
+	font-weight:bold;
+}
+.cabecera-lbox-I {
+	width:540px;
+	height:65px;
+	background:url(../images/halcon/logo-lbox.png) no-repeat top left;
+	border-bottom:1px solid #cccccc;
+	margin:0px auto 0px auto;
+}
+.resultado-sol {
+	background: none repeat scroll 0 0 transparent !important;
+}
+.resul-aclar-I {
+	color: #A7A9AC;
+	float: left;
+	height: 61px;
+	line-height: 18px;
+	padding: 15px 11px 0;
+	width: 480px;
+	text-align:justify;
+}
+.resul-aclar-I p {
+	margin-bottom:15px;
+}
+/* FIN CAG Styles */
+
+/* tablas en LightBox para Credito Hipotecario, Credito Vehicular, */
+.CH-CRO {
+	width:730px;
+	margin:0px auto;
+}
+.CH-CRO-tablas {
+	margin:0px auto;
+}
+.CH-CRO p {
+	font-size:10px;
+	padding-top:10px;
+	float:left;
+}
+.CH-CRO-tablas .CH-cabeceras {
+	height:30px;
+}
+.CH-CRO-tablas .CH-cabeceras, .CH-CRO-tablas .CH-destacados {
+	background:#ededed;
+}
+.CH-CRO-tablas .CH-cabeceras {
+	padding:14px 0 4px 5px;
+}
+.CH-CRO-tablas .CH-destacados, .CH-CRO-tablas .CH-simple {
+	padding:4px;
+	/*float:left;*/
+}
+.CH-CRO-tablas .CH-cabeceras .cuota, .CH-CRO-tablas .CH-cabeceras .vencimiento, .CH-CRO-tablas .CH-cabeceras .s-inicial, .CH-CRO-tablas .CH-cabeceras .amortizacion, .CH-CRO-tablas .CH-cabeceras .interes, .CH-CRO-tablas .CH-cabeceras .s-desgra, .CH-CRO-tablas .CH-cabeceras .s-bien, .CH-CRO-tablas .CH-cabeceras .comision, .CH-CRO-tablas .CH-cabeceras .m-cuota {
+	color:#444444;
+	margin-right:10px;
+	float:left;
+	text-align:center;
+}
+.CH-CRO-tablas .cuota, .CH-CRO-tablas .vencimiento, .CH-CRO-tablas .s-inicial, .CH-CRO-tablas .amortizacion, .CH-CRO-tablas .interes, .CH-CRO-tablas .s-desgra, .CH-CRO-tablas .s-bien, .CH-CRO-tablas .comision, .CH-CRO-tablas .m-cuota {
+	margin-right:10px;
+	float:left;
+	text-align:center;
+}
+.CH-CRO-tablas .cuota {
+	width:60px;
+}
+.CH-CRO-tablas .vencimiento {
+	width:83px;
+}
+.CH-CRO-tablas .s-inicial {
+	width:74px;
+}
+.CH-CRO-tablas .amortizacion {
+	width:74px;
+}
+.CH-CRO-tablas .interes {
+	width:50px;
+}
+.CH-CRO-tablas .s-desgra {
+	width:75px;
+}
+.CH-CRO-tablas .s-bien {
+	width:70px;
+}
+.CH-CRO-tablas .comision {
+	width:53px;
+}
+.CH-CRO-tablas .m-cuota {
+	width:88px;
+}
+.r-totales {
+	background: #cecfca;
+	width:200px;
+	height:55px;
+	padding:10px;
+	margin:20px 0 40px 0;
+	float:right;
+}
+.r-totales .mtp, .r-totales .tdi, .r-totales .tdc {
+	width:112px;
+	float:left;
+	color:#444444;
+	margin-bottom:8px;
+}
+.r-totales .mtp-data, .r-totales .tdi-data, .r-totales .tdc-data {
+	float:left;
+	width:77px;
+	margin-left:10px;
+	text-align:right;
+	color:#3e3e3e;
+}
+.cl-extra {
+	width: 730px !important;
+}
+.DSP-cont {
+	background:#f2f2f2;
+	width:420px;
+	height:60px;
+	margin:50px auto 10px;
+	padding:7px;
+	display:block;
+}
+.DSP-cont-I {
+	width:420px;
+	margin:5px auto 30px;
+	padding:7px;
+	display:block;
+}
+.DSP-cont-I .dsp-txt {
+	float:left;
+	margin-top:10px;
+	margin-bottom:60px;
+	height: 300px;
+	display:inline-block;
+}
+.DSP-cont-I .dsp-txt-det {
+	float:left;
+	width:260px;
+	border-bottom:solid 1px #ccc;
+	padding:5px 0 5px 10px;
+	display: block;
+}
+.DSP-cont-I .dsp-txt-det-II {
+	float:left;
+	width:130px;
+	border-bottom:solid 1px #ccc;
+	padding:5px 0 5px 10px;
+	color:#3e3e3e;
+}
+.DSP-cont #content-lbox-I {
+	margin:0px !important;
+	padding:17px !important;
+	width:320px !important;
+}
+.DSP-cont #content-lbox-I h3 {
+	width:270px;
+	float:left;
+}
+.DSP-cont .ca-descarga {
+	display: block;
+	height:65px;
+	width:60px;
+	float:left;
+	border-left: solid 1px #ccc;
+}
+.DSP-cont .ca-descarga a {
+	color:#828282;
+}
+.DSP-cont .ca-descarga-txt {
+	background: none repeat scroll 0 0;
+	float: left;
+	text-align: center;
+	font-size:9px;
+}
+.DSP-cont .ca-descarga-icon {
+	background: url(../images/halcon/sprite-beneficios.jpg) no-repeat scroll 14px -263px transparent;
+	display: block;
+	height:32px;
+	margin: 0 auto;
+	width: 33px;
+	float:left;
+	padding:8px 5px 0 10px;
+}
+/* FIN de tablas en LightBox para Credito Hipotecario, Credito Vehicular, */
+.wrapper-lighbox {
+	line-height:15px;
+	font-size:11px;
+	padding:20px 0 0 30px;
+}
+.wrapper-lighbox .title, .wrapper-lighbox h3 {
+	color:#616162;
+}
+.wrapper-lighbox span {
+	display:block;
+}
+.titlecur {
+	font-style:italic;
+}
+.trtitle, .trlogo {
+	padding: 0 0 10px 0;
+	width:263px;
+	overflow:hidden;
+}
+.trresult {
+	padding: 0 0 2px 0;
+	width:263px;
+	overflow:hidden;
+}
+.trdiscount {
+	padding:3px 0 0 0;
+	font-size:10px;
+	width:263px;
+	overflow:hidden;
+}
+/**TERMINOS Y CONDICIONES**/
+.wrapper {
+	width: 543px;
+	padding: 0 0 0 38px;
+	margin: 28px 0 0 0;
+	height: 540px;
+}
+.wrapper h2 {
+	color:#444444;
+	font-size:15px;
+	line-height:15px;
+	padding: 20px 0;
+	font-weight:bold;
+}
+.wrapper p {
+	width: 525px;
+	padding: 0 0 15px 0;
+	line-height:18px;
+	font-size:12px;
+}
+.wrapper .line {
+	border-top:1px solid #cccccc;
+	width:543px;
+}
+.termsconditions {
+	height: 575px;
+	overflow:hidden
+}
+/**SCROLLBAR**/
+
+.scrollbar {
+	width: 21px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	visibility: hidden;
+}
+.scrollbar .knob {
+	width: 7px;
+	height: 50px;
+	margin: 0 7px;
+	cursor: pointer;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	filter: alpha(opacity=75);
+	opacity: 0.75;
+}
+.scrollbar .knob span {
+	display: block;
+	height:4px;
+	width:7px;
+}
+.scrollbar .knob span.top {
+	background: url(../images/halcon/top.jpg) no-repeat;
+	overflow:hidden;
+}
+.scrollbar .knob span.body {
+	background: #dbdcdd;
+}
+.scrollbar .knob span.bottom {
+	background: url(../images/halcon/bottom.jpg) no-repeat;
+}
+.scrollbar .knob:hover {
+	-moz-opacity: 1;
+	opacity: 1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/**VIDEO**/
+.content-milkbox2{
+	width:300px;
+	/*padding:29px 40px 0px 40px;*/
+}
+.content-milkbox2 h2{
+	font-size:15px;
+	font-weight:bold;
+	color:#444444;
+	padding:22px 0px 27px 0px;
+}
+.width640{
+	width:640px !important;
+}
+.video-lgt{
+	width:640px;
+	height:360px;
+}
+
+.fixMargin-video{
+	 margin: 34px 0 0 40px;
+}
+
+.resul-aclar-I li {
+    background: url("../images/halcon/buellet_inc.jpg") no-repeat scroll 0 3px transparent;
+    font-size: 12px;
+    line-height: 17px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.both {
+	clear: both; /*display:block;*/
+}
+
+.espaciado25{
+	height:25px;	
+}

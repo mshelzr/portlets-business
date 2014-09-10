@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Ocurrencia.obtenerUltimaPeticion">
+		<![CDATA[
+		SELECT gepe_IdGestionPeticion, 
+		gepe_IP, gepe_CodigoProducto, 
+		gepe_fecha, gepe_estado, 
+		gepe_ocurrencia 
+		FROM T_PETICION WHERE gepe_IP = ? AND 
+		gepe_CodigoProducto = ? AND 
+		gepe_estado = ? AND convert(CHAR(10),gepe_fecha,103) = ? 
+		ORDER BY gepe_fecha DESC  
+		]]>
+	</sql>
+	<sql id="Ocurrencia.cambiarEstado">
+		<![CDATA[
+		UPDATE T_PETICION SET gepe_estado = ? 
+		WHERE gepe_IdGestionPeticion = ? 
+		]]>
+	</sql>
+	<sql id="Ocurrencia.insertar">
+		<![CDATA[
+		 INSERT INTO T_PETICION (gepe_IP, gepe_CodigoProducto, gepe_fecha, gepe_estado, gepe_ocurrencia)
+		VALUES (?, ?, ?, ?, ?)
+		]]>
+	</sql>
+	
+	
+	
+</custom-sql>

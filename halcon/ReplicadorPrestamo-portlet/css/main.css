@@ -1,0 +1,147 @@
+@import url(/halcon-theme/css/lightbox.css);
+
+.wd476p {
+	width: 476px !important;
+}
+.wd86p {
+	width: 86px !important;
+}
+.wd124p {
+	width: 124px !important;
+}
+.percentage {
+	float: left;
+	font-size: 12px;
+	line-height: 28px;
+	margin: 0 0 0 4px;
+}
+.ayuda-sign {
+	background: url(/halcon-theme/images/halcon/help-pr.jpg) left 8px no-repeat;
+	_background-image: url(/halcon-theme/images/halcon/help-pr.jpg);
+	_background-position: left 7px;
+	_background-repeat: no-repeat;
+	display: block;
+	height: 22px;
+	position: relative;
+	float: left;
+	width: 15px;
+	margin: 0 3px;
+}
+.mg5 {
+	margin-left: 10px !important;
+}
+.optchn {
+	float: right;
+	padding: 5px 0 0 0;
+}
+.opCh {
+	float: left;
+}
+.texCh {
+    float: left;
+    line-height: 12px;
+    margin-left: 3px;
+}
+.cnt {
+	width: 150px;
+	margin: auto;
+}
+.campRad {
+	float: left;
+	margin: 8px 5px 0 6px;
+}
+.texRad {
+	float: left;
+	line-height: 29px;
+ *line-height: 38px;
+	_line-height: 35px;
+}
+.next-sol {
+	float: none !important;
+	width: 180px;
+	margin: auto !important;
+	_margin: 0 0 0 280px;
+}
+.next-sol a {
+*line-height:19px;
+}
+.wd290p {
+	width: 290px !important;
+}
+.mg10tp {
+	margin-top: 10px;
+}
+.cntsinln {
+	line-height: 21px;
+}
+
+.DSP-cont .ca-descarga-icon {
+    background: url("/halcon-theme/images/halcon/sprite-beneficios.jpg") no-repeat scroll 14px -263px rgba(0, 0, 0, 0);
+    display: block;
+    float: left;
+    height: 32px;
+    margin: 0 auto;
+    padding: 8px 5px 0 10px;
+    width: 33px;
+    background-position: 14px -265px !important;
+}
+
+.DSP-cont {
+    background: none repeat scroll 0 0 #F2F2F2;
+    display: block;
+    height: 60px;
+    margin: 50px auto 10px;
+    padding: 7px;
+    width: 420px;
+}
+
+.DSP-cont .ca-descarga {
+    border-left: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    height: 65px;
+    width: 60px;
+}
+
+.DSP-cont #content-lbox-I {
+    margin: 0 !important;
+    padding: 17px !important;
+    width: 320px !important;
+}
+
+.DSP-cont #content-lbox-I h3 {
+    float: left;
+    width: 270px;
+}
+
+.DSP-cont .ca-descarga a {
+    color: #828282;
+}
+
+.DSP-cont-I {
+    display: block;
+    margin: 5px auto 30px;
+    padding: 7px;
+    width: 420px;
+}
+
+.replicador-ubicacion {
+	width: 100% !important;
+}
+
+.replicador-contenedor {
+	margin: auto;
+}
+
+.con-decoration a {
+    color: #0098C3 !important;
+    text-decoration: underline;
+}
+
+input[type=text].datepiker.text-error {
+		background-color: #FCE5F1 !important;
+}
+
+.replicador-resError{
+	margin-top: 25px;
+}

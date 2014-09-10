@@ -1,0 +1,5 @@
+[{"id":1,"etiqueta":"30 d\u00edas","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"90 d\u00edas","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"180 d\u00edas","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"360 d\u00edas","tool":"tooltip","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"720 d\u00edas","tool":"tooltip","orden":"5","defecto":"0"}]

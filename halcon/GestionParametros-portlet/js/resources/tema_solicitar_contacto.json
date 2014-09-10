@@ -1,0 +1,7 @@
+[{"id":1,"etiqueta":"Tarjetas de Credito","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"Cuentas de Deposito","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Banca Electronica","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Creditos Personales","tool":"tooltip","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"Seguros","tool":"tooltip","orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"Fondos Mutuos","tool":"tooltip","orden":"6","defecto":"0"},
+{"id":7,"etiqueta":"Otros","tool":"tooltip","orden":"7","defecto":"0"}]

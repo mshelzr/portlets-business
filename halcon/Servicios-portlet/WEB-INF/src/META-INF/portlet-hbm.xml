@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.ext.portlet.pin.model.Categoria" />
+	<import class="com.ext.portlet.pin.model.Persona" />
+	<class name="com.ext.portlet.pin.model.impl.CategoriaImpl" table="Categoria">
+		<id name="categoriaId" column="Codigo_categoria" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idImagen" type="com.liferay.portal.dao.orm.hibernate.LongType" column="Id_image" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Nombre" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="Estado" />
+		<property name="descripcion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Descripcion" />
+	</class>
+	<class name="com.ext.portlet.pin.model.impl.PersonaImpl" table="Persona">
+		<id name="userId" column="Userid" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="nombres" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Nombres" />
+		<property name="apellidoPaterno" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Apellido_Paterno" />
+		<property name="apellidoMaterno" type="com.liferay.portal.dao.orm.hibernate.StringType" column="Apellido_Materno" />
+		<property name="dni" type="com.liferay.portal.dao.orm.hibernate.StringType" column="DNI" />
+		<property name="tipoDocumento" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="Tipo_Documento" />
+	</class>
+</hibernate-mapping>

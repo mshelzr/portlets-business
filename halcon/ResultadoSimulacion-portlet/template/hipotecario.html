@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Interbank</title>
+<link href="%RUTA_CSS%/styles.css" rel="stylesheet" type="text/css" />
+<link href="%RUTA_CSS%/lightbox.css" rel="stylesheet" type="text/css" />
+<!--[if IE 7]><link href="%RUTA_CSS%/stylesie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 6]><link href="%RUTA_CSS%/stylesie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body class="resultado-sol">
+<div class="content-milkbox cl-extra">
+  <div class="cabecera-lbox cl-extra"><img src="%RUTA_IMG%/halcon/logo-lbox.jpg" width="160" height="48" /></div>
+  <div class="DSP-cont">
+    <div id="content-lbox-I">
+      <h3>Detalle de Simulación del producto <br />
+        %PRODUCTO%</h3>
+    </div>
+    <div class="ca-descarga-txt"> <span class="ca-descarga"><a href="%URL_DESCARGA%"><span class="ca-descarga-icon"></span></a><span ><a href="%URL_DESCARGA%">Descargar<br />
+      en PDF</a></span></span> </div>
+    <div class="both"></div>
+  </div>
+  <div class="DSP-cont-I">
+    <div class="dsp-txt"> 
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Producto </span> <span class="dsp-txt-det-II no-bd"> %PRODUCTO%</span>
+			<div class="both"></div>
+		</div>
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Moneda del Crédito </span> <span class="dsp-txt-det-II no-bd"> %MONEDA%</span> 
+			<div class="both"></div>
+		</div>
+		<div style="border-bottom:1px solid #cccccc">
+		<span class="dsp-txt-det no-bd">Valor del Inmueble</span> <span class="dsp-txt-det-II no-bd">%VALOR_INMUEBLE%</span>
+		<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Monto a Financiar </span> <span class="dsp-txt-det-II no-bd">%MONTO_FINANCIAR%</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tasa de Costo Efectivo Anual (TCEA) </span> <span class="dsp-txt-det-II no-bd">%TCEA%% anual</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tasa de Interés Compensatorio (TEA) </span> <span class="dsp-txt-det-II no-bd"> %TEA%% anual</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tipo de Cuota </span> <span class="dsp-txt-det-II no-bd"> %TIPO_CUOTA%</span>
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Monto de Cuota Ordinaria </span> <span class="dsp-txt-det-II no-bd"> %MONTO_CUOTA_ORDINARIA%</span>
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Plazo de Crédito </span> <span class="dsp-txt-det-II no-bd"> %PLAZO% meses</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tipo de Seguro de Desgravamen </span> <span class="dsp-txt-det-II no-bd"> %TIPO_SEGURO%</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tasa de Seguro de Desgravamen </span> <span class="dsp-txt-det-II no-bd"> %TASA_SEGURO_DES%% mensual</span> 
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Tasa del Inmueble </span> <span class="dsp-txt-det-II no-bd">%TASA_INMUEBLE%% fija mensual </span>
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Período de Gracia </span> <span class="dsp-txt-det-II no-bd"> %PERIODO_GRACIA% meses</span>
+			<div class="both"></div>
+		</div>
+		
+		<div style="border-bottom:1px solid #cccccc">
+			<span class="dsp-txt-det no-bd">Comisión </span> <span class="dsp-txt-det-II no-bd">%COMISION% </span>
+			<div class="both"></div>
+		</div>
+	</div>
+    <div class="both"></div>
+  </div>
+  <div class="CH-CRO">
+    <div class="CH-CRO-tablas">
+      <div class="CH-cabeceras"> <span class="cuota">Nro Cuota</span> <span class="vencimiento">F. Vencimiento</span> <span class="s-inicial">Saldo inicial</span> <span class=" amortizacion">Amortización</span> <span class="interes">Interés</span> <span class="s-desgra">Seguro<br/>
+        Desgravamen</span> <span class="s-bien">Seguro Bien</span> <span class="comision">Comisión</span> <span class="m-cuota">Monto de Cuota</span> </div>
+      
+      %DETALLE_SIMULACION%
+      
+      <div class="both"></div>   
+      <div class="r-totales ver2">
+        <table width="690" border="0" cellpadding="0" cellspacing="0" style="font-size:12px; color:#3e3e3f;">
+          <tr>
+            <td width="241">Totales</td>
+            <td width="86" style="font-weight:bold">%TOTAL_AMOTIZACIONES%</td>
+            <td width="83" style="font-weight:bold">%TOTAL_INTERESES% </td>
+            <td width="86" style="font-weight:bold">%TOTAL_SEGURO_DESGRAVAMEN%</td>
+            <td width="63" style="font-weight:bold">%TOTAL_SEGURO_BIEN%</td>
+            <td width="61" style="font-weight:bold">%TOTAL_COMISION%</td>
+            <td width="70" style="font-weight:bold">%TOTAL_MONTO_CUOTA%</td>
+          </tr>
+        </table>
+      </div>
+      <div class="both"></div>
+      <!-- 
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor tortor, vestibulum at auctor eu, hendrerit eget lorem. Pellentesque dolor tortor, vestibulum at auctor eu, hendrerit eget lorem. Pellentesque dolor tortor, vestibulum at auctor eu. Pellentesque dolor tortor, vestibulum at auctor eu.</p>
+       -->
+
+				<div class="listadob">
+					<ul>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">Los datos emitidos por este simulador son referenciales,
+							están sujetos a evaluación y a la fecha real de desembolso del
+							crédito.</li>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">No se incluyen los gastos pagados al contado directamente
+							por el cliente.</li>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">El monto de las cuotas no incluye ITF.</li>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">El monto de la cuota incluye: el seguro de desgravamen de
+							Interbank.</li>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">El cliente tiene la opción de endosar su póliza de
+							seguros a favor de Interbank.</li>
+						<li style="background: url('%RUTA_IMG%/halcon/dot.jpg') no-repeat scroll left 4px transparent">Para mayor información puede acercarse a nuestra red de
+							Tiendas Interbank a nivel nacional.</li>
+					</ul>
+				</div>
+
+
+
+
+			</div>
+  </div>
+  <div class="both"></div>
+</div>
+</body>
+</html>

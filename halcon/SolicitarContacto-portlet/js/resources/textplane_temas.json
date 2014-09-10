@@ -1,0 +1,6 @@
+[{"id":1,"etiqueta":"Tarjetas de Cr\u00E9dito", "orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"Cuentas de Dep\u00F3sito", "orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Banco Electr\u00F3nico", "orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Cr\u00E9ditos Personales", "orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"Seguros", "orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"Fondos Mutuos", "orden":"6","defecto":"0"}]

@@ -1,0 +1,7 @@
+[{"id":1,"etiqueta":"30 d\u00edas","tool":"30 días","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"90 d\u00edas","tool":"90 días","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"180 d\u00edas","tool":"180 días","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"1 A\u00f1o","tool":"1 Año","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"2 a\u00f1os","tool":"2 años","orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"3 a\u00f1os","tool":"3 años","orden":"6","defecto":"0"},
+{"id":7,"etiqueta":"5 a\u00f1os","tool":"5 años","orden":"7","defecto":"0"}]

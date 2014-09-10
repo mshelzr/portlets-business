@@ -1,0 +1,6 @@
+[{"id":1,"etiqueta":"6 meses","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"12 meses","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"24 meses","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"36 meses","tool":"tooltip","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"48 meses","tool":"tooltip","orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"60 meses","tool":"tooltip","orden":"6","defecto":"0"}]

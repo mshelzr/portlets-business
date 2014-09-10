@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.ext.portlet.halcon.service.AuditoriaCajaSorpresaLocalService" class="com.ext.portlet.halcon.service.impl.AuditoriaCajaSorpresaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.AuditoriaCajaSorpresaService" class="com.ext.portlet.halcon.service.impl.AuditoriaCajaSorpresaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.AuditoriaCajaSorpresaPersistence" class="com.ext.portlet.halcon.service.persistence.AuditoriaCajaSorpresaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.AuditoriaCajaSorpresaFinder" class="com.ext.portlet.halcon.service.persistence.AuditoriaCajaSorpresaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.AuditoriaPerfiladorLocalService" class="com.ext.portlet.halcon.service.impl.AuditoriaPerfiladorLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.AuditoriaPerfiladorService" class="com.ext.portlet.halcon.service.impl.AuditoriaPerfiladorServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.AuditoriaPerfiladorPersistence" class="com.ext.portlet.halcon.service.persistence.AuditoriaPerfiladorPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.AuditoriaSimuladorLocalService" class="com.ext.portlet.halcon.service.impl.AuditoriaSimuladorLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.AuditoriaSimuladorService" class="com.ext.portlet.halcon.service.impl.AuditoriaSimuladorServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.AuditoriaSimuladorPersistence" class="com.ext.portlet.halcon.service.persistence.AuditoriaSimuladorPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.AuditoriaSimuladorFinder" class="com.ext.portlet.halcon.service.persistence.AuditoriaSimuladorFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.CargaDescuentoLocalService" class="com.ext.portlet.halcon.service.impl.CargaDescuentoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.CargaDescuentoService" class="com.ext.portlet.halcon.service.impl.CargaDescuentoServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaDescuentoPersistence" class="com.ext.portlet.halcon.service.persistence.CargaDescuentoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaDescuentoFinder" class="com.ext.portlet.halcon.service.persistence.CargaDescuentoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.CargaSocioRemesaLocalService" class="com.ext.portlet.halcon.service.impl.CargaSocioRemesaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.CargaSocioRemesaService" class="com.ext.portlet.halcon.service.impl.CargaSocioRemesaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaSocioRemesaPersistence" class="com.ext.portlet.halcon.service.persistence.CargaSocioRemesaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaSocioRemesaFinder" class="com.ext.portlet.halcon.service.persistence.CargaSocioRemesaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.CargaTiendaLocalService" class="com.ext.portlet.halcon.service.impl.CargaTiendaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.CargaTiendaService" class="com.ext.portlet.halcon.service.impl.CargaTiendaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaTiendaPersistence" class="com.ext.portlet.halcon.service.persistence.CargaTiendaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.CargaTiendaFinder" class="com.ext.portlet.halcon.service.persistence.CargaTiendaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.CategoriaSubcategoriaLocalService" class="com.ext.portlet.halcon.service.impl.CategoriaSubcategoriaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.CategoriaSubcategoriaService" class="com.ext.portlet.halcon.service.impl.CategoriaSubcategoriaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.CategoriaSubcategoriaPersistence" class="com.ext.portlet.halcon.service.persistence.CategoriaSubcategoriaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.CategoriaSubcategoriaFinder" class="com.ext.portlet.halcon.service.persistence.CategoriaSubcategoriaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.ConfiguracionPerfiladorLocalService" class="com.ext.portlet.halcon.service.impl.ConfiguracionPerfiladorLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.ConfiguracionPerfiladorService" class="com.ext.portlet.halcon.service.impl.ConfiguracionPerfiladorServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.ConfiguracionPerfiladorPersistence" class="com.ext.portlet.halcon.service.persistence.ConfiguracionPerfiladorPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.ConfiguracionPerfiladorFinder" class="com.ext.portlet.halcon.service.persistence.ConfiguracionPerfiladorFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.ConfiguracionProductoLocalService" class="com.ext.portlet.halcon.service.impl.ConfiguracionProductoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.ConfiguracionProductoService" class="com.ext.portlet.halcon.service.impl.ConfiguracionProductoServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.ConfiguracionProductoPersistence" class="com.ext.portlet.halcon.service.persistence.ConfiguracionProductoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.FondosMutuosLocalService" class="com.ext.portlet.halcon.service.impl.FondosMutuosLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.FondosMutuosService" class="com.ext.portlet.halcon.service.impl.FondosMutuosServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.FondosMutuosPersistence" class="com.ext.portlet.halcon.service.persistence.FondosMutuosPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.FondosMutuosFinder" class="com.ext.portlet.halcon.service.persistence.FondosMutuosFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.LogIncidenciasLocalService" class="com.ext.portlet.halcon.service.impl.LogIncidenciasLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.LogIncidenciasService" class="com.ext.portlet.halcon.service.impl.LogIncidenciasServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.LogIncidenciasPersistence" class="com.ext.portlet.halcon.service.persistence.LogIncidenciasPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.LogIncidenciasFinder" class="com.ext.portlet.halcon.service.persistence.LogIncidenciasFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.OcurrenciaLocalService" class="com.ext.portlet.halcon.service.impl.OcurrenciaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.OcurrenciaService" class="com.ext.portlet.halcon.service.impl.OcurrenciaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.OcurrenciaPersistence" class="com.ext.portlet.halcon.service.persistence.OcurrenciaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.OcurrenciaFinder" class="com.ext.portlet.halcon.service.persistence.OcurrenciaFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.PaisLocalService" class="com.ext.portlet.halcon.service.impl.PaisLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.PaisService" class="com.ext.portlet.halcon.service.impl.PaisServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.PaisPersistence" class="com.ext.portlet.halcon.service.persistence.PaisPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.PaisFinder" class="com.ext.portlet.halcon.service.persistence.PaisFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.ParametroLocalService" class="com.ext.portlet.halcon.service.impl.ParametroLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.ParametroService" class="com.ext.portlet.halcon.service.impl.ParametroServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.ParametroPersistence" class="com.ext.portlet.halcon.service.persistence.ParametroPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.ParametroFinder" class="com.ext.portlet.halcon.service.persistence.ParametroFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.PreguntaFrecuenteLocalService" class="com.ext.portlet.halcon.service.impl.PreguntaFrecuenteLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.PreguntaFrecuenteService" class="com.ext.portlet.halcon.service.impl.PreguntaFrecuenteServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.PreguntaFrecuentePersistence" class="com.ext.portlet.halcon.service.persistence.PreguntaFrecuentePersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.ProductoComplementarioLocalService" class="com.ext.portlet.halcon.service.impl.ProductoComplementarioLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.ProductoComplementarioService" class="com.ext.portlet.halcon.service.impl.ProductoComplementarioServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.ProductoComplementarioPersistence" class="com.ext.portlet.halcon.service.persistence.ProductoComplementarioPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.SolicitudContactoLocalService" class="com.ext.portlet.halcon.service.impl.SolicitudContactoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.SolicitudContactoPersistence" class="com.ext.portlet.halcon.service.persistence.SolicitudContactoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.SolicitudProductoLocalService" class="com.ext.portlet.halcon.service.impl.SolicitudProductoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.SolicitudProductoService" class="com.ext.portlet.halcon.service.impl.SolicitudProductoServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.SolicitudProductoPersistence" class="com.ext.portlet.halcon.service.persistence.SolicitudProductoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.SolicitudProductoFinder" class="com.ext.portlet.halcon.service.persistence.SolicitudProductoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.TelefonoSolicitudProductoLocalService" class="com.ext.portlet.halcon.service.impl.TelefonoSolicitudProductoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.TelefonoSolicitudProductoService" class="com.ext.portlet.halcon.service.impl.TelefonoSolicitudProductoServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.TelefonoSolicitudProductoPersistence" class="com.ext.portlet.halcon.service.persistence.TelefonoSolicitudProductoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.UbigeoLocalService" class="com.ext.portlet.halcon.service.impl.UbigeoLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.UbigeoService" class="com.ext.portlet.halcon.service.impl.UbigeoServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.UbigeoPersistence" class="com.ext.portlet.halcon.service.persistence.UbigeoPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.persistence.UbigeoFinder" class="com.ext.portlet.halcon.service.persistence.UbigeoFinderImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.halcon.service.ValorCuotaLocalService" class="com.ext.portlet.halcon.service.impl.ValorCuotaLocalServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.ValorCuotaService" class="com.ext.portlet.halcon.service.impl.ValorCuotaServiceImpl" />
+	<bean id="com.ext.portlet.halcon.service.persistence.ValorCuotaPersistence" class="com.ext.portlet.halcon.service.persistence.ValorCuotaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="halconDataSource" />
+		<property name="sessionFactory" ref="halconSessionFactory" />
+	</bean>
+</beans>

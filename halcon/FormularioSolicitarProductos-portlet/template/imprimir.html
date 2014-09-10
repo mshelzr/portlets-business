@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Interbank</title>
+<link href="%RUTA_CSS%/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="%RUTA_CSS%/lightbox.css" rel="stylesheet" type="text/css" media="print" />
+<!--[if IE 7]><link href="%RUTA_CSS%/stylesie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 6]><link href="%RUTA_CSS%/stylesie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if IE 7]>
+<link href="%RUTA_CSS%/lightbox.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="%RUTA_CSS%/imprimir.css" rel="stylesheet" type="text/css" media="print" /> 
+<![endif]-->
+
+
+</head>
+<body class="resultado-sol">
+
+<div class="content-milkbox" id="printArea">
+
+  <div class="cabecera-lbox"><img src="/halcon-theme/images/halcon/logo-lbox.jpg" border="0"></img></div>
+  <div id="content-lbox" style="padding: 0 68px 0 65px !important;">
+  	<div id="leli" style="height:26px;" ></div>
+    <div class="resul-titulo con-decoration" style="overflow: hidden;"> <div class="chekp" style="overflow: hidden;"><img src="/halcon-theme/images/halcon/ico-good.png" border="0" ></img></div>
+<!--      <em class="exito"></em> -->
+      <h3 style="overflow: hidden;">%FULLNAME%</h3>
+      %MENSAJE%
+    </div>
+    <div class="resul-soli " style="overflow: hidden;">
+      <h3 style="overflow: hidden; width: 407px !important; height: 42px !important; padding: 0px !important;"><img src="/halcon-theme/images/halcon/tus_datos.jpg" border="0"></img></h3>
+<!--     <div><img src="/halcon-theme/images/halcon/imprimir_tusdatos.png" border="0" ></img></div> -->
+     <!--   <h3>Tus datos</h3> -->
+     	%ATRIBUTOS%
+    </div>
+    <div class="resul-soli" style="overflow: hidden;">
+<!--     <div><img src="/halcon-theme/images/halcon/imprimir_detalledelproducto.png" border="0" ></img></div> -->
+      <h3 style="overflow: hidden; width: 407px !important; height: 42px !important; padding: 0px !important;"><img src="/halcon-theme/images/halcon/detalle_producto.jpg" border="0"></img></h3>
+      <div class="campos-oblig-dos final">
+        <label>%TIPO%</label>
+        <p>%CARD%</p>
+      </div>
+    </div>
+ 	%PRODUCT%
+ 	<div class="espaciado25 both"></div> 
+    <div class="resul-impre con-decoration" id="impresionLightbox" name="impresionLightbox"> <em class="impre-centro"></em> <a href="javascript:imprimir();" title="Imprimir">Imprimir</a> </div>
+    <div class="resul-impre con-decoration" id="impresionPDF"	   name="impresionPDF"     > <em class="impre-centro"></em> <a href="%URL_DESCARGA%" title="Imprimir"></a> <a href="%URL_DESCARGA%" title="Imprimir">Imprimir</a> </div>
+<!--   																		<a href="javascript:window.parent.imprimir();" -->
+<!--     <div class="both"></div> -->
+  
+  <div class="both"></div>
+  </div>
+  <br class="both"/>
+</div>
+<script src="/halcon-theme/js/halcon/mootools.core.js" type="text/javascript" slick-uniqueid="571"></script>
+
+<script type="text/javascript">
+	if($('impresionLightbox') && $('impresionPDF')){
+		if(Browser.ie6 || Browser.ie7 || Browser.ie8 ){	
+			$('impresionLightbox').setStyle("display", "none");
+			$('impresionPDF').setStyle("display", "block");
+		}else{
+			$('impresionLightbox').setStyle("display", "block");
+			$('impresionPDF').setStyle("display", "none");
+		}
+	}
+</script>
+
+<script>
+function imprimir(){
+	
+	if(Browser.ie6 || Browser.ie7 || Browser.ie8 ){
+	
+		alert('Internet Explorer');	
+		
+// 	parent.document.getElement('.main').setStyle('display','none');	
+// 	parent.document.getElement('iframe').set('id','printo');
+// 	$('printArea').setStyles({'width':'45%','height':'45%','margin':'0 auto'});
+// 	$('printArea').clone().inject(parent.document.getElement('.main'),'after');
+// 	window.print();
+// 	$('printArea').setStyles({'width':'540px','height':'auto'});
+// 	parent.document.getElement('.main').setStyle('display','block');
+// 	parent.document.getElement('body').getChildren('.content-milkbox').setStyle('display','none');
+// 	parent.document.getElement('body').getChildren('.llamada').setStyle('background-color','#008C46');
+// 	parent.document.getElement('body').getChildren('.llamada').setStyle('position','absolute');
+	
+/**
+		var element,clonePrintArea,fwindow;
+		elementContent = window.parent.document;
+		element = elementContent.getElement('.main');
+		contentPrintArea= elementContent.getElement('#printArea');
+		element.setStyle('display','none');
+		
+		if(!contentPrintArea){
+			$('printArea').setStyles({'width':'45%','height':'45%','margin':'0 auto'});
+			clonePrintArea = $('printArea').clone();
+			clonePrintArea.inject($(parent.document.body));
+			contentPrintArea = clonePrintArea;
+		}else{
+			contentPrintArea.setStyle('display','block');
+		}
+					
+		window.print();
+			
+		contentPrintArea.setStyle('display','none');
+		element.removeProperty('style');
+*/
+	}
+	else{
+		window.print();
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+#paso2, #paso3 {
+    margin-left: 0 !important;
+}
+
+.profile .body .title {
+	margin: 25px 0 0;
+    padding: 0 0 6px;
+}
+		
+.profile .body .content-head {
+    padding: 1px 0 0 19px;
+}
+
+.seguros {
+    height: 390px !important;
+}
+
+.sidebar {
+    float: left;
+    line-height: 18px;
+    position: relative;
+    width: 305px;
+    z-index: 60;
+}
+
+.no-float{
+	float: none !important;
+	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.cont_p {
+	width: 307px;
+	border-radius: 10px 0 10px 0;
+	overflow: hidden;
+}
+.headT {
+	background: #009b3a;
+	padding: 10px; text-align:justify;
+}
+.headT p {
+	font-size: 14px;
+	color: #FFF; 	
+}
+.cuerpoT {
+	background: #f3f3f3;padding: 10px; text-align:justify; font-size:12px; color:#919195;
+}
+.cuerpoT p{ 
+	margin:12px 0 12px 0;
+}
+
+.espaciado12{
+	height:12px;	
+}
+
+.espaciado25{
+	height:25px;	
+}
+
+.espaciado34{
+	height:34px;	
+}
+
+.form-error {
+    color: #CA005D;
+    display: none;
+    font-size: 10px;
+    line-height: 8px;
+    margin: 5px 0 12px !important;
+    width: 400px;
+}
+
+.wt40r {
+  width: 40px !important;
+  margin: 0 4px 0 0; }
+
+.wt40l {
+  width: 40px !important;
+  margin: 0 0 0 4px; }
+
+.wt112m {
+  width: 112px !important;
+  height: 26px; }

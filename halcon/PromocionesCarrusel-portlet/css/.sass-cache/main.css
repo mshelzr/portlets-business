@@ -1,0 +1,38 @@
+.f-conoce .paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url(/halcon-theme/images/halcon/puntos2.png) repeat scroll 0 10px !important;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 0px;
+  line-height: 10px; }
+
+.f-conoce .paging li a.active {
+  background: url(/halcon-theme/images/halcon/puntos2.png) repeat scroll 10px 20px !important;
+  color: #3ab8c8; }
+
+.f-conoce .paging li a:hover {
+  background: url(/halcon-theme/images/halcon/puntos2.png) repeat scroll 10px 20px !important;
+  color: #3ab8c8; }
+
+.ie6 .paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url(/halcon-theme/images/halcon/puntos2.gif) repeat scroll 0 10px transparent !important;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 0px;
+  line-height: 10px; }
+.ie6 .paging li a.active {
+  background: url(/halcon-theme/images/halcon/puntos2.gif) repeat scroll 10px 20px !important;
+  color: #3ab8c8; }
+.ie6 .paging li a:hover {
+  background: url(/halcon-theme/images/halcon/puntos2.gif) repeat scroll 10px 20px !important;
+  color: #3ab8c8; }
+

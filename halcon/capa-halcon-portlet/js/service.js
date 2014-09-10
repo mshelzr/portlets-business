@@ -1,0 +1,1 @@
+Liferay.Service.register("Liferay.Service.halcon", "com.ext.portlet.halcon.service", "capa-halcon-portlet");

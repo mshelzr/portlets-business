@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="CargaRemesas.truncate">
+		<![CDATA[
+		delete from T_CARGA_SOCIO_REMESA
+		]]>
+	</sql>
+	<sql id="CargaRemesas.insert">
+		<![CDATA[
+		INSERT INTO T_CARGA_SOCIO_REMESA 
+		(casr_Empresa, 
+		casr_PaisCobertura, 
+		casr_PaginaWeb, 
+		casr_Telefono)
+		VALUES (?, ?, ?, ?)		
+		]]>
+	</sql>
+</custom-sql>
+	

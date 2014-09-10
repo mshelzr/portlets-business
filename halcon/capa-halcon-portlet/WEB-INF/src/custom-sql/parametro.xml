@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Parametro.listar">
+		<![CDATA[
+		SELECT parm_IdParametro, parm_IdParametroPadre, parm_ValorMonto1, parm_ValorMonto2, parm_ValorMonto3, parm_Dato1, parm_Dato2, parm_Dato3, parm_Dato4, parm_Num1, parm_Num2, parm_Num3 FROM T_PARAMETRO
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerPadre">
+		<![CDATA[
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_IdParametro = (SELECT TOP 1 
+										p.parm_IdParametroPadre 
+									FROM T_PARAMETRO AS p 
+									WHERE p.parm_IdParametro = ?)
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerHijos">
+		<![CDATA[
+		SELECT parm_IdParametro, parm_IdParametroPadre, parm_ValorMonto1, parm_ValorMonto2, parm_ValorMonto3, parm_Dato1, parm_Dato2, parm_Dato3, parm_Dato4, parm_Num1, parm_Num2, parm_Num3 FROM T_PARAMETRO WHERE parm_IdParametroPadre = ?
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerHijos2">
+		<![CDATA[
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_IdParametroPadre =  ( SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = ? )
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerPorTipo">
+		<![CDATA[
+		SELECT parm_IdParametro, parm_IdParametroPadre, parm_ValorMonto1, parm_ValorMonto2, parm_ValorMonto3, parm_Dato1, parm_Dato2, parm_Dato3, parm_Dato4, parm_Num1, parm_Num2, parm_Num3 FROM T_PARAMETRO WHERE parm_Num2 = ?
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerPorDescripcion">
+		<![CDATA[
+		SELECT parm_IdParametro, parm_IdParametroPadre, parm_ValorMonto1, parm_ValorMonto2, parm_ValorMonto3, parm_Dato1, parm_Dato2, parm_Dato3, parm_Dato4, parm_Num1, parm_Num2, parm_Num3 FROM T_PARAMETRO WHERE parm_IdParametroPadre IS NOT NULL AND parm_Dato1 LIKE ?
+		]]>
+	</sql>
+	<sql id="Parametro.cambiarEstado">
+		<![CDATA[
+		UPDATE T_PARAMETRO SET parm_Num1 = ? WHERE parm_IdParametro = ?
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerListaPadre">
+		<![CDATA[
+		SELECT parm_IdParametro, parm_IdParametroPadre, parm_ValorMonto1, parm_ValorMonto2, parm_ValorMonto3, parm_Dato1, parm_Dato2, parm_Dato3, parm_Dato4, parm_Num1, parm_Num2, parm_Num3 FROM T_PARAMETRO WHERE parm_IdParametroPadre IS NULL
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerRangoValor">
+		<![CDATA[
+		SELECT p2.parm_IdParametro,
+			p2.parm_IdParametroPadre,
+			p2.parm_valorMonto1, 
+			p2.parm_valorMonto2, 
+			p2.parm_valorMonto3, 
+			p2.parm_Dato1,
+			p2.parm_Dato2,
+			p1.parm_Dato3,
+			p2.parm_Dato4,
+			p2.parm_Num1,
+			p2.parm_Num2,
+			p2.parm_Num3
+			FROM T_PARAMETRO AS p1, T_PARAMETRO as p2
+			WHERE p1.parm_Num2 = ? AND 
+			p1.parm_IdParametroPadre IS NULL 
+			AND p2.parm_IdParametroPadre = p1.parm_IdParametro
+		]]>
+	</sql>
+	<sql id="Parametro.validarTipo">
+		<![CDATA[
+		SELECT p1.parm_Num2+ p1.parm_Num3
+		FROM T_PARAMETRO AS p1, T_PARAMETRO as p2
+		WHERE p2.parm_IdParametro = ? AND p1.parm_IdParametroPadre IS NULL 
+		AND p2.parm_IdParametroPadre = p1.parm_IdParametro
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerHijosDos">
+		<![CDATA[
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_Num1 = 1 AND parm_IdParametroPadre = (SELECT TOP 1 
+										p.parm_IdParametroPadre 
+									FROM T_PARAMETRO AS p 
+									WHERE p.parm_IdParametro = ?)
+		ORDER BY parm_Num2;
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerDepartamentos">
+		<![CDATA[
+		SELECT ubig_IdUbigeo
+		      ,ubig_Codigo
+		      ,ubig_Nombre
+		      ,ubig_CodDepartamento
+		      ,ubig_CodProvincia
+		      ,ubig_CodDistrito 
+		FROM T_UBIGEO 
+		WHERE ubig_CodProvincia = '00'
+		ORDER BY ubig_Nombre
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerProvincias">
+		<![CDATA[
+		SELECT ubig_IdUbigeo
+		      ,ubig_Codigo
+		      ,ubig_Nombre
+		      ,ubig_CodDepartamento
+		      ,ubig_CodProvincia
+		      ,ubig_CodDistrito
+		FROM T_UBIGEO 
+		WHERE ubig_CodDistrito = '00' AND ubig_CodProvincia <> '00'
+		ORDER BY ubig_Nombre;
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerDistritos">
+		<![CDATA[
+		SELECT ubig_IdUbigeo
+		      ,ubig_Codigo
+		      ,ubig_Nombre
+		      ,ubig_CodDepartamento
+		      ,ubig_CodProvincia
+		      ,ubig_CodDistrito
+		FROM T_UBIGEO 
+		WHERE ubig_CodDistrito <> '00' AND ubig_CodProvincia <> '00'
+		ORDER BY ubig_Nombre;
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerDistritosLima">
+		<![CDATA[
+		SELECT ubig_IdUbigeo
+		      ,ubig_Codigo
+		      ,ubig_Nombre
+		      ,ubig_CodDepartamento
+		      ,ubig_CodProvincia
+		      ,ubig_CodDistrito
+		FROM T_UBIGEO 
+		WHERE ubig_Codigo IN (?) AND
+			 ubig_CodDistrito <> '00' AND
+			 ubig_CodProvincia <> '00' AND
+			 (ubig_CodDepartamento = '15' OR ubig_CodDepartamento = '07')
+		ORDER BY ubig_Nombre
+		]]>
+	</sql>
+	<sql id="Parametro.obtenerPaises">
+		<![CDATA[
+		SELECT pais_IdPais
+		      ,pais_Codigo
+		      ,pais_Nombre
+		  FROM T_PAIS
+		  ORDER BY pais_Nombre;
+		]]>
+	</sql>
+	<sql id="Parametro.listadoHijosPadresJson">
+		<![CDATA[
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_Num1 = 1 AND parm_IdParametroPadre = ?
+		ORDER BY parm_Num2;
+		]]>
+	</sql>
+	<sql id="Parametro.listadoPadresJson">
+		<![CDATA[
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_IdParametroPadre is null and
+		parm_Num2 = ?;
+		]]>
+	</sql>
+	<sql id="Parametro.insertCabecera">
+		<![CDATA[
+	
+		INSERT INTO T_PARAMETRO (
+			 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3)
+		VALUES (?, ?, ?, ?, ?, ?, ?)
+
+		]]>
+	</sql>
+	<sql id="Parametro.insertDetalle">
+		<![CDATA[
+			INSERT INTO T_PARAMETRO (
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3) 
+		VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+		]]>
+	</sql>
+	
+	<sql id="Parametro.selectIdCabecera">
+		<![CDATA[
+			 select parm_IdParametro from T_PARAMETRO where parm_Dato3=? and parm_Num1 = 1
+		]]>
+	</sql>
+	
+	<sql id="Parametro.countSiebel">
+		<![CDATA[
+			 select count(parm_IdParametro) from T_PARAMETRO where parm_Dato3=? and parm_Num1 = 1
+		]]>
+	</sql>
+</custom-sql>

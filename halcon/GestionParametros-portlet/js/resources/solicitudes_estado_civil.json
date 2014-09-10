@@ -1,0 +1,6 @@
+[{"id":0,"etiqueta":"Seleccione","tool":"tooltip","orden":"0","defecto":"1"},
+{"id":1,"etiqueta":"Soltero","tool":"tooltip","orden":"1","defecto":"0"},
+{"id":2,"etiqueta":"Divorciado","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Conviviente","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Viudo","tool":"tooltip","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"Casado","tool":"tooltip","orden":"5","defecto":"0"}]

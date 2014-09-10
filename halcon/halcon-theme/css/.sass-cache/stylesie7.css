@@ -1,0 +1,363 @@
+@charset "utf-8";
+/* CSS Document */
+/* bloques ofertas  */
+.TC-off {
+  background: url("../images/halcon/bg-cc4.jpg") repeat-y scroll 0 10px transparent;
+  height: 530px;
+  position: absolute;
+  width: 180px !important;
+  z-index: 99; }
+
+.TC-off .elemento {
+  font-size: 11px;
+  padding-top: 1px;
+  text-align: center; }
+
+.TC-detail-prods-gal {
+  background-color: #F5F5F5;
+  color: #919193;
+  position: absolute;
+  width: 760px;
+  z-index: 80;
+  height: 530px; }
+
+.TC-off .list-noIcon .active, .TC-off .list-noIcon a:hover {
+  background: url("../images/halcon/bg-cc3.png") no-repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  height: 32px;
+  width: 180px !important; }
+
+.TC-off .list-noIcon a {
+  background: url("../images/halcon/bg-cc33.jpg") no-repeat scroll 0 0 transparent;
+  color: #939391;
+  display: block;
+  height: 32px;
+  padding: 20px 0 5px;
+  text-align: center;
+  width: 180px !important; }
+
+.TC-off .C-center {
+  font-size: 15px;
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 100px;
+  font-weight: bold; }
+
+/* list cards */
+.TC-detail-prods-gal .TC-gal-det-new {
+  float: left;
+  line-height: 16px !important;
+  padding: 12px 0 21px 32px;
+  width: 344px;
+  border-bottom: solid 1px #ccc;
+  border-right: solid 1px #ccc; }
+
+.nobd-r {
+  border-right: none !important; }
+
+.nobd-b {
+  border-bottom: none !important; }
+
+.h417 {
+  height: 530px; }
+
+.h566 {
+  height: 566px !important; }
+
+.TC-detail-prods-gal .TC-gal-det-new h2 {
+  float: left;
+  line-height: 16px !important;
+  margin: 10px 5px 17px 0px;
+  width: 340px;
+  color: #444444;
+  font-size: 15px;
+  font-weight: bold; }
+
+.TC-detail-prods-gal .TC-gal-det-new a {
+  color: #009ac8;
+  text-decoration: underline; }
+
+/* Paginador Resultados de Busqueda */
+.TC-detail-cont .paginator {
+  padding: 19px 0 25px 2px;
+  background: #FFF;
+  z-index: 99;
+  float: right;
+  width: 100%;
+  text-align: right; }
+
+.TC-detail-cont .paginator p {
+  /*float:left; */
+  margin-right: 15px; }
+
+.TC-detail-cont .paginator .res-dest {
+  margin-right: 5px;
+  color: #0098c3; }
+
+.TC-detail-cont .paginator a {
+  /*float:left; */
+  font-size: 12px;
+  padding: 0 10px 0 0;
+  color: #c7c7c7; }
+
+.TC-detail-cont .paginator li {
+  float: left; }
+
+.TC-detail-cont .paginator a:active, .TC-detail-cont .paginator a.active, .TC-detail-cont .paginator a.btn-pag {
+  color: #009ac8;
+  background: none;
+  width: auto;
+  height: auto; }
+
+.TC-detail-cont .paginator a.active {
+  text-decoration: underline; }
+
+.TC-gal-det-new .list-cards-IV {
+  float: left;
+  margin: 0 0 10px 20px;
+  width: 170px;
+  padding-top: 10px; }
+
+.TC-gal-det-new .list-cards-IV ul {
+  margin: 0 0 15px 0; }
+
+.TC-gal-det-new .list-cards-IV a {
+  color: #0098C3;
+  text-decoration: underline; }
+
+.im-sp {
+  width: 140px;
+  height: 100px;
+  float: left; }
+
+.sp_cal .previous, .sp_cal .next {
+  border: 1px solid #CCCCCC;
+  float: left;
+  height: 20px;
+  width: 20px; }
+
+.sp_cal .previous, .sp_cal .next {
+  height: 17px !important; }
+
+.calendar-title .titleMonth {
+  width: 69px !important; }
+
+.sp_cal .calendar-controls {
+  width: 174px; }
+
+.sp_cal {
+  background: #FFFFFF;
+  border: 1px solid #C7C7C7;
+  color: #222222;
+  left: 142px;
+  position: absolute;
+  top: 0;
+  width: 172px;
+  overflow: hidden; }
+
+.calendar-title .titleYear {
+  padding: 0 9px 0 0;
+  text-align: right;
+  width: 38px; }
+
+.calendar-title .titleMonth {
+  text-align: center;
+  width: 74px; }
+
+.resul-busqueda h2 {
+  color: #f78f1e !important;
+  float: left;
+  width: 513px !important;
+  font-size: 15px !important;
+  margin: 0 !important;
+  line-height: 16px; }
+
+.optiongroup, .optiongroup2 {
+  display: inline !important;
+  background: url(../images/halcon/bg-op-v.jpg) 0px 0px;
+  border-radius: 2px 2px 2px 2px; }
+
+.pas-vehicular .trform-pr .anch {
+  width: 330px !important; }
+
+.porlet-right-hp .feature-hp .sec-feature {
+  width: 381px;
+  float: left;
+  margin: 0 2px 0 0;
+  height: 290px;
+  padding: 0 0 0 18px;
+  background: #FFFFFFF; }
+
+.header .float {
+  margin-left: -90px !important; }
+
+.sldexe .bgsldeje .ttcom {
+  display: none;
+  height: 110px;
+  margin: 57px 0 0 -73px;
+  position: absolute;
+  width: 140px;
+  z-index: 50; }
+
+a.antes {
+  background: url(../img/slider_exe.gif) left top no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 115px 0 0 11px; }
+
+a.despues {
+  background: url(../img/slider_exe.gif) -22px top no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 115px 11px 0 0; }
+
+.staff-dp {
+  left: 0;
+  margin: 6px auto 6px 44px !important;
+  position: absolute;
+  top: 0;
+  width: 850px; }
+
+.sldexe p {
+  margin: 0 auto 18px auto;
+  width: 850px; }
+
+.mg13 {
+  color: #919195 !important;
+  font-size: 12px;
+  margin: 13px 0 33px 0;
+  width: 320px; }
+
+.error-dialog p {
+  font-size: 12px;
+  text-align: justify;
+  width: 320px;
+  float: left; }
+
+.error-dialog h2 {
+  color: #009B3A !important;
+  font-size: 22px !important;
+  margin: 0 0 5px !important;
+  padding-top: 75px;
+  width: 320px;
+  float: left; }
+
+a.antes {
+  background: url("../images/halcon/slider_exe.gif") no-repeat scroll left top transparent;
+  height: 20px;
+  left: 0;
+  margin: 115px 0 0 -27px;
+  position: absolute;
+  top: 0;
+  width: 20px; }
+
+a.despues {
+  background: url("../images/halcon/slider_exe.gif") no-repeat scroll -22px top transparent;
+  height: 20px;
+  margin: 115px -32px 0 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px; }
+
+#content-medio .inform .tabla-denuncia .cajastxt {
+  width: 119px;
+  height: auto;
+  float: left;
+  margin: 0 14px 7px 0; }
+
+#content-medio .inform .tabla-denuncia .cajastxt .txt-s {
+  width: 109px;
+  height: 28px;
+  border: 1px solid #c7c7c7;
+  background: #fafafa;
+  margin: 0 0 7px 0;
+  color: #919195;
+  padding: 5px;
+  overflow: hidden; }
+
+.sidebar .tarjetas-credito-ann h2 {
+  width: 272px;
+  margin: 8px auto 5px auto; }
+
+.sidebar .tarjetas-credito-ann em.ico-warning {
+  background: url(../images/halcon/sprite-preguntas-frecuentes.png) no-repeat 1px -341px;
+  height: 25px;
+  margin: 4px 10px 2px 41px;
+  float: left; }
+
+/*ESTO ES NUEVO 29/04/2013*/
+.gallery .holder {
+  max-width: 312px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  height: 249px !important; }
+
+/*10/05/2013*/
+.sldexe .bgsldeje .ttcom .comment {
+  background: url("../images/halcon/labeltxt_02.gif") no-repeat left top;
+  overflow: hidden;
+  text-align: left !important;
+  height: 87px;
+  padding: 7px 3px 10px 5px;
+  margin-top: 0px !important; }
+
+.pie-contactanos .footer-logo {
+  background: url("../images/halcon/logo-footer.png") repeat scroll 0 0 transparent;
+  height: 24px;
+  margin: 65px 0 0 20px;
+  width: 127px; }
+
+.pie .descarga-app .mg2 {
+  float: right;
+  margin: 0 29px 0 10px; }
+
+.imgslide3 .holder {
+  height: 285px !important; }
+
+.profile .content-slider .contentText {
+  float: right;
+  margin-right: 10px; }
+
+.descargas-CV .descargas {
+  margin-left: -5px; }
+
+.profile .content .body {
+  width: 303px; }
+
+.error-dialog {
+  color: #090;
+  height: auto;
+  margin-bottom: 35px; }
+
+.porlet-left-hp li {
+  position: relative;
+  display: block;
+  height: 30px;
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important; }
+
+.dos-lineas-op {
+  line-height: 13px !important; }
+
+.social-media-recomendar iframe {
+  position: absolute;
+  z-index: 100; }
+
+.sidebar {
+  display: block;
+  overflow: hidden;
+  float: none !important; }
+
+.subtitulo .social-media {
+  display: block;
+  overflow: visible; }
+

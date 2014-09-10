@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="LogErrores.insertar">
+		<![CDATA[
+	INSERT INTO T_ERROR_LOG (
+	erlg_MensajeError, 
+	erlg_Parametros, 
+	erlg_IdSessionVisitante, 
+	erlg_TipoNumDoc, 
+	erlg_IP, 
+	erlg_FechaHoraError, 
+	erlg_TrazaError, 
+	erlg_PaginasHijas 
+	)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+		]]>
+	</sql>
+</custom-sql>

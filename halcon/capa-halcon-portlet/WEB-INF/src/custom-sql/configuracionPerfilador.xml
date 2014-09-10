@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="ConfiguracionPerfilador.obtenerRangoValor">
+		<![CDATA[
+		  	SELECT cfpf_IdConfiguracionPerfilador
+			  FROM 
+			  	T_CONFIGURACION_PERFILADOR
+			  WHERE 
+			  	cfpf_CodigoVariablePadre = ?
+			  	AND (? between cfpf_Valor1 and cfpf_Valor2)
+		]]>
+	</sql>
+</custom-sql>

@@ -1,0 +1,40 @@
+<header id="banner" role="banner">
+#if($theme_display.getLayout().getFriendlyURL()=="/personas")  
+	<a href="https://plus.google.com/u/0/+interbank" rel="publisher" />
+#end
+	<div class="header">
+	        <div class="logo">
+		        <a href="$custom_url_home" title="Interbank - el tiempo vale mas que el dinero">
+		            <img src="/halcon-theme/images/halcon/logo.jpg" alt="Interbank"/>
+		        </a>
+		    </div>
+	    
+	    <div class="opciones">
+          <ul>
+          	<li><a href="/servicio-al-cliente" title="Servicio al cliente Interbank" >Servicio al cliente</a>|</li>
+            <li><a href="/promociones" title="Promociones" >Promociones</a>|</li>
+            <li><a href="/contactanos" title="Cont&aacute;ctanos" >Cont&aacute;ctanos</a>|</li>
+            <li><a href="/mapa-del-sitio" title="Mapa de Sitio Interbank" >Mapa del Sitio</a></li>
+          </ul>
+         </div>
+	    
+	    <div id="socials">
+ 			<ul>
+                <li><a href="http://www.facebook.com/InterbankPeru" title="Interbank en Facebook" class="soc-fb" target="_blank">Interbank en Facebook</a></li>
+                <li><a href="http://twitter.com/interbank" title="Interbank en Twitter" class="soc-twitter" target="_blank">Interbank en Twitter</a></li>
+                <li><a href="http://www.youtube.com/user/InterbankDigital" title="Interbank en Youtube" class="soc-youtb" target="_blank">Interbank en Youtube</a></li>
+            </ul>
+ 		</div>
+
+ 		<a href="javascript:Abrir_ventana('$url_banca')" class="btn-operaciones" title="Ingresa aqu&iacute; para hacer tus operaciones en el portal Interbank" onClick="_gaq.push(['_trackEvent', 'BPI', '$nombre_banca_ga','Boton Permanente']);">
+        	<span>Ingresa aqu&iacute; para hacer tus operaciones</span>
+        </a>
+ 		
+ 		##El menu de navegacion
+ 		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</div>
+	
+	<br class="both">
+</header>

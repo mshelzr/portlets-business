@@ -1,0 +1,5 @@
+[{"id":1,"etiqueta":"30 dias","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"90 dias","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"180 dias","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"360 dias","tool":"tooltip","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"720 dias","tool":"tooltip","orden":"5","defecto":"0"}]

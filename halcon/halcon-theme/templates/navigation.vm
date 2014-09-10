@@ -1,0 +1,114 @@
+<nav class="$nav_css_class" id="navigation">
+	## Menu primer nivel
+	<div class="menu">
+        <!-- Buscador -->
+	    <div class="buscador">
+	 		<input id="search" name="search" type="text" placeholder="Buscador" class="buscador-box textform" />
+	 		<input name="search-button" type="button" class="buscador-btn" />
+	 	</div>
+	
+#set($personaSelected = 0)
+#set($pequenaEmpresaSelected = 0)
+#set($empresaSelected = 0)
+#set($corporativoSelected = 0)
+#set($institucionalSelected = 0)
+#set($otherSelected = 0)
+##Se incluye la clase adicional del home personas para el menu de segundo nivel
+#set($class_nivel_2="")
+
+##Se identificara la pagina que esta seleccionada actualmente para pintarla
+#foreach ($nav_item in $nav_items)
+		##Cuerpo del menu elegimos que pestaña esta seleccionada
+		#if($nav_item.isSelected() && $velocityCount == 1)
+			#set($personaSelected = 1)
+			#set($class_nivel_2="homepersonas")
+		#else 
+			#if($nav_item.isSelected() && $velocityCount == 2)
+				#set($pequenaEmpresaSelected = 1)
+			#else 
+				#if($nav_item.isSelected() && $velocityCount == 3)
+					#set($empresaSelected = 1)
+				#else 
+					#if($nav_item.isSelected() && $velocityCount == 4)
+						#set($corporativoSelected = 1)
+					#else 
+						#if($nav_item.isSelected() && $velocityCount == 5)
+							#set($institucionalSelected = 1)
+						#else
+						    #if($nav_item.isSelected() && $velocityCount > 5)
+						    	#set($otherSelected=1)
+						    	#set($class_nivel_2="homepersonas")
+    						#end
+						#end
+					#end
+				#end
+			#end
+		#end
+		
+#end
+
+#foreach ($nav_item in $nav_items)
+	<!-- Menu primer nivel-->
+	#if($personaSelected == 1)
+		##Personas seleccionado, solo pinta dos paginas
+		#parse ("$full_templates_path/nivel1/page_personas.vm")		
+	#else
+		##Puequeñas empresas seleccionado
+		#if($pequenaEmpresaSelected == 1)
+			#parse ("$full_templates_path/nivel1/page_pequenas_empresas.vm")
+		#else
+			##Empresas seleccionado 
+			#if($empresaSelected == 1)
+				#parse ("$full_templates_path/nivel1/page_empresas.vm")
+			#else
+				##Corporativo seleccionado  
+				#if($corporativoSelected == 1)
+					#parse ("$full_templates_path/nivel1/page_corporativo.vm")
+				#else
+					##Institucional seleccionado  
+					#if($institucionalSelected == 1)
+						#parse ("$full_templates_path/nivel1/page_institucional.vm")
+					#else
+					    #if($otherSelected == 1)
+						   #parse ("$full_templates_path/nivel1/page_personas.vm")	
+						#end
+					#end
+				#end
+			#end
+		#end		
+	#end
+	
+	##Cerramos el menu primer nivel cuando sea el ultimo
+	#if($velocityCount == $nav_items.size())
+	</div>
+	<br class="both" />
+	#end
+#end
+
+	##Menu segundo nivel
+	<!-- Opciones 2do nivel Menu principal -->
+	#if($otherSelected == 1)
+			<div class="menu-drop">	
+			#foreach ($nav_item in $nav_items)
+				#if ($nav_item.hasChildren() && $velocityCount == 1)
+					#foreach ($nav_child in $nav_item.getChildren())
+						<!--Menu segundo nivel  -->
+						#parse ("$full_templates_path/nivel2/caso0.vm")
+					#end
+				#end
+			#end
+			</div>		
+	#else
+			<div class="menu-drop">	
+			#foreach ($nav_item in $nav_items)
+				#if ($nav_item.hasChildren() && $nav_item.isSelected())
+					#foreach ($nav_child in $nav_item.getChildren())
+						<!--Menu segundo nivel  -->
+						#parse ("$full_templates_path/nivel2/caso0.vm")
+					#end
+				#end
+			#end
+			</div>
+	#end
+	
+</nav>

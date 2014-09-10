@@ -1,0 +1,147 @@
+#*
+This file allows you to override and define new Velocity variables.
+*#
+
+##Seteamos los css para IE
+#set ($css_halcon_ie6 = "$css_folder/stylesie6.css")
+#set ($css_halcon_ie7 = "$css_folder/stylesie7.css")
+#set ($css_halcon_ie6_galeria = "$css_folder/galeriaie6.css")
+#set ($css_halcon_ie7_galeria = "$css_folder/galeriaie7.css")
+
+##Seteamos los JS del portal
+#set ($js_halcon_ie7 = "$javascript_folder/halcon/DD_belatedPNG_0.0.8a-min.js")
+#set ($js_halcon_seguridad = "$javascript_folder/halcon/bordersin.js")
+
+##Seteamos la ruta del home segun el caso
+#set ($custom_url_home= "/personas")
+##if($layout.getFriendlyURL()=="/personas" || $layout.getFriendlyURL() == "/header" || $layout.getFriendlyURL() == "/footer")
+##set ($custom_url_home= "/personas")
+##end
+##foreach($ancestor in $layout.getAncestors())
+		##if($ancestor.getFriendlyURL()=="/personas" || $ancestor.getFriendlyURL() == "/header" || $ancestor.getFriendlyURL() == "/footer")
+			##set ($custom_url_home= "/personas")
+		##end	
+##end
+
+
+##Seteamos la descripción para google analitycs segun tipo de banca
+#set ($nombre_banca_ga= "default")
+#if($layout.getFriendlyURL()=="/personas")
+	#set ($nombre_banca_ga= "BPI Personas")
+#else 
+    #if($layout.getFriendlyURL()=="/pequena-empresa")
+	  #set ($nombre_banca_ga= "BPI Pequena Empresa")
+    #else 
+	    #if($layout.getFriendlyURL()=="/empresas")
+	      #set ($nombre_banca_ga= "BPI Empresas")
+        #else 
+		    #if($layout.getFriendlyURL()=="/corporativo")
+	          #set ($nombre_banca_ga= "BPI Corporativo")
+            #else 
+			    #if($layout.getFriendlyURL()=="/institucional")
+	              #set ($nombre_banca_ga= "BPI Institucional")
+                #end
+            #end
+		#end
+    #end
+#end
+
+#if($nombre_banca_ga=="default")
+	#foreach($antesesores in $layout.getAncestors())
+			#if($antesesores.getFriendlyURL()=="/personas" || $antesesores.getFriendlyURL() == "/header" || $antesesores.getFriendlyURL() == "/footer")
+				#set ($nombre_banca_ga= "BPI Personas")
+			#else 
+	    		#if($antesesores.getFriendlyURL()=="/pequena-empresa")
+		  		   #set ($nombre_banca_ga= "BPI Pequena Empresa")
+	    		#else 
+		    		#if($antesesores.getFriendlyURL()=="/empresas")
+		      		   #set ($nombre_banca_ga= "BPI Empresas")
+	        		#else 
+			           #if($antesesores.getFriendlyURL()=="/corporativo")
+		          		#set ($nombre_banca_ga= "BPI Corporativo")
+	            		    #else 
+				    	#if($antesesores.getFriendlyURL()=="/institucional")
+		              	  #set ($nombre_banca_ga= "BPI Institucional")
+	                		#end
+	            		    #end
+				#end
+	    		     #end
+			#end
+		
+	#end
+#end
+
+##Seteamos el caracter que simulara al espacio en blanco html
+#set($br_space=";")
+
+#set($paginaServicioCliente="/servicio-al-cliente") 
+#set($paginaCanalesElectronicos="/canales-electronicos")
+#set($paginaBancaporInternet="/banca-por-internet")
+
+
+##Seteamos la ruta del Banca
+#set($url_banca_per= "https://www.netinterbank.com.pe/web-interbank/interbanking/newWelcome.jsp")
+#set($url_banca_bpe= "https://www.netactiva24.com/peqempresas/menu_der.asp")
+#set($url_banca_emp= "https://bpiemp.netinterbank.com.pe/emp-interbank1/interbanking/proxim?org=true")
+#set($url_banca_cor= "https://bpiemp.netinterbank.com.pe/emp-interbank1/interbanking/proxim?org=true")
+#set($url_banca_ins= "https://bpiemp.netinterbank.com.pe/emp-interbank1/interbanking/proxim?org=true")
+
+#set($url_banca= "")
+
+##Asignado a personas
+#if($layout.getFriendlyURL()=="/personas" || $layout.getFriendlyURL() == "/header" || $layout.getFriendlyURL() == "/footer")
+	#set($url_banca= $url_banca_per)
+#else
+	#if($layout.getFriendlyURL()=="/pequena-empresa")
+		#set($url_banca= $url_banca_bpe)
+	#else
+		#if($layout.getFriendlyURL()=="/empresas")
+			#set($url_banca= $url_banca_emp)
+		#else
+			#if($layout.getFriendlyURL()=="/corporativo")
+				#set($url_banca= $url_banca_cor)
+			#else
+				#if($layout.getFriendlyURL()=="/institucional")
+					#set($url_banca= $url_banca_ins)
+				#end
+			#end
+		#end
+	#end
+#end
+
+#foreach($ancestor in $layout.getAncestors())
+		#if($ancestor.getFriendlyURL()=="/personas" || $ancestor.getFriendlyURL() == "/header" || $ancestor.getFriendlyURL() == "/footer")
+			#set($url_banca= $url_banca_per)
+		#else
+		  #if($ancestor.getFriendlyURL()=="/pequena-empresa")
+		  	#set($url_banca= $url_banca_bpe)
+		  #else
+		  	  #if($ancestor.getFriendlyURL()=="/empresas")
+			  	#set($url_banca= $url_banca_emp)
+			  #else
+			      #if($ancestor.getFriendlyURL()=="/corporativo")
+				  	#set($url_banca= $url_banca_cor)
+				  #else
+				     #if($ancestor.getFriendlyURL()=="/institucional")
+					  	#set($url_banca= $url_banca_ins)					  
+					  #end
+				  #end
+			  #end
+		  #end
+		#end	
+#end
+
+#macro( urlVerdadera $navActual )
+  #set($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+  #set($paginaActual=$navActual.getLayout())
+  
+  #if($paginaActual.isTypeLinkToLayout())
+  	 
+  	 #set($idPaginaVerdadera=$paginaActual.getLayoutType().getTypeSettingsProperty("linkToLayoutId"))
+  	 #set($pagina=$layoutLocalService.getLayout($getterUtil.getLong($paginaActual.getGroupId()), $getterUtil.getBoolean("false"), $getterUtil.getLong($idPaginaVerdadera)))
+  	 $pagina.getFriendlyURL()
+  	 
+  #else
+     $navActual.getURL()
+  #end
+#end

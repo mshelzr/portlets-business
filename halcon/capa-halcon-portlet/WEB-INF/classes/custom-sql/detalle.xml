@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Detalle.listar">
+		<![CDATA[
+		SELECT CODDETALLE, CODFACTURA, DETALLE FROM DETALLE
+		]]>
+	</sql>
+	<sql id="Detalle.insertarDetalle">
+		<![CDATA[
+		INSERT INTO DETALLE (CODFACTURA, DETALLE) VALUES (?, ?)
+		]]>
+	</sql>
+</custom-sql>

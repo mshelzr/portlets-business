@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.ext.portlet.pin.service.CategoriaLocalService" class="com.ext.portlet.pin.service.impl.CategoriaLocalServiceImpl" />
+	<bean id="com.ext.portlet.pin.service.CategoriaService" class="com.ext.portlet.pin.service.impl.CategoriaServiceImpl" />
+	<bean id="com.ext.portlet.pin.service.persistence.CategoriaPersistence" class="com.ext.portlet.pin.service.persistence.CategoriaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="pinDataSource" />
+		<property name="sessionFactory" ref="pinSessionFactory" />
+	</bean>
+	<bean id="com.ext.portlet.pin.service.PersonaLocalService" class="com.ext.portlet.pin.service.impl.PersonaLocalServiceImpl" />
+	<bean id="com.ext.portlet.pin.service.PersonaService" class="com.ext.portlet.pin.service.impl.PersonaServiceImpl" />
+	<bean id="com.ext.portlet.pin.service.persistence.PersonaPersistence" class="com.ext.portlet.pin.service.persistence.PersonaPersistenceImpl" parent="basePersistence">
+		<property name="dataSource" ref="pinDataSource" />
+		<property name="sessionFactory" ref="pinSessionFactory" />
+	</bean>
+</beans>

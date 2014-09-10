@@ -1,0 +1,8 @@
+[{"id":0,"etiqueta":"Seleccione","tool":"tooltip 1","orden":"0","defecto":"1"},
+{"id":1,"etiqueta":"Cuidado Personal","tool":"tooltip 1","orden":"1","defecto":"0"},
+{"id":2,"etiqueta":"Detalles y regalos","tool":"tooltip 2","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Hogar y otros","tool":"tooltip 2","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Restaurantes","tool":"tooltip 11","orden":"4","defecto":"0"},
+{"id":5,"etiqueta":"Educación","tool":"tooltip 2","orden":"5","defecto":"0"},
+{"id":6,"etiqueta":"Hoteles y viajes","tool":"tooltip 2","orden":"6","defecto":"0"},
+{"id":7,"etiqueta":"Ropa y calzado","tool":"tooltip 2","orden":"7","defecto":"0"}]

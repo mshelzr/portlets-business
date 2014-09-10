@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="CargaTienda.truncate">
+		<![CDATA[
+		delete from T_CARGA_TIENDA
+		]]>
+	</sql>
+	
+	<sql id="CargaTienda.insert">
+		<![CDATA[
+		INSERT INTO T_CARGA_TIENDA
+           (cati_IdCanal
+           ,cati_IdDistrito
+           ,cati_Latitud
+           ,cati_Longitud
+           ,cati_Direccion
+           ,cati_Horario
+           ,cati_IdLocacion
+           ,cati_Locacion
+           ,cati_EmailCom
+           ,cati_Telefono)
+     VALUES
+           (?,?,?,?,?,?,?,?,?,?)
+		]]>
+	</sql>
+	
+	
+	
+	
+</custom-sql>
+	

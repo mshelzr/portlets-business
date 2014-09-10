@@ -1,0 +1,408 @@
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import url(galeria.css);
+@import url(styles.css);
+@import url(slimpicker.css);
+
+
+
+
+portlet-borderless-container{z-index:100;}
+.fbpdl{ z-index:1000 !important;} 
+
+/*A partir de aca poner los parches propios del portal*/
+/*Julio Hurtado*/
+
+.social-media .social-media-tweet {
+	background:none;
+}
+.social-media .social-media-recomendar {
+	background:none;
+	z-index:100; 
+	display:block; overflow:visible;
+}
+
+.twtr-widget .twtr-tweet-wrap {
+    border: 0 none !important;
+    height: 30px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 385px !important;
+}
+
+.dropdown2 {
+    background: url("../images/halcon/dropdown.jpg") no-repeat scroll right top #FFFFFF;
+    border: 1px solid #C7C7C7;
+    color: #9F9FA2;
+    cursor: pointer;
+    font-size: 11px;
+    line-height: 26px;
+}
+.dropdown2 div{
+  margin-left: 5px;
+}
+
+div.droplist{
+  line-height: 26px;
+  font-size: 11px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+div.droplist li {
+   /*width: 177px;*/
+    background: none repeat scroll 0 0 #FAFAFA !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+    color: #9F9FA2;
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px !important;
+    list-style: none outside none;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.imagnPeque {
+	height: 75px;
+	width: 75px;
+} 
+ 
+.content-general2 .dest_2 ul li a{ 
+	color: #919195;
+    text-decoration: none;
+ }	
+.content-general2 .dest_2 ul li a:hover {
+	text-decoration:underline;
+	color:#f78f1e;
+}
+
+/*Parches HTML*/
+/*A partir de aca poner los parches propios del portal*/
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+}
+ol, ul {
+	list-style: none outside none;
+}
+.header .buscador-box {
+	background-image: none !important;
+}
+
+
+.bluebtn-cont .boton-form3 {
+	background:url(../images/halcon/btn2.png) no-repeat top left !important;
+	border: 0 none !important;
+	color: #FFFFFF !important;
+	font-family: Trebuchet Ms !important;
+	font-size: 12px;
+	font-weight: normal !important;
+	height: 33px !important;
+	line-height: 30px;
+	width: 112px !important; text-shadow:none !important;
+}
+
+.bluebtn-cont .boton-form3:hover {
+    background: url("../images/halcon/btn2.png") no-repeat scroll left top transparent !important;
+    border: 0 none !important;
+    color: #FFFFFF !important;
+    font-family: Trebuchet Ms !important;
+    font-size: 12px;
+    font-weight: normal;
+    height: 33px !important;
+    line-height: 30px;
+    width: 112px !important; text-shadow:none !important;
+}
+.bluebtn-cont .boton-form2 {
+	background:url(../images/halcon/btn3.png) no-repeat top left !important;
+	border: 0 none !important;
+	color: #FFFFFF !important;
+	font-family: Trebuchet ms !important;
+	font-size: 12px;
+	font-weight: normal  !important ;
+	height: 33px !important;
+	line-height: 30px;
+	width: 133px !important; text-shadow:none !important;
+}
+.bluebtn-cont .boton-form2:hover {
+	background:url(../images/halcon/btn3.png) no-repeat top left !important;
+	border: 0 none !important;
+	color: #FFFFFF !important;
+	font-family: Trebuchet ms !important;
+	font-size: 12px;
+	font-weight: normal  !important ;
+	height: 33px !important;
+	line-height: 30px;
+	width: 133px !important; text-shadow:none !important;
+}
+.baner {
+	width: 305px;
+	height: 216px;
+}
+.LVPI_element .LVPI_img {
+	height: 89px;
+	width: 147px;
+}
+
+.trfrm .btnform {
+	background: url("../images/halcon/faq-busca.jpg") no-repeat scroll left top transparent !important;
+	border: 0 none !important;
+	cursor: pointer;
+	float: left;
+	height: 28px;
+	width: 32px;
+	border-radius: 0 0 0 0 !important;
+}
+.form-socio .btnform {
+	background: url("../images/halcon/faq-busca.jpg") no-repeat scroll left top transparent !important;
+	border: 0 none !important;
+	cursor: pointer;
+	float: left;
+	height: 28px;
+	width: 31px;
+	border-radius: 0 0 0 0 !important;
+}
+.trform-re .btn-regalo {
+    background: url("../images/halcon/btn-regalo.jpg") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    height: 66px;
+    width: 133px;
+}
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover{
+	background:transparent;
+	border-color:none;
+	color:none;
+}
+ul ul {
+    list-style-type: none;
+}
+/* .boton-form2:hover {background:url(../images/halcon/btn3.png) no-repeat top left !important;}	 */
+/*.boton-form3:hover {background:url(../images/halcon/btn3.png) no-repeat top left !important;}*/	
+input.btnform4[type="submit"], input.btnform4[type="button"], input.btnform4[type="reset"]:hover, button.btnform4, .btnform4,
+input.btnform4[type="submit"]:hover, input.btnform4[type="button"]:hover, input.btnform4[type="reset"]:hover, button.btnform4:hover, .btnform4:hover {
+	background:url(../images/halcon/btn4.png) no-repeat top left;
+	border: 0 none;
+	color: #FFFFFF;
+	font-family: Trebuchet ms;
+	font-size: 12px;
+	font-weight: normal;
+	height: 33px;
+	line-height: 30px;
+	width: 63px;
+	border-radius: 0 0 0 0 !important;
+}
+input[type="text"], input[type="password"], input[type="file"], input[type="submit"], input[type="button"], input[type="reset"], select, textarea, .textarea, button, .aui-field-input-text .textform, .aui-field-input-text .textform1 {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #C7C7C7;
+    color: #9F9FA2;
+    float: left;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 5px !important;
+    text-shadow:none !important;
+}
+input[type="text"].buscador-btn, input[type="password"].buscador-btn, input[type="file"].buscador-btn, input[type="submit"].buscador-btn, input[type="button"].buscador-btn, input[type="reset"].buscador-btn, select .buscador-btn, textarea .buscador-btn, .textarea.buscador-btn, button.buscador-btn, .aui-field-input-text .buscador-btn{
+	 background:url(../images/halcon/search-btn.png) no-repeat scroll 0 0 transparent;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 28px !important;
+    width: 28px;
+	border-radius: 0 5px 5px 0 !important;
+}
+
+input.buscador-box[type="text"], input.buscador-box[type="password"], input.buscador-box[type="file"], input.buscador-box[type="submit"], input.buscador-box[type="button"], input.buscador-box[type="reset"], select, textarea.buscador-box, .textarea.buscador-box, button.buscador-box, .aui-field-input-text .buscador-box, input.buscador-box[type="text"]:hover, input.buscador-box[type="password"]:hover, input.buscador-box[type="file"]:hover, input.buscador-box[type="submit"]:hover, input.buscador-box[type="button"]:hover, input.buscador-box[type="reset"]:hover, select.buscador-box:hover, textarea.buscador-box:hover, .textarea.buscador-box:hover, button.buscador-box:hover, .aui-field-input-text:hover .buscador-box:hover {
+    background: none repeat scroll 0 0 #FAFAFA;
+    border: 1px solid #C7C7C7;
+    color: #9F9FA2;
+    float: left;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 24px !important;
+    line-height: 26px;
+    padding: 0 5px !important;
+}
+
+
+input.btnform[type="text"], input.btnform[type="password"], input.btnform[type="file"], input.btnform[type="submit"], input.btnform[type="button"], input.btnform[type="reset"], select.btnform, textarea.btnform, .textarea .btnform, button.btnform, .aui-field-input-text .btnform {
+    background: url("../images/halcon/faq-busca.jpg") no-repeat scroll left top transparent;
+    border: 0 none !important;
+	    cursor: pointer; 
+    height: 28px !important;
+    width: 32px !important;   
+    color: #9F9FA2;
+    float: left;
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 12px;   
+    line-height: 26px;
+    padding: 0 !important;
+    text-shadow: none !important;
+	border-radius:0 0 0 0 !important;
+}
+
+
+input.txtfrm[type="text"], input.txtfrm[type="password"], input.txtfrm[type="file"], input.txtfrm[type="submit"], input.txtfrm[type="button"], input.txtfrm[type="reset"], select.txtfrm, textarea.txtfrm, .textarea .txtfrm, button.txtfrm, .aui-field-input-text .txtfrm {
+	border: 1px solid #CACACA !important;
+	color: #919195 !important;
+	float: left;
+	font-size: 12px;
+	height: 16px !important;
+	width: 571px !important;
+	background: none repeat scroll 0 0 #FAFAFA;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding: 0 5px !important;
+	text-shadow: none !important;
+}
+
+/*INICIO Estilos tabla preguntas frecuentes*/
+
+.pf-productos table {
+	width:100%;
+}
+.pf-productos table td {
+	vertical-align:middle;
+	padding: 10px 0 10px 20px;
+}
+.pf-productos table .borde-btm {
+	border-bottom:1px solid #e5e5e5;
+}
+.pf-productos table p {
+	 margin: 0 !important;
+	color:#919195;
+	text-align:left;
+	line-height: 14px !important;
+	width:auto !important;
+}
+.pf-productos table .titularbg {
+	background:#00a950;
+}
+.pf-productos table .titulares {
+	font-size:11px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.pf-productos table .subtitulobg {
+	background:#05be62;
+}
+.pf-productos table .subtitulo {
+	font-size:12px;
+	color:#FFFFFF;
+	font-weight:normal;
+}
+.fs11 {
+    font-size: 11px !important;
+}
+
+.fs10 {
+    font-size: 10px !important;
+}
+.nota-al-pie {
+    color: #919195;
+    font-weight: normal !important;
+    padding: 8px 5px;
+}
+ .nota-al-pie .nota2 {
+    float: right;
+    margin: 0 62px 0 0;
+}
+
+ .nota-al-pie .nota1 {
+    float: left;
+}
+
+/*FIN Estilos tablas preguntas frecuentes*/
+
+
+.portlet-body iframe{
+	overflow-y: hidden !important;
+	overflow-x: hidden !important;
+}
+
+.textdropdown{
+	width:50px ;
+}
+
+.padt15{ 
+	padding-top:15px !important;
+}
+
+.parentFrom{
+  	position: relative;
+  	height: 692px;
+}
+  
+.parentFrom .childfrm{
+  	position:absolute;
+  	top:0;
+  	left:0;
+}
+  
+.parentFrom .frm1{
+  	z-index: 4;
+}
+      
+.parentFrom .frm2{
+  	z-index: 3;
+}
+  
+.parentFrom .frm3{
+  	z-index: 2;
+}
+  
+.parentFrom .frm4{
+    z-index: 1;
+}
+  
+.parentFrom .frm2, .parentFrom .frm3, .parentFrom .frm4{  	
+  	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;  	
+}
+
+.sol#content-medio {
+	padding:0 !important;
+	
+}
+
+.bluebtn-cont .boton-form33 {
+    background: url("../images/halcon/btn2.png") no-repeat scroll left top transparent !important;
+    border: 0 none !important;
+    color: #FFFFFF;
+    font-family: Trebuchet Ms !important;
+    font-size: 12px;
+    font-weight: normal;
+    height: 33px !important;
+    line-height: 30px;
+    width: 90px !important;
+}
+
+
+.ie6 input.file.upload-hide{
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	filter: alpha(opacity=75);
+	font-family: Trebuchet Ms !important;
+	background-color:transparent none !important;
+	background: transparent none !important;
+	color:#9f9fa2;
+	padding: 0;
+	height: 28px;
+}
+
+.ie6 input.submit.btn-load{
+	border: 0;
+	background:#003fa8 url("../images/halcon/cargar_arch.jpg") no-repeat;
+	color:#003fa8;
+	line-height:1px;
+	width:109px;
+	height:28px;
+	margin:0 0 0 15px;
+	cursor:pointer;
+	text-indent:-900px; 
+	display:block;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Contacto.obtenerSolicitudCount">
+		<![CDATA[
+		select count(*) from 
+		t_solicitud_contacto sc
+		where 
+		(sc.slct_Fecha BETWEEN ISNULL( convert(datetime, ?, 120), (select min(slct_Fecha) from t_solicitud_contacto) ) AND ISNULL( convert(datetime, ?, 120),  (select max(slct_Fecha) from t_solicitud_contacto)  ) )
+		]]>
+	</sql>
+	<sql id="Contacto.obtenerSolicitud">
+		<![CDATA[	
+		select  
+		sc.slct_IdSolicitudContacto,
+		sc.slct_EsCliente,
+		sc.slct_Nombres,
+		sc.slct_Apellidos,
+		sc.slct_Email,
+		sc.slct_TipoDocumento,
+		sc.slct_Ndocumento,
+		sc.slct_Direccion,
+		sc.slct_Departamento,
+		sc.slct_Provincia,
+		sc.slct_Distrito,
+		sc.slct_Telefono,
+		sc.slct_Fecha,
+		sc.slct_Mensaje,
+		sc.slct_Moneda,
+		sc.slct_Importe,
+		sc.slct_TipoMensaje,
+		sc.slct_TipoTema
+		from 
+		t_solicitud_contacto sc
+		where 
+		(sc.slct_Fecha BETWEEN ISNULL( convert(datetime, ?, 120), (select min(slct_Fecha) from t_solicitud_contacto) ) AND ISNULL( convert(datetime, ?, 120),  (select max(slct_Fecha) from t_solicitud_contacto)  ) )
+		ORDER BY sc.slct_Fecha DESC
+		]]>
+	</sql>
+</custom-sql>

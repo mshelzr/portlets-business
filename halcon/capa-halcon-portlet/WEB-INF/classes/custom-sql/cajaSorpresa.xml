@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="CajaSorpresa.insert">
+		<![CDATA[
+		INSERT INTO T_AUDITORIA_CAJA_SORPRESA 
+		(aucs_IdTransaccion, 
+		aucs_TipoDocumento, 
+		aucs_NumDocumento, 
+		aucs_Producto1, 
+		aucs_Producto2, 
+		aucs_Producto3, 
+		aucs_Producto4, 
+		aucs_CodProducto1, 
+		aucs_CodProducto2, 
+		aucs_CodProducto3, 
+		aucs_CodProducto4, 
+		aucs_IP, 
+		aucs_Session, 
+		aucs_FechaHora, 
+		aucs_UTMSource, 
+		aucs_UTMMedium, 
+		aucs_UTMCampaing, 
+		aucs_UTMContent)
+VALUES  (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+		]]>
+	</sql>
+	
+	
+	
+	
+</custom-sql>
+	

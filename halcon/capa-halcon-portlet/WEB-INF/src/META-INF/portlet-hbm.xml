@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.ext.portlet.halcon.model.AuditoriaCajaSorpresa" />
+	<import class="com.ext.portlet.halcon.model.AuditoriaPerfilador" />
+	<import class="com.ext.portlet.halcon.model.AuditoriaSimulador" />
+	<import class="com.ext.portlet.halcon.model.CargaDescuento" />
+	<import class="com.ext.portlet.halcon.model.CargaSocioRemesa" />
+	<import class="com.ext.portlet.halcon.model.CargaTienda" />
+	<import class="com.ext.portlet.halcon.model.CategoriaSubcategoria" />
+	<import class="com.ext.portlet.halcon.model.ConfiguracionPerfilador" />
+	<import class="com.ext.portlet.halcon.model.ConfiguracionProducto" />
+	<import class="com.ext.portlet.halcon.model.FondosMutuos" />
+	<import class="com.ext.portlet.halcon.model.LogIncidencias" />
+	<import class="com.ext.portlet.halcon.model.Ocurrencia" />
+	<import class="com.ext.portlet.halcon.model.Pais" />
+	<import class="com.ext.portlet.halcon.model.Parametro" />
+	<import class="com.ext.portlet.halcon.model.PreguntaFrecuente" />
+	<import class="com.ext.portlet.halcon.model.ProductoComplementario" />
+	<import class="com.ext.portlet.halcon.model.SolicitudContacto" />
+	<import class="com.ext.portlet.halcon.model.SolicitudProducto" />
+	<import class="com.ext.portlet.halcon.model.TelefonoSolicitudProducto" />
+	<import class="com.ext.portlet.halcon.model.Ubigeo" />
+	<import class="com.ext.portlet.halcon.model.ValorCuota" />
+	<class name="com.ext.portlet.halcon.model.impl.AuditoriaCajaSorpresaImpl" table="T_AUDITORIA_CAJA_SORPRESA">
+		<id name="idAuditoriaCajSorp" column="aucs_IdAuditoriaCajSorp" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idTransaccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_IdTransaccion" />
+		<property name="tipoDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_TipoDocumento" />
+		<property name="numDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_NumDocumento" />
+		<property name="producto1" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_Producto1" />
+		<property name="producto2" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_Producto2" />
+		<property name="producto3" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_Producto3" />
+		<property name="producto4" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_Producto4" />
+		<property name="codProducto1" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_CodProducto1" />
+		<property name="codProducto2" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_CodProducto2" />
+		<property name="codProducto3" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_CodProducto3" />
+		<property name="codProducto4" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_CodProducto4" />
+		<property name="IP" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_IP" />
+		<property name="session" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_Session" />
+		<property name="fechaHora" type="org.hibernate.type.TimestampType" column="aucs_FechaHora" />
+		<property name="UTMSource" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_UTMSource" />
+		<property name="UTMMedium" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_UTMMedium" />
+		<property name="UTMCampaing" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_UTMCampaing" />
+		<property name="UTMContent" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aucs_UTMContent" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.AuditoriaPerfiladorImpl" table="T_AUDITORIA_PERFILADOR">
+		<id name="idAuditoriaPer" column="aupf_IdAuditoriaPer" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="tipoDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_TipoDocumento" />
+		<property name="numeroDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_NumeroDocumento" />
+		<property name="perfilador" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Perfilador" />
+		<property name="session" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Session" />
+		<property name="transaccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Transaccion" />
+		<property name="monto" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="aupf_Monto" />
+		<property name="tipoCredito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_TipoCredito" />
+		<property name="IP" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_IP" />
+		<property name="fechaHora" type="org.hibernate.type.TimestampType" column="aupf_FechaHora" />
+		<property name="UTMSource" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_UTMSource" />
+		<property name="UTMMedium" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_UTMMedium" />
+		<property name="UTMCampaing" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_UTMCampaing" />
+		<property name="UTMContent" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_UTMContent" />
+		<property name="pregunta01" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Pregunta01" />
+		<property name="pregunta02" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Pregunta02" />
+		<property name="pregunta03" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Pregunta03" />
+		<property name="pregunta04" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Pregunta04" />
+		<property name="respuesta01" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Respuesta01" />
+		<property name="respuesta02" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Respuesta02" />
+		<property name="respuesta03" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Respuesta03" />
+		<property name="respuesta04" type="com.liferay.portal.dao.orm.hibernate.StringType" column="aupf_Respuesta04" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.AuditoriaSimuladorImpl" table="T_AUDITORIA_SIMULADOR">
+		<id name="idAuditoriaSim" column="ausm_IdAuditoriaSim" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="tipoSimulador" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_TipoSimulador" />
+		<property name="idTransaccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_IdTransaccion" />
+		<property name="tipoDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_TipoDocumento" />
+		<property name="numDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_NumeroDocumento" />
+		<property name="moneda" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_Moneda" />
+		<property name="tipoProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_TipoProducto" />
+		<property name="invirtioFondMut" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_InvirtioFondMut" />
+		<property name="nivelConocimFondMut" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_NivelConocimFondMut" />
+		<property name="reaccionVarMerc" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_ReaccionVarMerc" />
+		<property name="valorBien" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="ausm_ValorBien" />
+		<property name="montoPrestamo" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="ausm_MontoPrestamo" />
+		<property name="cuotaInicial" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="ausm_CuotaInicial" />
+		<property name="periodoInvers" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_PeriodoInvers" />
+		<property name="tasa" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="ausm_Tasa" />
+		<property name="segDesgrav" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_SegDesgrav" />
+		<property name="tipoCuota" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_TipoCuota" />
+		<property name="IP" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_IP" />
+		<property name="fechaHora" type="org.hibernate.type.TimestampType" column="ausm_FechaHora" />
+		<property name="UTMSource" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_UTMSource" />
+		<property name="UTMMedium" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_UTMMedium" />
+		<property name="UTMCampaing" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_UTMCampaing" />
+		<property name="UTMContent" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ausm_UTMContent" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.CargaDescuentoImpl" table="T_CARGA_DESCUENTO">
+		<id name="idCargaDesc" column="cade_IdCargaDesc" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="local" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Local" />
+		<property name="descuentoGeneral" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_DescuentoGeneral" />
+		<property name="condicionesRestricciones" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_CondicionesRestricciones" />
+		<property name="direccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Direccion" />
+		<property name="idDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_IdDistrito" />
+		<property name="distrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Distrito" />
+		<property name="telefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Telefono" />
+		<property name="web" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Web" />
+		<property name="finVigencia" type="org.hibernate.type.TimestampType" column="cade_FinVigencia" />
+		<property name="categoria" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Categoria" />
+		<property name="coordenada" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Coordenada" />
+		<property name="URLImagen" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_URLImagen" />
+		<property name="latitud" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Latitud" />
+		<property name="longitud" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cade_Longitud" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.CargaSocioRemesaImpl" table="T_CARGA_SOCIO_REMESA">
+		<cache usage="read-write" />
+		<id name="idSocioRemesa" column="casr_IdSocioRemesa" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="empresa" type="com.liferay.portal.dao.orm.hibernate.StringType" column="casr_Empresa" />
+		<property name="paisCobertura" type="com.liferay.portal.dao.orm.hibernate.StringType" column="casr_PaisCobertura" />
+		<property name="paginaWeb" type="com.liferay.portal.dao.orm.hibernate.StringType" column="casr_PaginaWeb" />
+		<property name="telefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="casr_Telefono" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.CargaTiendaImpl" table="T_CARGA_TIENDA">
+		<id name="idCargaTienda" column="cati_IdCargaTienda" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idPtoServicio" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdPtoServicio" />
+		<property name="idCanal" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdCanal" />
+		<property name="idSubCanal" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdSubCanal" />
+		<property name="codDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdDepartamento" />
+		<property name="codProvincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdProvincia" />
+		<property name="codDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_IdDistrito" />
+		<property name="nomDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Departamento" />
+		<property name="nomProvincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Provincia" />
+		<property name="nomDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Distrito" />
+		<property name="latitud" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Latitud" />
+		<property name="longitud" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Longitud" />
+		<property name="direccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Direccion" />
+		<property name="horario" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Horario" />
+		<property name="tipoLocacion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_TipoLocacion" />
+		<property name="codTienda" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="cati_CodTienda" />
+		<property name="idLocacion" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="cati_IdLocacion" />
+		<property name="locacion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Locacion" />
+		<property name="emailCom" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_EmailCom" />
+		<property name="telefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cati_Telefono" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.CategoriaSubcategoriaImpl" table="T_CATEGORIA_SUBCATEGORIA">
+		<id name="idCategoriaSubCat" column="ctsc_IdCategoriaSubCat" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idCategoriaSubCatPadre" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="ctsc_IdCategoriaSubCatPadre" />
+		<property name="descripcion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ctsc_Descripcion" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.ConfiguracionPerfiladorImpl" table="T_CONFIGURACION_PERFILADOR">
+		<id name="idConfiguracionPerfilador" column="cfpf_IdConfiguracionPerfilador" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="tipoVariable" type="com.liferay.portal.dao.orm.hibernate.LongType" column="cfpf_TipoVariable" />
+		<property name="nombreVariable" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpf_NombreVariable" />
+		<property name="codigoClasificacion" type="com.liferay.portal.dao.orm.hibernate.LongType" column="cfpf_CodigoClasificacion" />
+		<property name="codigoVariablePadre" type="com.liferay.portal.dao.orm.hibernate.LongType" column="cfpf_CodigoVariablePadre" />
+		<property name="valor1" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpf_Valor1" />
+		<property name="valor2" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpf_Valor2" />
+		<property name="valor3" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpf_Valor3" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="cfpf_Estado" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.ConfiguracionProductoImpl" table="T_CONFIGURACION_PRODUCTO">
+		<id name="idConfiguracionProducto" column="cfpr_IdConfiguracionProducto" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idConfiguracionPerfilador" type="com.liferay.portal.dao.orm.hibernate.LongType" column="cfpr_IdConfiguracionPerfilador" />
+		<property name="idProducto" type="com.liferay.portal.dao.orm.hibernate.LongType" column="cfpr_IdProducto" />
+		<property name="nombreProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpr_NombreProducto" />
+		<property name="codigoSiebelProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="cfpr_CodigoSiebelProducto" />
+		<property name="estadoConfiguracion" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="cfpr_EstadoConfiguracion" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.FondosMutuosImpl" table="T_FONDOS_MUTUOS">
+		<id name="idValorCuota" column="fomu_IdValorCuota" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="codigoMoneda" type="com.liferay.portal.dao.orm.hibernate.StringType" column="fomu_CodigoMoneda" />
+		<property name="tipoFondo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="fomu_TipoFondo" />
+		<property name="valorCuota" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="fomu_ValorCuota" />
+		<property name="fecha" type="com.liferay.portal.dao.orm.hibernate.StringType" column="fomu_Fecha" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.LogIncidenciasImpl" table="T_ERROR_LOG">
+		<id name="idError" column="erlg_IdErrorLog" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="mensajeError" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_MensajeError" />
+		<property name="parametro" type="com.liferay.portal.dao.orm.hibernate.StringType" column="loge_Parametro" />
+		<property name="idSessionVisitante" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_IdSessionVisitante" />
+		<property name="tipoNumDoc" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_TipoNumDoc" />
+		<property name="IP" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_IP" />
+		<property name="fechaHoraError" type="org.hibernate.type.TimestampType" column="erlg_FechaHoraError" />
+		<property name="trazaError" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_TrazaError" />
+		<property name="paginaHija" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlgPaginaHija" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_UserId" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_UserName" />
+		<property name="recursoId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_RecursoId" />
+		<property name="recursoName" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_RecursoName" />
+		<property name="recursoAction" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_RecursoAction" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" column="erlg_CreateDate" />
+		<property name="clienteHost" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_ClienteHost" />
+		<property name="serverName" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_ServerName" />
+		<property name="serverId" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_ServerId" />
+		<property name="additionalInformation" type="com.liferay.portal.dao.orm.hibernate.StringType" column="erlg_AdditionalInformation" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.OcurrenciaImpl" table="T_PETICION">
+		<id name="idGestionPeticion" column="gepe_IdGestionPeticion" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="ip" type="com.liferay.portal.dao.orm.hibernate.StringType" column="gepe_IP" />
+		<property name="codigoProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="gepe_CodigoProducto" />
+		<property name="fecha" type="org.hibernate.type.TimestampType" column="gepe_fecha" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="gepe_estado" />
+		<property name="ocurrencia" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="gepe_ocurrencia" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.PaisImpl" table="T_PAIS">
+		<id name="pais_IdPais" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="codigo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="pais_Codigo" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" column="pais_Nombre" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.ParametroImpl" table="T_PARAMETRO">
+		<id name="idParametro" column="parm_IdParametro" type="int">
+			<generator class="identity" />
+		</id>
+		<property name="idParametroPadre" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="parm_IdParametroPadre" />
+		<property name="valorMonto1" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_ValorMonto1" />
+		<property name="valorMonto2" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_ValorMonto2" />
+		<property name="valorMonto3" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_ValorMonto3" />
+		<property name="dato1" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_Dato1" />
+		<property name="dato2" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_Dato2" />
+		<property name="dato3" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_Dato3" />
+		<property name="dato4" type="com.liferay.portal.dao.orm.hibernate.StringType" column="parm_Dato4" />
+		<property name="num1" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="parm_Num1" />
+		<property name="num2" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="parm_Num2" />
+		<property name="num3" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="parm_Num3" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.PreguntaFrecuenteImpl" table="T_PREGUNTA_FRECUENTE">
+		<id name="idPreguntaFrecuente" column="prfr_IdPreguntaFrecuente" type="int">
+			<generator class="identity" />
+		</id>
+		<property name="idCategoriaSubCat" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="prfr_IdCategoriaSubCat" />
+		<property name="enunciado" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prfr_Enunciado" />
+		<property name="respuesta" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prfr_Respuesta" />
+		<property name="estado" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="prfr_Estado" />
+		<property name="etiqueta" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prfr_Etiqueta" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.ProductoComplementarioImpl" table="T_PRODUCTO_COMPLEMENTARIO">
+		<id name="idProductoComplementario" column="prcm_IdProductoComplementario" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idSolicitudProducto" type="com.liferay.portal.dao.orm.hibernate.LongType" column="prcm_IdSolicitudProducto" />
+		<property name="principalidad" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prcm_Principalidad" />
+		<property name="producto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prcm_Producto" />
+		<property name="idProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prcm_IdProducto" />
+		<property name="idGrupoProducto" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prcm_IdGrupoProducto" />
+		<property name="emailSupervisor" type="com.liferay.portal.dao.orm.hibernate.StringType" column="prcm_EmailSupervisor" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.SolicitudContactoImpl" table="T_SOLICITUD_CONTACTO">
+		<id name="idSolicitudContacto" column="slct_IdSolicitudContacto" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="esCliente" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="slct_EsCliente" />
+		<property name="nombres" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Nombres" />
+		<property name="apellidos" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Apellidos" />
+		<property name="email" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Email" />
+		<property name="tipoDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_TipoDocumento" />
+		<property name="ndocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Ndocumento" />
+		<property name="direccion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Direccion" />
+		<property name="departamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Departamento" />
+		<property name="provincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Provincia" />
+		<property name="distrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Distrito" />
+		<property name="telefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Telefono" />
+		<property name="fecha" type="org.hibernate.type.TimestampType" column="slct_Fecha" />
+		<property name="mensaje" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Mensaje" />
+		<property name="moneda" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Moneda" />
+		<property name="importe" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_Importe" />
+		<property name="tipoMensaje" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_TipoMensaje" />
+		<property name="tipoTema" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slct_TipoTema" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.SolicitudProductoImpl" table="T_SOLICITUD_PRODUCTO">
+		<id name="idSolicitudProducto" column="slpr_IdSolicitudProducto" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idTipoDocumentoAdq" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="slpr_IdTipoDocumentoAdq" />
+		<property name="idTipoDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IdTipoDocumento" />
+		<property name="tipoCredito" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="slpr_TipoCredito" />
+		<property name="codigoCanal" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_CodigoCanal" />
+		<property name="tipoEnvio" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_TipoEnvio" />
+		<property name="numeroDocumento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_NumeroDocumento" />
+		<property name="apellidoPaterno" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_ApellidoPaterno" />
+		<property name="apellidoMaterno" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_ApellidoMaterno" />
+		<property name="primerNombre" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_PrimerNombre" />
+		<property name="segundoNombre" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_SegundoNombre" />
+		<property name="fechaNacimiento" type="org.hibernate.type.TimestampType" column="slpr_FechaNacimiento" />
+		<property name="sexo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Sexo" />
+		<property name="rentaMensual" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="slpr_RentaMensual" />
+		<property name="celular" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Celular" />
+		<property name="telefonoCasa" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_TelefonoCasa" />
+		<property name="telefonoTrabajo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_TelefonoTrabajo" />
+		<property name="anexo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Anexo" />
+		<property name="idEstadoCivilAdq" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="slpr_IdEstadoCivilAdq" />
+		<property name="idEstadoCivil" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IdEstadoCivil" />
+		<property name="RUC" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_RUC" />
+		<property name="razonSocial" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_RazonSocial" />
+		<property name="situacionLaboral" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_SituacionLaboral" />
+		<property name="idSituacionLaboral" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="slpr_IdSituacionLaboral" />
+		<property name="idDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IdDepartamento" />
+		<property name="idProvincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IdProvincia" />
+		<property name="idDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IdDistrito" />
+		<property name="nomDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Departamento" />
+		<property name="nomProvincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Provincia" />
+		<property name="nomDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Distrito" />
+		<property name="correoElectronico" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_CorreoElectronico" />
+		<property name="direccionEnvio" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_DireccionEnvio" />
+		<property name="placaVehiculo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_PlacaVehiculo" />
+		<property name="IdSession" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_Session" />
+		<property name="IPCliente" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_IPCliente" />
+		<property name="horarioEnvio" type="org.hibernate.type.TimestampType" column="slpr_HorarioEnvio" />
+		<property name="fechaRegistro" type="org.hibernate.type.TimestampType" column="slpr_FechaRegistro" />
+		<property name="UTMSource" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_UTMSource" />
+		<property name="UTMMedium" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_UTMMedium" />
+		<property name="UTMCampaing" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_UTMCampaing" />
+		<property name="UTMContent" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_UTMContent" />
+		<property name="fechaResultadoPreCalif" type="org.hibernate.type.TimestampType" column="slpr_FechaResultadoPreCalif" />
+		<property name="fechaEnvioLead" type="org.hibernate.type.TimestampType" column="slpr_FechaEnvioLead" />
+		<property name="fechaEnvioEmailing" type="org.hibernate.type.TimestampType" column="slpr_FechaEnvioEmailing" />
+		<property name="estadoPreCalificacion" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="slpr_EstadoPreCalificacion" />
+		<property name="estadoRegLead" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="slpr_EstadoRegLead" />
+		<property name="estadoEnvCorreo" type="com.liferay.portal.dao.orm.hibernate.BooleanType" column="slpr_EstadoEnvCorreo" />
+		<property name="respPreCalificacion" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_RespPreCalificacion" />
+		<property name="descripcionLead" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_DescripcionLead" />
+		<property name="fechaActualizacion" type="org.hibernate.type.TimestampType" column="slpr_FechaActualizacion" />
+		<property name="montoProspectado" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="slpr_MontoProspectado" />
+		<property name="codigoCampania" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_CodigoCampania" />
+		<property name="codigoMoneda" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_CodigoMoneda" />
+		<property name="nombreSupervisor" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_NombreSupervisor" />
+		<property name="respRegLead" type="com.liferay.portal.dao.orm.hibernate.StringType" column="slpr_RespRegLead" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.TelefonoSolicitudProductoImpl" table="T_TELEFONO_SOLICITUD_PRODUCTO">
+		<id name="idTelefSolicitudProducto" column="tslp_IdTelefSolicitudProducto" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="idSolicitudProducto" type="com.liferay.portal.dao.orm.hibernate.LongType" column="tslp_IdSolicitudProducto" />
+		<property name="tipoTelefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tslp_TipoTelefono" />
+		<property name="numeroTelefono" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tslp_NumeroTelefono" />
+		<property name="anexo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="tslp_Anexo" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.UbigeoImpl" table="T_UBIGEO">
+		<id name="idUbigeo" column="ubig_IdUbigeo" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="codigo" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ubig_Codigo" />
+		<property name="nombre" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ubig_Nombre" />
+		<property name="codDepartamento" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ubig_CodDepartamento" />
+		<property name="codProvincia" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ubig_CodProvincia" />
+		<property name="codDistrito" type="com.liferay.portal.dao.orm.hibernate.StringType" column="ubig_CodDistrito" />
+	</class>
+	<class name="com.ext.portlet.halcon.model.impl.ValorCuotaImpl" table="T_VALOR_CUOTA">
+		<id name="IdValorCuota" column="vlct_IdValorCuota" type="long">
+			<generator class="identity" />
+		</id>
+		<property name="tipoFondoMutuo" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="vlct_TipoFondoMutuo" />
+		<property name="fecha" type="org.hibernate.type.TimestampType" column="vlct_Fecha" />
+		<property name="valorCuota" type="com.liferay.portal.dao.orm.hibernate.DoubleType" column="vlct_ValorCuota" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+
+<service-builder package-path="com.ext.portlet.pin">
+	<author>arodriguez</author>
+	<namespace>pin</namespace>
+	<entity name="Persona" local-service="true" remote-service="true" table="Persona" data-source="pinDataSource" session-factory="pinSessionFactory" tx-manager="pinTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="userId" type="long" primary="true" db-name="Userid"></column>
+		<!-- Audit fields -->
+		<column name="nombres" type="String" db-name="Nombres"></column>
+		<column name="apellidoPaterno" type="String" db-name="Apellido_Paterno"></column>
+		<column name="apellidoMaterno" type="String" db-name="Apellido_Materno"></column>
+		<column name="dni" type="String" db-name="DNI"></column>
+		<column name="tipoDocumento" type="int" db-name="Tipo_Documento"></column>
+	</entity>
+	<entity name="Categoria" local-service="true" remote-service="true" table="Categoria" data-source="pinDataSource" session-factory="pinSessionFactory" tx-manager="pinTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="categoriaId" type="long" primary="true" db-name="Codigo_categoria" id-type="identity"></column>
+		<!-- Audit fields -->
+		<column name="idImagen" type="long" db-name="Id_image"></column>
+		<column name="nombre" type="String" db-name="Nombre"></column>
+		<column name="estado" type="boolean" db-name="Estado"></column>
+		<column name="descripcion" type="String" db-name="Descripcion"></column>
+	</entity>
+</service-builder>

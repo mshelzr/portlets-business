@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+
+<service-builder package-path="com.ext.portlet.halcon">
+	<author>Infonet-Consulting</author>
+	<namespace>halcon</namespace>
+	<entity name="AuditoriaCajaSorpresa" local-service="true" remote-service="true" table="T_AUDITORIA_CAJA_SORPRESA" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idAuditoriaCajSorp" type="long" primary="true" db-name="aucs_IdAuditoriaCajSorp" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="idTransaccion" type="String" db-name="aucs_IdTransaccion"></column>
+		<column name="tipoDocumento" type="String" db-name="aucs_TipoDocumento"></column>
+		<column name="numDocumento" type="String" db-name="aucs_NumDocumento"></column>
+		<column name="producto1" type="String" db-name="aucs_Producto1"></column>
+		<column name="producto2" type="String" db-name="aucs_Producto2"></column>
+		<column name="producto3" type="String" db-name="aucs_Producto3"></column>
+		<column name="producto4" type="String" db-name="aucs_Producto4"></column>
+		<column name="codProducto1" type="String" db-name="aucs_CodProducto1"></column>
+		<column name="codProducto2" type="String" db-name="aucs_CodProducto2"></column>
+		<column name="codProducto3" type="String" db-name="aucs_CodProducto3"></column>
+		<column name="codProducto4" type="String" db-name="aucs_CodProducto4"></column>
+		<column name="IP" type="String" db-name="aucs_IP"></column>
+		<column name="session" type="String" db-name="aucs_Session"></column>
+		<column name="fechaHora" type="Date" db-name="aucs_FechaHora"></column>
+		<column name="UTMSource" type="String" db-name="aucs_UTMSource"></column>
+		<column name="UTMMedium" type="String" db-name="aucs_UTMMedium"></column>
+		<column name="UTMCampaing" type="String" db-name="aucs_UTMCampaing"></column>
+		<column name="UTMContent" type="String" db-name="aucs_UTMContent"></column>
+	</entity>
+	<entity name="AuditoriaPerfilador" local-service="true" remote-service="true" table="T_AUDITORIA_PERFILADOR" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idAuditoriaPer" type="long" primary="true" db-name="aupf_IdAuditoriaPer" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="tipoDocumento" type="String" db-name="aupf_TipoDocumento"></column>
+		<column name="numeroDocumento" type="String" db-name="aupf_NumeroDocumento"></column>
+		<column name="perfilador" type="String" db-name="aupf_Perfilador"></column>
+		<column name="session" type="String" db-name="aupf_Session"></column>
+		<column name="transaccion" type="String" db-name="aupf_Transaccion"></column>
+		<column name="monto" type="Double" db-name="aupf_Monto"></column>
+		<column name="tipoCredito" type="String" db-name="aupf_TipoCredito"></column>
+		<column name="IP" type="String" db-name="aupf_IP"></column>
+		<column name="fechaHora" type="Date" db-name="aupf_FechaHora"></column>
+		<column name="UTMSource" type="String" db-name="aupf_UTMSource"></column>
+		<column name="UTMMedium" type="String" db-name="aupf_UTMMedium"></column>
+		<column name="UTMCampaing" type="String" db-name="aupf_UTMCampaing"></column>
+		<column name="UTMContent" type="String" db-name="aupf_UTMContent"></column>
+		<column name="pregunta01" type="String" db-name="aupf_Pregunta01"></column>
+		<column name="pregunta02" type="String" db-name="aupf_Pregunta02"></column>
+		<column name="pregunta03" type="String" db-name="aupf_Pregunta03"></column>
+		<column name="pregunta04" type="String" db-name="aupf_Pregunta04"></column>
+		<column name="respuesta01" type="String" db-name="aupf_Respuesta01"></column>
+		<column name="respuesta02" type="String" db-name="aupf_Respuesta02"></column>
+		<column name="respuesta03" type="String" db-name="aupf_Respuesta03"></column>
+		<column name="respuesta04" type="String" db-name="aupf_Respuesta04"></column>
+	</entity>
+	<entity name="AuditoriaSimulador" local-service="true" remote-service="true" table="T_AUDITORIA_SIMULADOR" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idAuditoriaSim" type="long" primary="true" db-name="ausm_IdAuditoriaSim" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="tipoSimulador" type="String" db-name="ausm_TipoSimulador"></column>
+		<column name="idTransaccion" type="String" db-name="ausm_IdTransaccion"></column>
+		<column name="tipoDocumento" type="String" db-name="ausm_TipoDocumento"></column>
+		<column name="numDocumento" type="String" db-name="ausm_NumeroDocumento"></column>
+		<column name="moneda" type="String" db-name="ausm_Moneda"></column>
+		<column name="tipoProducto" type="String" db-name="ausm_TipoProducto"></column>
+		<column name="invirtioFondMut" type="String" db-name="ausm_InvirtioFondMut"></column>
+		<column name="nivelConocimFondMut" type="String" db-name="ausm_NivelConocimFondMut"></column>
+		<column name="reaccionVarMerc" type="String" db-name="ausm_ReaccionVarMerc"></column>
+		<column name="valorBien" type="Double" db-name="ausm_ValorBien"></column>
+		<column name="montoPrestamo" type="Double" db-name="ausm_MontoPrestamo"></column>
+		<column name="cuotaInicial" type="Double" db-name="ausm_CuotaInicial"></column>
+		<column name="periodoInvers" type="String" db-name="ausm_PeriodoInvers"></column>
+		<column name="tasa" type="Double" db-name="ausm_Tasa"></column>
+		<column name="segDesgrav" type="String" db-name="ausm_SegDesgrav"></column>
+		<column name="tipoCuota" type="String" db-name="ausm_TipoCuota"></column>
+		<column name="IP" type="String" db-name="ausm_IP"></column>
+		<column name="fechaHora" type="Date" db-name="ausm_FechaHora"></column>
+		<column name="UTMSource" type="String" db-name="ausm_UTMSource"></column>
+		<column name="UTMMedium" type="String" db-name="ausm_UTMMedium"></column>
+		<column name="UTMCampaing" type="String" db-name="ausm_UTMCampaing"></column>
+		<column name="UTMContent" type="String" db-name="ausm_UTMContent"></column>
+	</entity>
+	<entity name="Ubigeo" local-service="true" remote-service="true" table="T_UBIGEO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idUbigeo" type="long" primary="true" db-name="ubig_IdUbigeo" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="codigo" type="String" db-name="ubig_Codigo"></column>
+		<column name="nombre" type="String" db-name="ubig_Nombre"></column>
+		<column name="codDepartamento" type="String" db-name="ubig_CodDepartamento"></column>
+		<column name="codProvincia" type="String" db-name="ubig_CodProvincia"></column>
+		<column name="codDistrito" type="String" db-name="ubig_CodDistrito"></column>
+	</entity>
+	<entity name="CargaDescuento" local-service="true" remote-service="true" table="T_CARGA_DESCUENTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idCargaDesc" type="long" primary="true" db-name="cade_IdCargaDesc" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="local" type="String" db-name="cade_Local"></column>
+		<column name="descuentoGeneral" type="String" db-name="cade_DescuentoGeneral"></column>
+		<column name="condicionesRestricciones" type="String" db-name="cade_CondicionesRestricciones"></column>
+		<column name="direccion" type="String" db-name="cade_Direccion"></column>
+		<column name="idDistrito" type="String" db-name="cade_IdDistrito"></column>
+		<column name="distrito" type="String" db-name="cade_Distrito"></column>
+		<column name="telefono" type="String" db-name="cade_Telefono"></column>
+		<column name="web" type="String" db-name="cade_Web"></column>
+		<column name="finVigencia" type="Date" db-name="cade_FinVigencia"></column>
+		<column name="categoria" type="String" db-name="cade_Categoria"></column>
+		<column name="coordenada" type="String" db-name="cade_Coordenada"></column>
+		<column name="URLImagen" type="String" db-name="cade_URLImagen"></column>
+		<column name="latitud" type="String" db-name="cade_Latitud"></column>
+		<column name="longitud" type="String" db-name="cade_Longitud"></column>
+	</entity>
+	<entity name="CargaSocioRemesa" local-service="true" remote-service="true" table="T_CARGA_SOCIO_REMESA" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="true">
+		<!-- PK fields -->
+		<column name="idSocioRemesa" type="long" primary="true" db-name="casr_IdSocioRemesa" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="empresa" type="String" db-name="casr_Empresa"></column>
+		<column name="paisCobertura" type="String" db-name="casr_PaisCobertura"></column>
+		<column name="paginaWeb" type="String" db-name="casr_PaginaWeb"></column>
+		<column name="telefono" type="String" db-name="casr_Telefono"></column>
+	</entity>
+	<entity name="CargaTienda" local-service="true" remote-service="true" table="T_CARGA_TIENDA" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idCargaTienda" type="long" primary="true" db-name="cati_IdCargaTienda" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="idPtoServicio" type="String" db-name="cati_IdPtoServicio"></column>
+		<column name="idCanal" type="String" db-name="cati_IdCanal"></column>
+		<column name="idSubCanal" type="String" db-name="cati_IdSubCanal"></column>
+		<column name="codDepartamento" type="String" db-name="cati_IdDepartamento"></column>
+		<column name="codProvincia" type="String" db-name="cati_IdProvincia"></column>
+		<column name="codDistrito" type="String" db-name="cati_IdDistrito"></column>
+		<column name="nomDepartamento" type="String" db-name="cati_Departamento"></column>
+		<column name="nomProvincia" type="String" db-name="cati_Provincia"></column>
+		<column name="nomDistrito" type="String" db-name="cati_Distrito"></column>
+		<column name="latitud" type="String" db-name="cati_Latitud"></column>
+		<column name="longitud" type="String" db-name="cati_Longitud"></column>
+		<column name="direccion" type="String" db-name="cati_Direccion"></column>
+		<column name="horario" type="String" db-name="cati_Horario"></column>
+		<column name="tipoLocacion" type="String" db-name="cati_TipoLocacion"></column>
+		<column name="codTienda" type="Integer" db-name="cati_CodTienda"></column>
+		<column name="idLocacion" type="Integer" db-name="cati_IdLocacion"></column>
+		<column name="locacion" type="String" db-name="cati_Locacion"></column>
+		<column name="emailCom" type="String" db-name="cati_EmailCom"></column>
+		<column name="telefono" type="String" db-name="cati_Telefono"></column>
+	</entity>
+	<entity name="CategoriaSubcategoria" local-service="true" remote-service="true" table="T_CATEGORIA_SUBCATEGORIA" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idCategoriaSubCat" type="long" primary="true" db-name="ctsc_IdCategoriaSubCat" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idCategoriaSubCatPadre" type="Integer" db-name="ctsc_IdCategoriaSubCatPadre"></column>
+		<!-- Other fields -->
+		<column name="descripcion" type="String" db-name="ctsc_Descripcion"></column>
+	</entity>
+	<entity name="ConfiguracionPerfilador" local-service="true" remote-service="true" table="T_CONFIGURACION_PERFILADOR" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idConfiguracionPerfilador" type="long" primary="true" db-name="cfpf_IdConfiguracionPerfilador" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="tipoVariable" type="Long" db-name="cfpf_TipoVariable"></column>
+		<column name="nombreVariable" type="String" db-name="cfpf_NombreVariable"></column>
+		<column name="codigoClasificacion" type="Long" db-name="cfpf_CodigoClasificacion"></column>
+		<column name="codigoVariablePadre" type="Long" db-name="cfpf_CodigoVariablePadre"></column>
+		<column name="valor1" type="String" db-name="cfpf_Valor1"></column>
+		<column name="valor2" type="String" db-name="cfpf_Valor2"></column>
+		<column name="valor3" type="String" db-name="cfpf_Valor3"></column>
+		<column name="estado" type="Integer" db-name="cfpf_Estado"></column>
+	</entity>
+	<entity name="ConfiguracionProducto" local-service="true" remote-service="true" table="T_CONFIGURACION_PRODUCTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idConfiguracionProducto" type="long" primary="true" db-name="cfpr_IdConfiguracionProducto" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idConfiguracionPerfilador" type="Long" db-name="cfpr_IdConfiguracionPerfilador"></column>
+		<!-- Other fields -->
+		<column name="idProducto" type="Long" db-name="cfpr_IdProducto"></column>
+		<column name="nombreProducto" type="String" db-name="cfpr_NombreProducto"></column>
+		<column name="codigoSiebelProducto" type="String" db-name="cfpr_CodigoSiebelProducto"></column>
+		<column name="estadoConfiguracion" type="Integer" db-name="cfpr_EstadoConfiguracion"></column>
+	</entity>
+	<entity name="FondosMutuos" local-service="true" remote-service="true" table="T_FONDOS_MUTUOS" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idValorCuota" type="long" primary="true" db-name="fomu_IdValorCuota" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="codigoMoneda" type="String" db-name="fomu_CodigoMoneda"></column>
+		<column name="tipoFondo" type="String" db-name="fomu_TipoFondo"></column>
+		<column name="valorCuota" type="Double" db-name="fomu_ValorCuota"></column>
+		<!-- <column name="fechaValorCuota" type="Date" db-name="fomu_FechaValorCuota"/> -->
+		<column name="fecha" type="String" db-name="fomu_Fecha"></column>
+	</entity>
+	<entity name="Parametro" local-service="true" remote-service="true" table="T_PARAMETRO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idParametro" type="int" primary="true" db-name="parm_IdParametro" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idParametroPadre" type="Integer" db-name="parm_IdParametroPadre"></column>
+		<!-- <column name="parametroPadre" type="Collection" entity="Parametro"
+			mapping-key="parm_IdParametroPadre" lazy="false"/> -->
+		<!-- Other fields -->
+		<column name="valorMonto1" type="String" db-name="parm_ValorMonto1"></column>
+		<column name="valorMonto2" type="String" db-name="parm_ValorMonto2"></column>
+		<column name="valorMonto3" type="String" db-name="parm_ValorMonto3"></column>
+		<column name="dato1" type="String" db-name="parm_Dato1"></column>
+		<column name="dato2" type="String" db-name="parm_Dato2"></column>
+		<column name="dato3" type="String" db-name="parm_Dato3"></column>
+		<column name="dato4" type="String" db-name="parm_Dato4"></column>
+		<column name="num1" type="Integer" db-name="parm_Num1"></column>
+		<column name="num2" type="Integer" db-name="parm_Num2"></column>
+		<column name="num3" type="Integer" db-name="parm_Num3"></column>
+	</entity>
+	<entity name="PreguntaFrecuente" local-service="true" remote-service="true" table="T_PREGUNTA_FRECUENTE" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idPreguntaFrecuente" type="int" primary="true" db-name="prfr_IdPreguntaFrecuente" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idCategoriaSubCat" type="Integer" db-name="prfr_IdCategoriaSubCat"></column>
+		<!-- Other fields -->
+		<column name="enunciado" type="String" db-name="prfr_Enunciado"></column>
+		<column name="respuesta" type="String" db-name="prfr_Respuesta"></column>
+		<column name="estado" type="Boolean" db-name="prfr_Estado"></column>
+		<column name="etiqueta" type="String" db-name="prfr_Etiqueta"></column>
+	</entity>
+	<entity name="ProductoComplementario" local-service="true" remote-service="true" table="T_PRODUCTO_COMPLEMENTARIO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idProductoComplementario" type="long" primary="true" db-name="prcm_IdProductoComplementario" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idSolicitudProducto" type="long" db-name="prcm_IdSolicitudProducto"></column>
+		<!-- Other fields -->
+		<column name="principalidad" type="String" db-name="prcm_Principalidad"></column>
+		<column name="producto" type="String" db-name="prcm_Producto"></column>
+		<column name="idProducto" type="String" db-name="prcm_IdProducto"></column>
+		<column name="idGrupoProducto" type="String" db-name="prcm_IdGrupoProducto"></column>
+		<column name="emailSupervisor" type="String" db-name="prcm_EmailSupervisor"></column>
+	</entity>
+	<entity name="TelefonoSolicitudProducto" local-service="true" remote-service="true" table="T_TELEFONO_SOLICITUD_PRODUCTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idTelefSolicitudProducto" type="long" primary="true" db-name="tslp_IdTelefSolicitudProducto" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idSolicitudProducto" type="long" db-name="tslp_IdSolicitudProducto"></column>
+		<!-- Other fields -->
+		<column name="tipoTelefono" type="String" db-name="tslp_TipoTelefono"></column>
+		<column name="numeroTelefono" type="String" db-name="tslp_NumeroTelefono"></column>
+		<column name="anexo" type="String" db-name="tslp_Anexo"></column>
+	</entity>
+	<entity name="SolicitudContacto" local-service="true" remote-service="false" table="T_SOLICITUD_CONTACTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idSolicitudContacto" type="long" primary="true" db-name="slct_IdSolicitudContacto" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="esCliente" type="Integer" db-name="slct_EsCliente"></column>
+		<column name="nombres" type="String" db-name="slct_Nombres"></column>
+		<column name="apellidos" type="String" db-name="slct_Apellidos"></column>
+		<column name="email" type="String" db-name="slct_Email"></column>
+		<column name="tipoDocumento" type="String" db-name="slct_TipoDocumento"></column>
+		<column name="ndocumento" type="String" db-name="slct_Ndocumento"></column>
+		<column name="direccion" type="String" db-name="slct_Direccion"></column>
+		<column name="departamento" type="String" db-name="slct_Departamento"></column>
+		<column name="provincia" type="String" db-name="slct_Provincia"></column>
+		<column name="distrito" type="String" db-name="slct_Distrito"></column>
+		<column name="telefono" type="String" db-name="slct_Telefono"></column>
+		<column name="fecha" type="Date" db-name="slct_Fecha"></column>
+		<column name="mensaje" type="String" db-name="slct_Mensaje"></column>
+		<column name="moneda" type="String" db-name="slct_Moneda"></column>
+		<column name="importe" type="String" db-name="slct_Importe"></column>
+		<column name="tipoMensaje" type="String" db-name="slct_TipoMensaje"></column>
+		<column name="tipoTema" type="String" db-name="slct_TipoTema"></column>
+	</entity>
+	<entity name="SolicitudProducto" local-service="true" remote-service="true" table="T_SOLICITUD_PRODUCTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idSolicitudProducto" type="long" primary="true" db-name="slpr_IdSolicitudProducto" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="idTipoDocumentoAdq" type="Integer" db-name="slpr_IdTipoDocumentoAdq"></column>
+		<column name="idTipoDocumento" type="String" db-name="slpr_IdTipoDocumento"></column>
+		<column name="tipoCredito" type="Integer" db-name="slpr_TipoCredito"></column>
+		<column name="codigoCanal" type="String" db-name="slpr_CodigoCanal"></column>
+		<column name="tipoEnvio" type="String" db-name="slpr_TipoEnvio"></column>
+		<column name="numeroDocumento" type="String" db-name="slpr_NumeroDocumento"></column>
+		<column name="apellidoPaterno" type="String" db-name="slpr_ApellidoPaterno"></column>
+		<column name="apellidoMaterno" type="String" db-name="slpr_ApellidoMaterno"></column>
+		<column name="primerNombre" type="String" db-name="slpr_PrimerNombre"></column>
+		<column name="segundoNombre" type="String" db-name="slpr_SegundoNombre"></column>
+		<column name="fechaNacimiento" type="Date" db-name="slpr_FechaNacimiento"></column>
+		<column name="sexo" type="String" db-name="slpr_Sexo"></column>
+		<column name="rentaMensual" type="Double" db-name="slpr_RentaMensual"></column>
+		<column name="celular" type="String" db-name="slpr_Celular"></column>
+		<column name="telefonoCasa" type="String" db-name="slpr_TelefonoCasa"></column>
+		<column name="telefonoTrabajo" type="String" db-name="slpr_TelefonoTrabajo"></column>
+		<column name="anexo" type="String" db-name="slpr_Anexo"></column>
+		<column name="idEstadoCivilAdq" type="Integer" db-name="slpr_IdEstadoCivilAdq"></column>
+		<column name="idEstadoCivil" type="String" db-name="slpr_IdEstadoCivil"></column>
+		<column name="RUC" type="String" db-name="slpr_RUC"></column>
+		<column name="razonSocial" type="String" db-name="slpr_RazonSocial"></column>
+		<column name="situacionLaboral" type="String" db-name="slpr_SituacionLaboral"></column>
+		<column name="idSituacionLaboral" type="Integer" db-name="slpr_IdSituacionLaboral"></column>
+		<column name="idDepartamento" type="String" db-name="slpr_IdDepartamento"></column>
+		<column name="idProvincia" type="String" db-name="slpr_IdProvincia"></column>
+		<column name="idDistrito" type="String" db-name="slpr_IdDistrito"></column>
+		<column name="nomDepartamento" type="String" db-name="slpr_Departamento"></column>
+		<column name="nomProvincia" type="String" db-name="slpr_Provincia"></column>
+		<column name="nomDistrito" type="String" db-name="slpr_Distrito"></column>
+		<column name="correoElectronico" type="String" db-name="slpr_CorreoElectronico"></column>
+		<column name="direccionEnvio" type="String" db-name="slpr_DireccionEnvio"></column>
+		<column name="placaVehiculo" type="String" db-name="slpr_PlacaVehiculo"></column>
+		<column name="IdSession" type="String" db-name="slpr_Session"></column>
+		<column name="IPCliente" type="String" db-name="slpr_IPCliente"></column>
+		<column name="horarioEnvio" type="Date" db-name="slpr_HorarioEnvio"></column>
+		<column name="fechaRegistro" type="Date" db-name="slpr_FechaRegistro"></column>
+		<column name="UTMSource" type="String" db-name="slpr_UTMSource"></column>
+		<column name="UTMMedium" type="String" db-name="slpr_UTMMedium"></column>
+		<column name="UTMCampaing" type="String" db-name="slpr_UTMCampaing"></column>
+		<column name="UTMContent" type="String" db-name="slpr_UTMContent"></column>
+		<column name="fechaResultadoPreCalif" type="Date" db-name="slpr_FechaResultadoPreCalif"></column>
+		<column name="fechaEnvioLead" type="Date" db-name="slpr_FechaEnvioLead"></column>
+		<column name="fechaEnvioEmailing" type="Date" db-name="slpr_FechaEnvioEmailing"></column>
+		<column name="estadoPreCalificacion" type="Boolean" db-name="slpr_EstadoPreCalificacion"></column>
+		<column name="estadoRegLead" type="Boolean" db-name="slpr_EstadoRegLead"></column>
+		<column name="estadoEnvCorreo" type="Boolean" db-name="slpr_EstadoEnvCorreo"></column>
+		<column name="respPreCalificacion" type="String" db-name="slpr_RespPreCalificacion"></column>
+		<column name="descripcionLead" type="String" db-name="slpr_DescripcionLead"></column>
+		<column name="fechaActualizacion" type="Date" db-name="slpr_FechaActualizacion"></column>
+		<column name="montoProspectado" type="Double" db-name="slpr_MontoProspectado"></column>
+		<column name="codigoCampania" type="String" db-name="slpr_CodigoCampania"></column>
+		<column name="codigoMoneda" type="String" db-name="slpr_CodigoMoneda"></column>
+		<column name="nombreSupervisor" type="String" db-name="slpr_NombreSupervisor"></column>
+		<column name="respRegLead" type="String" db-name="slpr_RespRegLead"></column>
+		<!-- Relationships -->
+		<!-- <column name="productos" type="Collection" entity="ProductoComplementario"
+			mapping-key="idProductoComplementario" /> -->
+	</entity>
+	<entity name="ValorCuota" local-service="true" remote-service="true" table="T_VALOR_CUOTA" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="IdValorCuota" type="long" primary="true" db-name="vlct_IdValorCuota" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="tipoFondoMutuo" type="Integer" db-name="vlct_TipoFondoMutuo"></column>
+		<!-- Other fields -->
+		<column name="fecha" type="Date" db-name="vlct_Fecha"></column>
+		<column name="valorCuota" type="Double" db-name="vlct_ValorCuota"></column>
+	</entity>
+	<entity name="LogIncidencias" local-service="true" remote-service="true" table="T_ERROR_LOG" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idError" type="long" primary="true" db-name="erlg_IdErrorLog" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="mensajeError" type="String" db-name="erlg_MensajeError"></column>
+		<!--column name="mensajeSolucion" type="String" db-name="erlg_MensajeSolucion"/ -->
+		<column name="parametro" type="String" db-name="loge_Parametro"></column>
+		<column name="idSessionVisitante" type="String" db-name="erlg_IdSessionVisitante"></column>
+		<column name="tipoNumDoc" type="String" db-name="erlg_TipoNumDoc"></column>
+		<column name="IP" type="String" db-name="erlg_IP"></column>
+		<column name="fechaHoraError" type="Date" db-name="erlg_FechaHoraError"></column>
+		<column name="trazaError" type="String" db-name="erlg_TrazaError"></column>
+		<column name="paginaHija" type="String" db-name="erlgPaginaHija"></column>
+		<column name="userId" type="String" db-name="erlg_UserId"></column>
+		<column name="userName" type="String" db-name="erlg_UserName"></column>
+		<column name="recursoId" type="String" db-name="erlg_RecursoId"></column>
+		<column name="recursoName" type="String" db-name="erlg_RecursoName"></column>
+		<column name="recursoAction" type="String" db-name="erlg_RecursoAction"></column>
+		<column name="createDate" type="Date" db-name="erlg_CreateDate"></column>
+		<column name="clienteHost" type="String" db-name="erlg_ClienteHost"></column>
+		<column name="serverName" type="String" db-name="erlg_ServerName"></column>
+		<column name="serverId" type="String" db-name="erlg_ServerId"></column>
+		<column name="additionalInformation" type="String" db-name="erlg_AdditionalInformation"></column>
+	</entity>
+	<entity name="Pais" local-service="true" remote-service="true" table="T_PAIS" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="pais_IdPais" type="long" primary="true" db-name="pais_IdPais" id-type="identity"></column>
+		<!-- Other fields -->
+		<column name="codigo" type="String" db-name="pais_Codigo"></column>
+		<column name="nombre" type="String" db-name="pais_Nombre"></column>
+	</entity>
+	<entity name="Ocurrencia" local-service="true" remote-service="true" table="T_PETICION" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idGestionPeticion" type="long" primary="true" db-name="gepe_IdGestionPeticion" id-type="identity"></column>
+		<!-- FK fields -->
+		<!-- Other fields -->
+		<column name="ip" type="String" db-name="gepe_IP"></column>
+		<column name="codigoProducto" type="String" db-name="gepe_CodigoProducto"></column>
+		<column name="fecha" type="Date" db-name="gepe_fecha"></column>
+		<column name="estado" type="Integer" db-name="gepe_estado"></column>
+		<column name="ocurrencia" type="Integer" db-name="gepe_ocurrencia"></column>
+	</entity>
+	<entity name="TelefonoSolicitudProducto" local-service="true" remote-service="true" table="T_TELEFONO_SOLICITUD_PRODUCTO" data-source="halconDataSource" session-factory="halconSessionFactory" tx-manager="halconTransactionManager" cache-enabled="false">
+		<!-- PK fields -->
+		<column name="idTelefSolicitudProducto" type="long" primary="true" db-name="tslp_IdTelefSolicitudProducto" id-type="identity"></column>
+		<!-- FK fields -->
+		<column name="idSolicitudProducto" type="long" db-name="tslp_IdSolicitudProducto"></column>
+		<!-- Other fields -->
+		<column name="tipoTelefono" type="String" db-name="tslp_TipoTelefono"></column>
+		<column name="numeroTelefono" type="String" db-name="tslp_NumeroTelefono"></column>
+		<column name="anexo" type="String" db-name="tslp_Anexo"></column>
+	</entity>
+</service-builder>

@@ -1,0 +1,5 @@
+[{"id":0,"etiqueta":"Todos","tool":"","orden":"1","defecto":"1"},
+{"id":1,"etiqueta":"Cuentas de Ahorro","tool":"","orden":"2","defecto":"0"},
+{"id":2,"etiqueta":"Cr\u00e9dito Hipotecario","tool":"","orden":"3","defecto":"0"},
+{"id":3,"etiqueta":"Tarjetas de Cr\u00e9dito","tool":"","orden":"4","defecto":"0"},
+{"id":4,"etiqueta":"Seguros","tool":"","orden":"5","defecto":"0"}]

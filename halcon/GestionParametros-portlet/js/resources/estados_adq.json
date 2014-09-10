@@ -1,0 +1,5 @@
+[{"id":0,"etiqueta":"ESTADO_ADQ_ERROR","tool":"","orden":"1","defecto":"0"},
+{"id":1,"etiqueta":"ESTADO_ADQ_NO_PROCEDE","tool":"","orden":"2","defecto":"0"},
+{"id":2,"etiqueta":"ESTADO_ADQ_PRE_CALIFICA","tool":"","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"ESTADO_ADQ_PENDIENTE","tool":"","orden":"5","defecto":"0"},
+{"id":3,"etiqueta":"ESTADO_ADQ_PENDIENTE","tool":"","orden":"6","defecto":"0"}]

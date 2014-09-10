@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Solicitud.insertar">
+		<![CDATA[
+			INSERT INTO T_SOLICITUD_PRODUCTO (
+				slpr_IdTipoDocumentoAdq, 
+				slpr_IdTipoDocumento, 
+				slpr_TipoCredito, 
+				slpr_CodigoCanal, 
+				slpr_TipoEnvio, 
+				slpr_NumeroDocumento, 
+				slpr_ApellidoPaterno, 
+				slpr_ApellidoMaterno, 
+				slpr_PrimerNombre, 
+				slpr_SegundoNombre, 
+				slpr_FechaNacimiento, 
+				slpr_Sexo, 
+				slpr_RentaMensual, 
+				slpr_Celular, 
+				slpr_TelefonoCasa, 
+				slpr_TelefonoTrabajo, 
+				slpr_IdEstadoCivilAdq, 
+				slpr_IdEstadoCivil, 
+				slpr_SituacionLaboral, 
+				slpr_IdSituacionLaboral, 
+				slpr_RUC, 
+				slpr_RazonSocial, 
+				slpr_IdDepartamento, 
+				slpr_IdProvincia, 
+				slpr_IdDistrito, 
+				slpr_Departamento, 
+				slpr_Provincia, 
+				slpr_Distrito, 
+				slpr_Anexo, 
+				slpr_CorreoElectronico, 
+				slpr_DireccionEnvio, 
+				slpr_PlacaVehiculo, 
+				slpr_IPCliente, 
+				slpr_HorarioEnvio, 
+				slpr_FechaRegistro, 
+				slpr_UTMSource, 
+				slpr_UTMMedium, 
+				slpr_UTMCampaing, 
+				slpr_UTMContent, 
+				slpr_FechaResultadoPreCalif, 
+				slpr_FechaEnvioLead, 
+				slpr_FechaEnvioEmailing, 
+				slpr_EstadoPreCalificacion, 
+				slpr_EstadoRegLead, 
+				slpr_EstadoEnvCorreo, 
+				slpr_RespPreCalificacion, 
+				slpr_DescripcionLead, 
+				slpr_FechaActualizacion, 
+				slpr_MontoProspectado, 
+				slpr_CodigoCampania, 
+				slpr_CodigoMoneda, 
+				slpr_NombreSupervisor,
+				slpr_RespRegLead)
+			VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+					?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+					?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+		]]>
+	</sql>
+	<sql id="Solicitud.insertarProducto">
+		<![CDATA[
+		INSERT INTO T_PRODUCTO_COMPLEMENTARIO (
+			prcm_IdSolicitudProducto, 
+			prcm_Principalidad, 
+			prcm_Producto, 
+			prcm_IdProducto, 
+			prcm_IdGrupoProducto, 
+			prcm_EmailSupervisor)
+		VALUES (?,?,?,?,?,?)
+		]]>
+	</sql>
+	
+	<sql id="Solicitud.insertarTelefonos">
+		<![CDATA[
+		IF NOT EXISTS (
+		SELECT * 
+		FROM T_TELEFONO_SOLICITUD_PRODUCTO 
+		WHERE tslp_IdSolicitudProducto = ? AND tslp_TipoTelefono = ? )
+		INSERT INTO T_TELEFONO_SOLICITUD_PRODUCTO (
+			tslp_IdSolicitudProducto, 
+			tslp_TipoTelefono, 
+			tslp_NumeroTelefono, 
+			tslp_Anexo)
+		VALUES (?,?,?,?)
+		]]>
+	</sql>
+	<sql id="Solicitud.productoDistinct">
+		<![CDATA[		
+		SELECT 
+		DISTINCT(prcm_IdProducto) as prcm_IdProducto , 
+		prcm_Producto 
+		FROM T_PRODUCTO_COMPLEMENTARIO 
+		]]>
+	</sql>
+	
+	<sql id="Solicitud.obtenerDetalleSolicitudCount">
+		<![CDATA[
+		select count(*) from 
+		t_solicitud_producto sp, 
+		t_producto_complementario pc
+		where 
+		sp.slpr_idsolicitudproducto = pc.prcm_idsolicitudproducto and 		
+		(ISNULL((case when ? = '0' then NULL else ? end),pc.prcm_IdProducto) = pc.prcm_IdProducto) and
+		(ISNULL((case when ? = 5 then NULL else ? end),sp.slpr_RespPreCalificacion) = sp.slpr_RespPreCalificacion) 
+		AND
+		(sp.slpr_FechaRegistro BETWEEN ISNULL( convert(datetime, ?, 120), (select min(slpr_FechaRegistro) from t_solicitud_producto) ) AND ISNULL( convert(datetime, ?, 120),  (select max(slpr_FechaRegistro) from t_solicitud_producto)  ) )
+		]]>
+	</sql>
+	<sql id="Solicitud.obtenerDetalleSolicitud">
+		<![CDATA[
+		select  
+		sp.slpr_IdSolicitudProducto,
+		sp.slpr_IdTipoDocumentoAdq,
+		sp.slpr_IdTipoDocumento,
+				
+		sp.slpr_NumeroDocumento		,
+		sp.slpr_ApellidoPaterno		,
+		sp.slpr_ApellidoMaterno		,
+		sp.slpr_PrimerNombre		,
+		sp.slpr_SegundoNombre		,
+		sp.slpr_FechaNacimiento		,
+		sp.slpr_Sexo		,
+		sp.slpr_RentaMensual		,
+		sp.slpr_IdEstadoCivilAdq		,
+		sp.slpr_IdEstadoCivil		,
+		sp.slpr_SituacionLaboral		,
+		sp.slpr_IdSituacionLaboral		,
+		sp.slpr_RUC		,
+		sp.slpr_RazonSocial		,
+		sp.slpr_Celular		,
+		sp.slpr_TelefonoCasa		,
+		sp.slpr_TelefonoTrabajo		,
+		sp.slpr_IdDepartamento		,
+		sp.slpr_IdProvincia		,
+		sp.slpr_IdDistrito		,
+		sp.slpr_Departamento		,
+		sp.slpr_Provincia		,
+		sp.slpr_Distrito		,
+		sp.slpr_Anexo		,
+		sp.slpr_CorreoElectronico		,
+		sp.slpr_DireccionEnvio		,
+		sp.slpr_PlacaVehiculo		,
+		sp.slpr_Session		,
+		sp.slpr_IPCliente		,
+		sp.slpr_HorarioEnvio		,
+		sp.slpr_FechaRegistro		,
+		sp.slpr_UTMSource		,
+		sp.slpr_UTMMedium		,
+		sp.slpr_UTMCampaing		,
+		sp.slpr_UTMContent		,
+		sp.slpr_FechaResultadoPreCalif		,
+		sp.slpr_FechaEnvioLead		,
+		sp.slpr_FechaEnvioEmailing		,
+		sp.slpr_EstadoPreCalificacion		,
+		sp.slpr_EstadoRegLead		,
+		sp.slpr_EstadoEnvCorreo		,
+		sp.slpr_RespPreCalificacion		,
+		sp.slpr_DescripcionLead		,
+			
+		pc.prcm_IdProductoComplementario		,
+		pc.prcm_IdSolicitudProducto		,
+		pc.prcm_Principalidad		,
+		pc.prcm_Producto		,
+		pc.prcm_IdProducto		,
+		pc.prcm_IdGrupoProducto		,
+		
+		sp.slpr_CodigoCampania		,
+		sp.slpr_MontoProspectado		,
+		sp.slpr_CodigoMoneda		,
+		sp.slpr_NombreSupervisor		,
+		pc.prcm_EmailSupervisor
+		from 
+		t_solicitud_producto sp, 
+		t_producto_complementario pc
+		where 
+		sp.slpr_idsolicitudproducto = pc.prcm_idsolicitudproducto and 
+		(ISNULL((case when ? = '0' then NULL else ? end),pc.prcm_IdProducto) = pc.prcm_IdProducto) and
+		(ISNULL((case when ? = 5 then NULL else ? end),sp.slpr_RespPreCalificacion) = sp.slpr_RespPreCalificacion)
+		AND
+		(sp.slpr_FechaRegistro BETWEEN ISNULL( convert(datetime, ?, 120), (select min(slpr_FechaRegistro) from t_solicitud_producto) ) AND ISNULL( convert(datetime, ?, 120),  (select max(slpr_FechaRegistro) from t_solicitud_producto)  ) )
+		ORDER BY sp.slpr_FechaRegistro DESC
+		]]>
+	</sql>
+	<sql id="Solicitud.eliminarSolicitud">
+		<![CDATA[		
+		DELETE FROM T_PRODUCTO_COMPLEMENTARIO
+		WHERE prcm_IdSolicitudProducto = ?
+		
+		DELETE FROM T_TELEFONO_SOLICITUD_PRODUCTO
+		WHERE tslp_IdSolicitudProducto = ?
+		
+		DELETE FROM T_SOLICITUD_PRODUCTO
+		WHERE slpr_IdSolicitudProducto = ?
+		]]>
+	</sql>
+</custom-sql>

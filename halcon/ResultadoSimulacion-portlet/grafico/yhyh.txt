@@ -1,0 +1,8 @@
+/**
+	 * Nombre: returnJson. <br/>
+	 * Descripción: Convierte el objeto enviado como parámetro en formato JSON. <br/>
+	 * Fecha: 20/06/2013 <br/>
+	 * @param o El objeto que será convertido en formato JSON
+	 * @param resourceResponse Nos permite definir el tipo de contenido
+	 * @throws IOException Señales de que una excepción de E / S se ha producido.
+	 */

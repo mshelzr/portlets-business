@@ -1,0 +1,145 @@
+#set($filas=7)
+
+#if ($nav_child.hasChildren())
+	
+	#set($opcionMenuManualArray= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","Esmenumanual",$nav_child.getLayout().getPrimaryKey()))
+
+	
+	#set($opcionMenuManual = "")
+	#foreach( $criterio in $opcionMenuManualArray )
+		#set($opcionMenuManual = $criterio)
+	#end
+	
+	#if($opcionMenuManual == "SI")
+		#set($idMenuManual= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","Idmenumanual",$nav_child.getLayout().getPrimaryKey()))
+		#if($idMenuManual != 0)
+			#set($articleContentManual=$journalContentUtil.getContent($group_id, "$idMenuManual",null,"$locale",$theme_display))
+		    $articleContentManual
+		#end
+	#else
+		<div class="under-menu">
+		#**
+			#foreach ($nav_sub_child in $nav_child.getChildren())
+				##Indica si el class menu-destacado esta seteado o no
+				#set($esDestacado ="0")
+				<div class="menu-destacado">
+					#set($esDestacado ="1")
+					  <div class="item-md">
+			            <h2><a href="#urlVerdadera($nav_sub_child)" class="link-nc">$nav_sub_child.getName()</a></h2>
+			            ## 4to Nivel
+			           #if ($nav_sub_child.hasChildren()) 
+				            <ul>
+				            	#foreach ($nav_sub_sub_child in $nav_sub_child.getChildren())
+				            		#if($esDestacado==0)
+				            		 <div class="menu-destacado">
+				            		   	<div class="item-md">
+				            		   		<ul>
+				            		  #set($esDestacado ="1")
+				            		#end
+					            		#set($classSubSubChild ="")
+					            	#if($velocityCount % $filas == 1)
+										#set($classSubSubChild ='class="doble_linea"')	
+									#end
+									<li $classSubSubChild><a href="#urlVerdadera($nav_sub_sub_child)" title="$nav_sub_sub_child.getName()" $nav_sub_sub_child.getTarget()>$nav_sub_sub_child.getName()</a></li>
+									##Solo mostrare los 8 primeros
+									#if($velocityCount % $filas == 0 || $velocityCount==$nav_sub_child.getChildren().size())
+										</ul>
+									 </div>
+									</div>
+									#set($esDestacado ="0")
+									#end
+				            	#end
+				            ##</ul>
+			            #end 
+			            ##</div>
+		          ##</div>
+			#end
+	 **#
+			## banners inside pop up
+	       #**   #set($bannerId=$nav_child.getLayout().getExpandoBridge().getAttribute("idBannerMenuContextual"))
+	          #if($bannerId != 0)
+		          #set($articleContent=$journalContentUtil.getContent($group_id, "$bannerId",null,"$locale",$theme_display))
+		          $articleContent
+	          #end **#
+		<div class="content-opciones">
+			##SE dejaran 7 items por columna
+			#set($esDestacado =0)
+		  #foreach ($nav_sub_child in $nav_child.getChildren())
+		    ##NoFollow para el tercer nivel
+		    
+		    #set($opcionMenuManualArray3= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","nofollow",$nav_sub_child.getLayout().getPrimaryKey()))
+			#set($opcionMenuManual3 = "")
+			#foreach( $criterio in $opcionMenuManualArray3 )
+				#set($opcionMenuManual3 = $criterio)
+			#end
+			#if($opcionMenuManual3 == "SI")
+			   	#set($opcionMenuManual3 = "nofollow")	
+			#else
+				#set($opcionMenuManual3 = "follow")	
+			#end
+		  
+		  	#if($esDestacado == 0)
+		  	<div class="columna-menu">
+		  	#end 	
+		  		##3 Nivel
+		  	 	<a href="#urlVerdadera($nav_sub_child)" class="optpadre" rel="$opcionMenuManual3">$nav_sub_child.getName()</a>
+		  	 	 #set($esDestacado = $esDestacado + 1)
+		  	 	 ##4to Nivel
+			     #if ($nav_sub_child.hasChildren()) 
+			     	
+			           	#foreach ($nav_sub_sub_child in $nav_sub_child.getChildren())
+			           	 	##NoFollow para el cuarto nivel
+						    
+						    #set($opcionMenuManualArray4= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","nofollow",$nav_sub_sub_child.getLayout().getPrimaryKey()))
+							#set($opcionMenuManual4 = "")
+							#foreach( $criterio in $opcionMenuManualArray4 )
+								#set($opcionMenuManual4 = $criterio)
+							#end
+							#if($opcionMenuManual4 == "SI")
+							   	#set($opcionMenuManual4 = "nofollow")	
+							#else
+								#set($opcionMenuManual4 = "follow")	
+							#end
+			           		 
+			           		#if($esDestacado == $filas )
+						  	</div>
+						  		#set($esDestacado =0)
+						  	#end
+					  	    #if($esDestacado == 0)
+						  		<div class="columna-menu">
+						  	#end 
+			           		#if($velocityCount == 1)
+			           			<a href="#urlVerdadera($nav_sub_sub_child)" class="opthijo primerhijo" rel="$opcionMenuManual4">$nav_sub_sub_child.getName()</a>
+			           		#else
+			           			<a href="#urlVerdadera($nav_sub_sub_child)" class="opthijo"  rel="$opcionMenuManual4">$nav_sub_sub_child.getName()</a>
+			           		#end
+			           		#set($esDestacado = $esDestacado + 1)
+			           		
+			           		#if($esDestacado == $filas)
+						  	</div>
+						  		#set($esDestacado =0)
+						  	#end
+			           		
+		           		#end
+	           	 #end
+		  	
+		  	#if($esDestacado == $filas )
+		  	</div>
+		  		#set($esDestacado =0)
+		  	#end
+		  #end    
+		  ##Si el bucle termino y destacado no es 0 cerramos
+			   #if($esDestacado > 0 )
+			  	</div>
+			  		#set($esDestacado =0)
+			  	#end
+		</div> 
+	        	  		##banners inside pop up
+		   #set($bannerId= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","idBannerMenuContextual",$nav_child.getLayout().getPrimaryKey()))
+		   #if($bannerId != 0)
+		   	 	#set($articleContent=$journalContentUtil.getContent($group_id, "$bannerId",null,"$locale",$theme_display))
+		        $articleContent  
+		   #end  
+		</div>		
+	#end
+#end

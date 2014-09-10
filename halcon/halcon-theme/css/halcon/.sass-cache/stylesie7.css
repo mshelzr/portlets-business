@@ -1,0 +1,118 @@
+@charset "utf-8";
+.cont_hincha {
+  background: url(../images/halcon/bg_hinchacorporativo.jpg) repeat-x center 50%;
+  color: #919195;
+  font-size: 11px;
+  height: 30px;
+  margin: 22px 0 10px;
+  width: 940px; }
+
+.cont_hincha .contenido ul li {
+  display: block;
+  float: left;
+  margin: 0 5px 0 0; }
+
+.cont_hincha .contenido .imagenes {
+  display: inline-block;
+  height: 10px;
+  margin: -2px 0 0;
+  vertical-align: middle;
+  width: 10px; }
+
+.content-porlet {
+  margin: 22px 0 10px;
+  width: 940px; }
+
+.header .menu-deco .medio-m {
+  display: inline-block;
+  line-height: 15px;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 6px;
+  padding-top: 7px;
+  vertical-align: top; }
+
+.header .menu-deco .medio-mf {
+  display: inline-block;
+  line-height: 15px;
+  padding-bottom: 7px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 7px;
+  vertical-align: top; }
+
+/* vineta menu */
+.header .vineta {
+  width: 15px;
+  height: 15px;
+  display: inline-block; }
+
+.header .vineta-doble-linea {
+  background: url(../images/halcon/down-arrow.gif) 8px 7px no-repeat !important;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: top; }
+
+/* float element menu personas */
+.header .float {
+  background-color: #fff;
+  border: solid 2px #009B3A !important;
+  float: left;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 99;
+  /*	display:none;
+   padding:5px 15px 10px 10px;
+   top:66px;  left:700px;
+  
+  
+  */ }
+
+.header .float a {
+  margin: 0px;
+  color: #005daa;
+  float: none;
+  padding: 5px 0px 5px 0px; }
+
+.header .float a:hover {
+  margin: 0px;
+  color: #00b259;
+  float: none;
+  padding: 5px 0px 5px 0px; }
+
+.header .float ul li {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  text-transform: uppercase;
+  border-top: dotted #666 1px;
+  padding: 10px 0px 7px 0px;
+  line-height: 16px; }
+
+.header .float .lead, .header .float .lead:hover {
+  color: #000;
+  margin: 5px 5px 15px 0px;
+  padding: 5px 5px 15px 0px; }
+
+/* Vinetas decorativas Menus*/
+.header .float .vineta {
+  background: url(../images/halcon/down-arrow.gif) 0px 8px no-repeat !important;
+  width: 10px;
+  height: 18px;
+  padding: 2px; }
+
+.header .dos {
+  background: url(../images/halcon/down-arrow.gif) 0px 6px no-repeat !important;
+  width: 10px;
+  height: 18px; }
+
+/* HÂ´s en Under-menus */
+.header .under-menu h1, .under-menu h2, .under-menu h3 {
+  color: #005daa;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 7px 0px 5px 0px;
+  padding: 0 5px 0 3px;
+  line-height: 17px; }
+

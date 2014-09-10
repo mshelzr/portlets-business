@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<service name="Plugin_halcon_ValorCuotaService" provider="java:RPC" style="rpc" use="encoded">
+		<parameter name="allowedMethods" value="*" />
+		<parameter name="className" value="com.ext.portlet.halcon.service.http.ValorCuotaServiceSoap" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<parameter name="wsdlPortType" value="ValorCuotaServiceSoap" />
+		<parameter name="wsdlServiceElement" value="ValorCuotaServiceSoapService" />
+		<parameter name="wsdlServicePort" value="Plugin_halcon_ValorCuotaService" />
+		<parameter name="wsdlTargetNamespace" value="urn:http.service.halcon.portlet.ext.com" />
+	</service>
+</deployment>

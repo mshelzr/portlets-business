@@ -1,0 +1,6 @@
+[{"id":0,"etiqueta":"Todos","tool":"tooltip 1","orden":"0","defecto":"0"},
+{"id":2,"etiqueta":"Deposito Plazo","tool":"tooltip 1","orden":"1","defecto":"0"},
+{"id":5,"etiqueta":"Fondos Mutuos","tool":"tooltip 1","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Pr\u00e9stamo Personal","tool":"tooltip 1","orden":"3","defecto":"0"},
+{"id":1,"etiqueta":"Cr\u00e9dito Hipotecario","tool":"tooltip 1","orden":"4","defecto":"0"},
+{"id":4,"etiqueta":"Cr\u00e9dito Vehicular","tool":"tooltip 1","orden":"5","defecto":"0"}]

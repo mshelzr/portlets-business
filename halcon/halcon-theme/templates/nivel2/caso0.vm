@@ -1,0 +1,23 @@
+<div class="menu-deco"> 
+	
+  #if($stringUtil.count($nav_child.getName(), $br_space) == 0)
+	<a href="#" title="$nav_child.getName()" $nav_child.getTarget() class="mlinks"> 
+		<span class="menu-deco l">&nbsp;</span> 
+		<span class="medio-m $class_nivel_2">$nav_child.getName()<em class="vineta">&nbsp;</em></span> 
+		<span class="menu-deco r">&nbsp;</span> 
+	</a>
+  #else
+     #set($nuevo_texto=$nav_child.getName().replaceAll($br_space,"<br/>"))
+     #set($nuevo_texto_blanco=$nav_child.getName().replaceAll($br_space," "))
+	  <a href="#" title="$nuevo_texto_blanco" $nav_child.getTarget() class="mlinks doble-linea"> 
+			<span class="menu-deco l">&nbsp;</span> 
+			<span class="medio-md $class_nivel_2"><span class="d-linea">$nuevo_texto</span><em class="vineta-doble-linea">&nbsp;</em></span> 
+			<span class="menu-deco r">&nbsp;</span> 
+		</a>
+  #end
+	##Menu tercer nivel
+	#parse ("$full_templates_path/nivel3/caso0.vm")
+</div>
+#if($velocityCount != $nav_item.getChildren().size())
+	<span class="separation"></span>
+#end

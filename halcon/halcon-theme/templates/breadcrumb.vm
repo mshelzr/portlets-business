@@ -1,0 +1,41 @@
+#set ($menuItems= [])
+#foreach($pagina in $layout.getAncestors())
+#set ($tmp = $menuItems.add({"title" : $pagina.getName($locale.toString()), "orden" : $velocityCount ,"url" : $pagina.getFriendlyURL()}))
+#end
+
+#set($flag=1)
+
+<div class="cadena-template">
+
+
+	#foreach ($item in $sortTool.sort($menuItems, 'orden:desc'))
+		##Haz tu html
+		#if($item.url == "/header" || ($item.url == "/footer"))
+			<samp itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/" itemprop="url"><span itemprop="title">Inicio</span> </a></samp>
+			<span> &gt; </span>
+			#set($flag=0)
+		#else
+			
+			#set($padre="itemprop='child'")
+			#if($velocityCount==1)
+				#set($padre="")
+			#end
+		
+			#if($velocityCount ==2 && $flag==1)
+				<samp $padre itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="javascript:void(0)" itemprop="url"><span itemprop="title">$item.title.replaceAll(";", "")</span> </a></samp>
+				<span> &gt; </span>
+			#else
+				<samp $padre itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="$item.url"  itemprop="url"><span itemprop="title">$item.title.replaceAll(";", "")</span> </a></samp>
+				<span> &gt; </span>
+			#end
+		#end
+	#end
+	
+##pagina actual
+#if($menuItems.size()>0)
+	<samp itemscope itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child"><a href="javascript:void(0)" title="$layout.getName($locale.toString())" class="activo"  itemprop="url" ><span itemprop="title">$layout.getName($locale.toString())</span></a></samp>
+	
+#end
+
+
+</div>

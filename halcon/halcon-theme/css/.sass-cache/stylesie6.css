@@ -1,0 +1,3242 @@
+@charset "utf-8";
+/************************************HEADER ****************************/
+.header {
+  padding-top: 20px;
+  float: left;
+  font-size: 11px; }
+
+.logo {
+  display: inline; }
+
+.header .vineta {
+  background: url(../images/halcon/down-arrow.gif);
+  background-position: 5px 5px;
+  background-repeat: no-repeat;
+  height: 10px; }
+
+/* vineta menu */
+.header .dos {
+  background: url(../images/halcon/down-arrow.gif) 0px 8px no-repeat !important;
+  width: 8px;
+  height: 8px; }
+
+/* Menu principal */
+.header .menu-activo {
+  background: url(../images/halcon/bg-main-menu.png) repeat-x bottom;
+  color: #fff;
+  float: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 7px 0px 0px 0px;
+  z-index: 0;
+  display: inline-block; }
+
+.header .menu-ops {
+  background: url(../images/halcon/bg-menu-act.png) bottom repeat-x;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 11px 0px 0px 0px;
+  z-index: 0;
+  display: block;
+  float: left; }
+
+/* Menu segundo nivel */
+.header .menu a {
+  color: #666;
+  padding: 13px 4px 2px 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  float: left;
+  display: inline-block !important; }
+
+.header .menu-activo a {
+  color: #FFF !important;
+  display: inline !important; }
+
+.header span.separation {
+  background: #10813b;
+  border-right: medium none;
+  float: left;
+  height: 20px;
+  margin: 9px 0 0;
+  width: 1px; }
+
+.header span.separation-dos {
+  float: left;
+  border-right: solid 1px #aeaeae;
+  width: 1px;
+  height: 20px;
+  margin: 11px 6px 0px 6px; }
+
+/* bordes decorativos menus */
+.header .m_a_deco_l {
+  background: url(../images/halcon/bg-menu-l.png) no-repeat;
+  background-position: 0px 8px;
+  float: left;
+  width: 8px;
+  height: 41px; }
+
+.header .menu-ll {
+  background: url(../images/halcon/bg-menu-ll.png) no-repeat;
+  background-position: -1px 9px;
+  float: left;
+  width: 11px;
+  height: 42px; }
+
+.header .m_a_deco_r {
+  background: url(../images/halcon/bg-menu-r.png) no-repeat;
+  background-position: 0px 2px;
+  float: left;
+  width: 10px;
+  height: 35px;
+  z-index: 99;
+  margin: 6px 0 0 0; }
+
+.header .menu-rr {
+  background: url(../images/halcon/bg-menu-r.png) no-repeat;
+  background-position: 0px 2px;
+  float: left;
+  width: 10px;
+  height: 35px;
+  z-index: 99;
+  margin: 6px 0 0 0; }
+
+.header .menu-r {
+  background: url("../images/halcon/bg-menu-r.png") no-repeat scroll 0 9px transparent;
+  float: left;
+  width: 11px;
+  height: 42px; }
+
+.header .menu-r-v {
+  background: url(../images/halcon/m-last-deco.jpg) no-repeat;
+  float: left;
+  width: 10px;
+  height: 33px;
+  margin: 9px 0 0 0; }
+
+.header .menu-l-gris {
+  background: url(../images/halcon/bg-gris-menu-l.png) no-repeat;
+  float: left;
+  width: 6px;
+  height: 33px;
+  background-position: 0px 7px; }
+
+.header .m_opts_r {
+  background: url(../images/halcon/bg-gris-menu-r.png) no-repeat;
+  float: left;
+  width: 7px;
+  height: 33px;
+  background-position: 0px 7px; }
+
+.header .menu-drop a.doble-linea {
+  z-index: 98;
+  color: #FFFFFF;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  text-align: center; }
+
+.header .menu-drop span.d-linea {
+  display: inline-block; }
+
+/* search */
+.header .search {
+  width: 140px;
+  height: 28px;
+  float: right;
+  padding-top: 8px;
+  display: inline;
+  margin-bottom: 0;
+  overflow: hidden; }
+
+/* menu over opts */
+.header .menu-deco {
+  height: 30px;
+  float: left;
+  margin: 3px 0px 0px 0px; }
+
+.menu-deco:hover {
+  height: 30px;
+  padding: 3px;
+  background-color: #fff !important;
+  margin: 2px 2px;
+  border-radius: 5px 5px 0 0;
+  color: #000; }
+
+.header .menu-deco .l {
+  background: none;
+  width: 4px;
+  height: 34px;
+  padding: 0px !important;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  float: none !important;
+  margin: 0px !important;
+  display: inline-block !important; }
+
+.header .menu-deco .r {
+  background: none;
+  width: 4px;
+  height: 34px;
+  padding: 0px !important;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  float: none !important;
+  margin: 0px !important;
+  display: inline-block !important; }
+
+.header .menu-deco:hover .l {
+  background: url(../images/halcon/l-deco-m-int.jpg) no-repeat;
+  width: 4px;
+  height: 33px;
+  padding: 0px !important;
+  overflow: visible;
+  position: relative;
+  display: inline-block !important;
+  float: left; }
+
+.header .menu-deco:hover .r {
+  background: url(../images/halcon/r-deco-m-int.jpg) no-repeat;
+  width: 4px;
+  height: 33px;
+  padding: 0px !important;
+  overflow: visible;
+  position: relative;
+  display: inline-block !important;
+  float: left; }
+
+/* Menu Flotante*/
+/*.header .under-menu {
+	width:916px;
+	width:899px;
+	float:left;
+	background-color:#FFF;
+	color:#000000;
+	position:absolute;
+	top:0;
+	left:0;
+	margin:35px 0px 0px 0px;
+  	z-index:89;
+	padding:30px 20px 10px 18px;
+	border:solid 2px #009b3a;
+	display:none;
+	height:265px;
+}*/
+.header .under-menu a {
+  color: #0172d2;
+  padding: 3px 0px;
+  margin-left: 0px !important;
+  display: inline-block !important; }
+
+.header .under-menu a:hover {
+  color: #0172d2 !important; }
+
+.header .under-menu li a {
+  text-decoration: none;
+  display: inline-block !important;
+  color: #919195;
+  /*    display: inline-block !important;*/
+  text-decoration: none;
+  line-height: 13px;
+  padding: 3px 0 3px 0 !important; }
+
+.header .under-menu li a:hover {
+  color: #666666 !important; }
+
+.header .menu-destacado {
+  float: left;
+  width: 140px;
+  /*	padding:7px;*/
+  color: #0172d2;
+  line-height: 10px;
+  display: inline-block !important; }
+
+/* drop down */
+.header .menu-drop {
+  width: 940px;
+  background: url(../images/halcon/menu-bg.jpg) repeat-x;
+  display: block;
+  height: 37px;
+  float: left;
+  z-index: 98;
+  position: relative;
+  margin: 0; }
+
+.header .menu-drop a {
+  color: #ffffff;
+  float: left;
+  margin-left: 2px;
+  overflow: hidden;
+  padding-bottom: 7px;
+  padding-left: 4px;
+  padding-right: 2px;
+  padding-top: 2px;
+  position: relative; }
+
+.header .menu-drop a.menu_inst {
+  /*padding:7px 4px 7px 2px !important;*/ }
+
+.header .menu-drop a:hover {
+  color: #000;
+  /*	height:17px;*/
+  float: left;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 5px 5px 0 0; }
+
+/*IMGS DROP DOWN MENU */
+.cwd280 {
+  float: right;
+  height: 255px;
+  margin-right: 19px;
+  margin-top: 23px; }
+
+.wd280 {
+  width: 250px !important;
+  float: right;
+  margin-left: 9px; }
+
+.header .menu-drop .menu-deco .under-menu .solicitar-prods {
+  width: 250px;
+  float: left; }
+
+.header .under-menu ul {
+  margin: 0px;
+  padding: 4px 0px;
+  float: left; }
+
+.header .first-child {
+  margin-left: 0px; }
+
+.header .last {
+  margin-right: 10px; }
+
+.header .one-col {
+  margin-right: 204px; }
+
+.header .menu-deco .medio-m {
+  display: inline-block;
+  padding: 5px 6px 0 6px;
+  vertical-align: top; }
+
+.header .menu-deco .medio-md {
+  display: inline-block;
+  padding: 3px 0 0 0;
+  vertical-align: top; }
+
+.header .menu-deco .medio-mf {
+  display: inline-block;
+  padding: 0px;
+  vertical-align: top; }
+
+/* Doble-lineas en textos del menu */
+.header .menu-drop a.doble-linea {
+  float: left;
+  color: #FFFFFF;
+  overflow: hidden;
+  z-index: 99;
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+
+.header .menu-drop span.d-linea {
+  display: inline-block; }
+
+/* vineta menu */
+.header .vineta {
+  background: url(../images/halcon/down-arrow.gif) 8px 5px no-repeat !important;
+  display: inline-block; }
+
+.header .dos {
+  background: url(../images/halcon/down-arrow.gif) 0px 10px no-repeat !important;
+  width: 10px;
+  height: 18px; }
+
+.header .vineta-doble-linea {
+  background: url(../images/halcon/down-arrow.gif) 8px 7px no-repeat !important;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: top; }
+
+.this-menu {
+  background: url(../images/halcon/bg_menu_act_ie6.jpg) repeat-x left top !important; }
+
+/****************************FIN HEADER***********************/
+/***********************HOME PERSONAS ************************/
+.anchitox {
+  width: 77px; }
+
+.servicios-hi .lista-ser-hi ul {
+  float: left;
+  margin: 10px 0 0 10px;
+  width: 166px; }
+
+.regalo-hi .caja-re {
+  background: url(../images/halcon/caja-sorpresas-big.png) no-repeat;
+  float: left;
+  height: 143px;
+  margin: 32px 0 0 13px;
+  width: 137px; }
+
+/*SOCIAL*/
+.social {
+  width: 940px;
+  margin: 20px 0 20px 0; }
+
+.social h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #747678;
+  margin: 10px 0px 7px 20px;
+  height: 18px;
+  line-height: 17px !important; }
+
+/*social-interbank*/
+.social-interbank {
+  width: 921px;
+  height: 335px;
+  background: #dfdfdf;
+  border-radius: 15px 0px 0px 0px;
+  padding: 15px 0px 0px 19px; }
+
+.titulo-social {
+  width: 171px;
+  height: 34px;
+  color: #747678;
+  line-height: 30px; }
+
+.titulo-social em.mitiempo {
+  width: 73px;
+  height: 33px;
+  background: url(../images/halcon/sprite-iconos.png);
+  display: inline-block;
+  background-position: 1px -713px;
+  margin: 1px 0px 0px 0px; }
+
+.destacados {
+  width: 92px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  float: left; }
+
+.social-left-hp {
+  width: 584px;
+  height: 273px;
+  overflow: hidden;
+  float: left;
+  position: relative; }
+
+.social-left-hp .feature-social-hp {
+  width: 584px;
+  height: 273px;
+  position: absolute; }
+
+.planes {
+  width: 636px;
+  height: 273px;
+  margin: 6px 0px 0px 1px;
+  float: left;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative; }
+
+.planes em {
+  background: url(../images/halcon/sprite-vinetas.png);
+  display: block; }
+
+.planes img {
+  width: 278px;
+  height: 273px;
+  float: left;
+  border-radius: 10px 0px 0px 10px; }
+
+.social-left-hp .feature-social-hp .planes-hoy {
+  width: 293px;
+  height: 273px;
+  background-color: #930043;
+  float: left;
+  color: #FFF;
+  line-height: 16px;
+  font-size: 11px; }
+
+.planes-hoy b {
+  float: left; }
+
+.planes-hoy b.sub-bold {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 14px; }
+
+.planes-hoy p {
+  width: 272px;
+  float: left; }
+
+.planes-hoy em {
+  margin: 4px 3px 4px 23px; }
+
+.feature-social-hp .planes-hoy .planes-titulo {
+  width: 306px;
+  height: 38px;
+  background: #939391;
+  border-bottom: 1px solid #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  float: left; }
+
+.planes-titulo p {
+  width: 200px;
+  margin: 12px 0px 0px 11px; }
+
+.planes-titulo em {
+  width: 9px;
+  height: 19px;
+  margin: 13px 0px 0px 283px !important; }
+
+.planes-titulo em.planes-icono {
+  background-position: 1px -582px; }
+
+.bg-p {
+  float: left;
+  width: 13px;
+  height: 38px;
+  background: #737271; }
+
+.planes-noticia {
+  width: 280px;
+  height: 119px;
+  background: #c7015c;
+  margin: 12px 0px 10px 13px;
+  float: left;
+  line-height: 12px !important; }
+
+.planes-noticia em {
+  margin: 16px 3px 0px 10px; }
+
+.planes-noticia p {
+  width: 220px;
+  margin: 12px 0px 0px 17px;
+  line-height: 12px; }
+
+em.noticia-vineta {
+  background: url(../images/halcon/v-social.gif) no-repeat;
+  width: 5px;
+  height: 9px;
+  display: block;
+  float: left; }
+
+.dias ul li.dia-final a:hover {
+  line-height: 39px;
+  border-radius: 0px 0px 10px 0px; }
+
+.plugin {
+  width: 243px;
+  height: 273px;
+  float: left;
+  margin: 6px 0px 0px 21px;
+  background: #FFFFFF; }
+
+/*social-pie*/
+.social-pie {
+  width: 940px;
+  height: 50px;
+  background: #f1f1f1;
+  border-radius: 0px 0px 15px 0px; }
+
+.twitter-interbank {
+  width: 200px;
+  height: 50px;
+  float: left;
+  border-radius: 0px 0px 13px 0px;
+  background: #0098c3;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin: 0px 27px 0px 0px;
+  line-height: 47px; }
+
+.twitter-interbank em.t-icono {
+  width: 20px;
+  height: 18px;
+  background: url(../images/halcon/sprite-iconos.png);
+  display: block;
+  float: left;
+  background-position: -2px -675px;
+  margin: 16px 7px 0; }
+
+.twitter-interbank p {
+  float: left;
+  margin-left: 3px; }
+
+.twitter-interbank p.bold {
+  font-weight: bold;
+  margin: 0 !important; }
+
+.tweet {
+  width: 355px;
+  margin: 13px 40px 0px 0px;
+  float: left;
+  line-height: 13px;
+  font-size: 11px; }
+
+.tweet b {
+  color: #626262; }
+
+.tweet a {
+  text-decoration: underline;
+  color: #005daa; }
+
+.siguenos {
+  width: 280px;
+  overflow: hidden;
+  float: left; }
+
+.siguenos p {
+  color: #005DAA;
+  line-height: 51px;
+  float: left;
+  font-size: 12px; }
+
+/*.siguenos em {
+	background:url(../images/halcon/sprite-iconos.png);
+	width:19px;
+	height:19px;
+	display:block;
+	float:right;
+	margin:17px 0px 0px 5px;
+	cursor:pointer;
+}
+.siguenos em.google {
+	background-position:1px -114px;
+	margin-right:9px;
+}
+.siguenos em.youtube {
+	background-position:0px -76px;
+}
+.siguenos em.twitter {
+	background-position:0px -38px;
+}
+.siguenos em.facebook {
+	background-position:0px 0px;
+}*/
+.pie ul {
+  float: left;
+  height: 185px;
+  margin: 34px 3px 0 15px;
+  width: 170px; }
+
+.content-porlet {
+  margin: 12px 0 10px;
+  width: 940px; }
+
+/****************************FIN HOME PERSONAS*****************************/
+/************home corporativo **********************************/
+.cont_hincha {
+  background: url(../images/halcon/bg_hinchacorporativo.jpg) repeat-x center 50%;
+  color: #919195;
+  font-size: 11px;
+  height: 30px;
+  margin: 0;
+  width: 940px; }
+
+.cont_hincha .contenido {
+  float: left;
+  overflow: hidden;
+  padding-bottom: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 13px;
+  width: 889px; }
+
+.cont_hincha .contenido ul li {
+  display: block;
+  float: left;
+  margin: 0 5px 0 0; }
+
+.cont_hincha .contenido .imagenes {
+  display: inline-block;
+  height: 10px;
+  margin: -2px 0 0;
+  vertical-align: middle;
+  width: 10px; }
+
+.cont_hincha .contenido .igual {
+  background: url(../images/halcon/hinchas_signo_ie6.jpg) no-repeat scroll left 7px transparent; }
+
+.cont_hincha .contenido .up {
+  background: url(../images/halcon/hinchas_signo_ie6.jpg) no-repeat scroll left -14px transparent; }
+
+.cont_hincha .contenido .down {
+  background: url(../images/halcon/hinchas_signo_ie6.jpg) no-repeat scroll left -38px transparent; }
+
+.cont_hincha .btn {
+  float: right;
+  margin: 5px 0 0;
+  width: 31px; }
+
+/**************************fin home corporativo *********************************/
+/*objetos*/
+.optiongroup, .optiongroup2, .optiongroup3 {
+  display: inline !important;
+  zoom: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  /*border:1px solid #c7c7c7;*/ }
+
+.porlet-right-hp .feature-hp .sec-feature ul {
+  margin: 0; }
+
+.content-general .dest_ ul {
+  font-size: 11px;
+  margin: 25px 0 0; }
+
+.servicios-hi .titulo-ser-hi .sec-titulo-ser {
+  float: left;
+  height: 30px;
+  margin: 0 0 0 5px;
+  width: 172px; }
+
+.servicios-hi .titulo-ser-hi em.serviciox {
+  background-position: 0 -843px; }
+
+.servicios-hi .titulo-ser-hi em {
+  background: url(../images/halcon/sprite-iconos.png);
+  display: block;
+  float: left;
+  height: 30px;
+  width: 30px; }
+
+/*.simuladorC-contenedor {
+	margin:10px 0px 5px 0px;
+	width:350px;
+}
+.simuladorC-contenedor .simulador-opts {
+	height:31px;
+	line-height:30px;
+	margin:1px 0px;
+	background:url(../images/halcon/scv-bgs.gif) no-repeat;
+	background-position:0px -31px;
+}
+.simuladorC-contenedor .simulador-opts a {
+	color:#919195;
+	height:31px;
+	display:block;
+}
+.simuladorC-contenedor .simulador-opts:hover a {
+	color:#FFF;
+}
+.simuladorC-contenedor .simulador-opts:hover {
+	background-position:0px 0px;
+}
+.simuladorC-contenedor .simulador-opts-first-det {
+	margin:0 0 0 13px;
+	display:inline-block;
+	float:left;
+}
+.simuladorC-contenedor .simulador-opts-sec-det {
+	padding:0px 5px 0px 17px;
+	display:inline-block;
+	float:left;
+}
+
+*/
+/* fin Simulador CrÃ©dito por Fondos Mutuos */
+/*Adicionales*/
+.no-bold {
+  font-weight: normal !important; }
+
+.sin-border {
+  border: none !important; }
+
+.espacio9 {
+  height: 9px; }
+
+.float-left {
+  float: left; }
+
+.float-right {
+  float: right; }
+
+.sepw8 {
+  width: 7px !important;
+  height: 28px;
+  display: block; }
+
+.dos-lineas-op {
+  line-height: 13px !important; }
+
+/**/
+/*.optiongroup {
+	border-radius:2px;
+	overflow:hidden;
+	border:1px solid #c7c7c7;
+}*/
+/*.optiongroup span {
+	height:26px;
+	line-height:26px;
+	text-align:center;
+	color:#919195;
+	vertical-align:middle;
+	border-right:1px solid #a8a8a8;
+	background:url(../images/halcon/bg-op.jpg);
+	display:block;
+	float:left;
+	padding:0 5px 0 5px;
+	cursor:pointer;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+}*/
+/*.optiongroup span.active-op {
+	background:url(../images/halcon/bg-op-active.jpg);
+	color:#FFF;
+}*/
+/* float option menu Personas */
+.header .float {
+  background-color: #fff;
+  border: solid 2px #009B3A;
+  padding: 7px 16px 6px 14px;
+  width: 119px;
+  height: 166px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  margin: 12px 0 0 -88px; }
+
+.header .float a {
+  margin: 0px;
+  color: #005daa;
+  float: none;
+  padding: 5px 0px 5px 0px; }
+
+.header .float a:hover {
+  color: #00b259; }
+
+.header .float ul li {
+  list-style: none;
+  list-style-image: none;
+  list-style-type: none;
+  text-transform: uppercase;
+  border-top: dotted #666 1px;
+  padding: 5px 0px 3px 0px;
+  line-height: 16px; }
+
+.header .float .lead, .header .float .lead:hover {
+  color: #000;
+  margin: 0 5px 5px 0;
+  padding: 0 5px 0 0;
+  text-transform: uppercase;
+  font-size: 12px; }
+
+.header .float .vineta {
+  background: url(../images/halcon/down-arrow.gif) 0px 8px no-repeat !important;
+  width: 10px;
+  height: 18px;
+  vertical-align: top; }
+
+.header .under-menu h1, .under-menu h2, .under-menu h3 {
+  color: #005daa;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px 0px 5px 0px;
+  padding: 0 0px 0 5px;
+  line-height: 17px; }
+
+.header .under-menu li, .header .empresas li {
+  border-bottom: 1px dotted #999999;
+  float: left;
+  list-style: none outside none;
+  margin: 0 3px 0;
+  padding: 2px 0 0 0;
+  width: 144px; }
+
+.content-slider .selector .sl-img {
+  height: 5px;
+  margin: 7px 0 0 -9px;
+  position: absolute;
+  clip: rect(0px 15px 5px 0px); }
+
+.destacado-hp {
+  border-right: #d9d9d9 1px dotted;
+  float: left;
+  height: 130px;
+  margin: 0px 3px 0px -3px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 189px; }
+
+.porlet-right-hp .feature-hp .sec-feature .btn-simular-pr {
+  width: 123px;
+  height: 33px;
+  text-align: center;
+  color: #FFF;
+  display: block;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: none;
+  background: url(../images/halcon/btn-azul-medium.png) no-repeat;
+  cursor: pointer;
+  margin: 0 40px 0 0; }
+
+/******************************TEMPLATE FP******************************************/
+.formato-sf .izquierda {
+  float: left;
+  height: 249px;
+  overflow: hidden;
+  width: 311px; }
+
+.formato-sf .derecha {
+  float: left;
+  margin: 6px;
+  width: 285px; }
+
+.sidebar .tarjetas-credito-ann .titulo {
+  color: #005daa;
+  font-size: 13px;
+  line-height: 10px;
+  margin: 20px auto 18px;
+  text-align: left;
+  text-transform: uppercase;
+  width: 221px; }
+
+.det-producto-pes .sec-pes a.active {
+  background: url(img/bg-pes-det-pro.jpg) repeat-x;
+  border-bottom: #fff 1px solid;
+  border-left: #cdcdcd 1px solid;
+  border-right: #cdcdcd 1px solid;
+  border-top: #cdcdcd 1px solid;
+  color: #00b259;
+  height: 43px;
+  line-height: 45px;
+  margin: 4px 1px 0 0;
+  width: auto !important; }
+
+.formato-sf .menor-mg {
+  float: left;
+  margin: 14px 7px 10px 4px;
+  width: 287px; }
+
+.sidebar .tarjetas-credito-ann .final {
+  font-size: 12px;
+  margin: 15px auto;
+  text-align: center;
+  padding: 0 !important;
+  width: auto !important; }
+
+/***************************************************GALERIA************************************/
+.gallery-fade {
+  height: 250px;
+  max-width: 312px; }
+
+/********menus****************/
+.TC-detail-noticia {
+  float: left;
+  line-height: 16px !important;
+  margin: 31px 15px -1px 0;
+  width: 452px; }
+
+.TC-detail img, .TC-detail-TTC img {
+  float: left; }
+
+/* boton */
+.TC-detail-prods a.campana, .TC-detail-prods-TTC a.campana {
+  width: 139px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  color: #FFF;
+  background: url(../images/halcon/btn-azul-regular.png) no-repeat;
+  display: block;
+  margin: 15px 0 37px 0px; }
+
+/* List CArds */
+.TC-detail-noticia .list-cards {
+  float: left;
+  margin: 10px 5px 10px 12px;
+  width: 220px; }
+
+/* img dentro de perfiladores */
+/* H2 dentro de perfiladores */
+.TC-content h2.dotted {
+  border-top: 1px dotted #999999;
+  clear: right;
+  padding: 20px 0;
+  width: 421px;
+  margin: 0 0 0 23px; }
+
+.TC-offer {
+  width: 120px;
+  z-index: 99;
+  position: absolute;
+  background: url(../images/halcon/bg-00.png) repeat-y 0px 0px;
+  height: 618px;
+  overflow: hidden; }
+
+/*************************************PERFILADORES*********************/
+.profile span.line {
+  margin: 14px 0 14px 0;
+  display: block;
+  overflow: hidden; }
+
+a.card {
+  margin: -1px 0 30px 64px; }
+
+.profile .content-slider .contentText {
+  height: 18px;
+  line-height: 13px;
+  text-align: right;
+  width: 266px; }
+
+.profile .body .col1 {
+  float: left;
+  /*width:200px;*/
+  width: 270px;
+  margin: auto; }
+
+.profile .item p {
+  float: left;
+  font-size: 11px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  /*width:198px;*/
+  width: 268px; }
+
+.profile .item h2 {
+  float: left;
+  font-size: 11px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  width: 198px; }
+
+.TTC-blocks {
+  border-top: #999 1px dotted;
+  float: left;
+  font-size: 11px;
+  line-height: 18px;
+  padding-bottom: 15px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  width: 421px;
+  margin: 0 0 0 10px; }
+
+.TC-content {
+  border: 1px solid #D2D2D2;
+  padding: 28px 16px 20px 18px;
+  width: 583px; }
+
+.formato-sf .ancho {
+  margin: 12px 0 0 6px !important;
+  width: 366px !important; }
+
+.formato-sf .video-thumb {
+  float: left;
+  margin: 0 0 0 8px !important; }
+
+.formato-sf h2 {
+  color: #009b3a;
+  font-size: 17px;
+  line-height: 21px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 19px; }
+
+.bluebtn-cont4 {
+  margin: 16px 0 0 15px; }
+
+.formato-sf .ancho2 {
+  width: 232px !important; }
+
+.paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url(../images/halcon/puntos.jpg) repeat scroll 0 10px transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 0px;
+  line-height: 10px; }
+
+.paging li a.active {
+  background: url(../images/halcon/puntos.jpg) repeat scroll 10px 20px transparent;
+  color: #e2e2e2; }
+
+.paging li a:hover {
+  background: url(../images/halcon/puntos.jpg) repeat scroll 10px 20px transparent;
+  color: #e2e2e2; }
+
+#perfil {
+  height: 421px;
+  position: relative;
+  width: 305px; }
+
+#perfil.savings {
+  height: 439px !important; }
+
+/*****************************footer*****************************/
+.pie-contactanos .contacto-forma em.icono-p1 {
+  background-position: 1px -414px; }
+
+.pie-contactanos .contacto-forma em.icono-p2 {
+  background-position: 1px -454px; }
+
+.pie-contactanos .contacto-forma em.icono-p3 {
+  background-position: 1px -494px; }
+
+/*****************************footer cambiado*****************************/
+.pie .descarga-app {
+  border-bottom: 1px dotted #C9C9C9;
+  border-top: 1px dotted #C9C9C9;
+  color: #747678;
+  float: left;
+  height: 50px;
+  line-height: 52px;
+  margin: 0 0 13px 15px;
+  width: 556px; }
+
+.pie .descarga-app .mg {
+  float: left;
+  height: 35px;
+  width: 570px; }
+
+.pie .descarga-app .mg a {
+  margin: 0 0 0 9px;
+  color: #747678; }
+
+.pie .descarga-app .mg a:hover {
+  color: #333333; }
+
+.pie .descarga-app .mg2 {
+  float: right;
+  margin: 0 29px 0 10px; }
+
+/**********************************************************SOL**********************************************************/
+.sol#content-medio {
+  padding: 0px 0px 16px 0px; }
+
+.texto-sec {
+  padding: 0px 0px 20px 20px !important; }
+
+#content-medio {
+  width: 614px;
+  float: left;
+  margin: 0 10px 0 0; }
+
+.sol-formulario {
+  padding: 38px 0px 29px 109px !important; }
+
+.soli-botones {
+  padding: 0px 0px 18px 195px; }
+
+.soli-botones2 {
+  padding: 9px 0px 2px 184px; }
+
+.oblig-ruc {
+  height: 28px !important; }
+
+.oblig-ruc p {
+  height: 9px; }
+
+.resul-titulo {
+  height: 98px !important; }
+
+.resul-titulo h3 {
+  padding: 4px 0px 3px 0px; }
+
+.resul-titulo em {
+  margin: 0px 0px 0px 159px !important;
+  background: url(../images/halcon/sprite-iconos-ie6.jpg) no-repeat center top; }
+
+.resul-titulo em.exito {
+  background-position: 0px -70px; }
+
+.resul-titulo em.error {
+  background-position: 0px -99px; }
+
+.resul-impre.con-decoration em {
+  margin: 0px 6px 0px 16px !important;
+  background: url(../images/halcon/sprite-iconos-ie6.jpg) no-repeat;
+  background-position: -1px -132px; }
+
+.cabecera-lbox {
+  background: url(../images/halcon/sprite-iconos-ie6.jpg) no-repeat top left; }
+
+.sol#content-medio .next-sol {
+  margin: 31px 0px 26px 138px; }
+
+.sol-publi {
+  margin: 0px 0px 0px 24px; }
+
+.codigo-icons em.volver {
+  background-position: 0px -1074px;
+  margin: -5px 0 0 0 !important;
+  cursor: pointer;
+  height: 10px; }
+
+.ayuda-form {
+  line-height: 29px; }
+
+.ayuda-form em {
+  margin: 5px 0px 0px 1px; }
+
+.bluebtn-cont.width-sol {
+  width: 150px; }
+
+.resul-impre.con-decoration .impre-centro {
+  margin: 0px 9px 0px 87px !important; }
+
+/*tooltips*/
+/*simuladores*/
+.porlet-right-hp .feature-hp .sec-feature .continuar-pr {
+  width: 70px;
+  background: url(../images/halcon/buellet_inc2-c.jpg) top right no-repeat;
+  background-position: 57px 3px;
+  margin: 10px 60px 0 0;
+  line-height: 14px !important; }
+
+.porlet-right-hp .feature-hp .sec-feature .regresar-pr {
+  width: 67px;
+  background: url(../images/halcon/buellet_inc2-inv-c.jpg) top left no-repeat;
+  background-position: 0 3px;
+  margin: 10px 0 0 30px;
+  padding: 0 0 0 15px;
+  line-height: 14px !important; }
+
+/* Inicio Styles IE6 MNU */
+/* SOLICITAR CREDITO AUTOMOTRIZ  */
+.CA-contenedor {
+  background: #f3f3f3;
+  float: left;
+  width: 900px;
+  height: 130px;
+  margin-bottom: 10px;
+  padding: 24px 20px 20px 20px; }
+
+.CA-contenedor h2 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #045aa3;
+  margin-bottom: 10px; }
+
+.CA-contenedor .bloque-I {
+  width: 600px;
+  float: left;
+  margin-right: 20px;
+  border-right: dotted 1px #666; }
+
+.CA-contenedor .bloque-II {
+  width: 260px;
+  float: left; }
+
+.CA-contenedor .bloque-II .sc {
+  color: #059cc7;
+  padding-left: 25px; }
+
+.CA-contenedor .bloque-II li {
+  padding: 7px 0 7px 20px;
+  float: left;
+  width: 200px;
+  color: #009ac8; }
+
+.CA-contenedor .CA-list {
+  float: left;
+  width: 340px;
+  margin-right: 5px; }
+
+.CA-contenedor .CA-list li {
+  border-bottom: solid 1px #999999;
+  padding: 8px 0 9px 10px;
+  float: left;
+  width: 290px;
+  margin-left: 10px;
+  color: #737577;
+  background: url(../images/halcon/sprite-vinetas.png) no-repeat scroll 0 12px transparent; }
+
+.CA-contenedor .bloque-II .ca-phone-icon {
+  background: url(../images/halcon/ca-sprites.jpg) no-repeat scroll -3px -44px transparent;
+  width: 30px;
+  height: 30px;
+  background-color: #999;
+  float: left;
+  margin-right: 5px; }
+
+.CA-contenedor .CA-descargas {
+  color: #7f7f7f;
+  height: 105px;
+  background: #d9d9d9;
+  margin-left: 2px;
+  width: 106px;
+  float: left;
+  text-align: center; }
+
+.CA-contenedor .CA-descargas a {
+  color: #7f7f7f;
+  text-decoration: none; }
+
+.CA-contenedor .ca-descarga-icon {
+  width: 33px;
+  height: 55px;
+  background: #000;
+  margin: 0 auto;
+  display: block;
+  background: url(../images/halcon/ca-sprites.jpg) no-repeat scroll 0 12px transparent; }
+
+/* CVT */
+.content-dp .cvt-content {
+  width: 168px;
+  height: 280px;
+  float: left;
+  display: inline-block !important;
+  margin: 0px 2px 25px 0;
+  background: #fafafa; }
+
+.content-dp .cvt-content-I {
+  margin-right: 2px;
+  width: 170px;
+  height: 280px;
+  display: inline-block;
+  background: #f0f0f0; }
+
+.content-dp .cvt-content-II {
+  border: solid 3px #ccc !important;
+  margin-right: 2px;
+  width: 180px;
+  height: 287px !important;
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 8px 2px 2px 2px; }
+
+.content-dp .cvt-content-III {
+  border: solid 3px #ccc !important;
+  margin-right: 2px;
+  width: 180px;
+  height: 285px !important;
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 8px 2px 2px 2px; }
+
+.content-dp .cvt-content-IV {
+  border: solid 3px #ccc !important;
+  margin-right: 2px;
+  width: 180px;
+  height: 285px !important;
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 8px 2px 2px 2px; }
+
+.content-dp .cvt-finales {
+  float: left;
+  width: 580px; }
+
+.content-dp .cvt-finales .cvt-links {
+  margin: 0 auto;
+  width: 300px; }
+
+.content-dp .cvt-finales .cvt-links a {
+  margin-left: 20px;
+  color: #009AC8;
+  text-decoration: underline; }
+
+.content-dp .cvt-finales p {
+  margin: 35px auto;
+  width: 380px;
+  text-align: center; }
+
+.content-dp .cvt-finales .destacado-cvt {
+  color: #333; }
+
+.content-dp .cvt-content .cvt-finales p {
+  margin: 0px auto; }
+
+.content-dp .cvt-content-I {
+  border: solid 3px #ccc !important;
+  margin-right: 2px;
+  padding: 5px;
+  width: 164px;
+  height: 272px;
+  display: inline-block; }
+
+.content-dp .cvt-content h2 {
+  margin-bottom: 0px !important;
+  padding: 10px 0 12px 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px !important; }
+
+.content-dp .cvt-content li {
+  padding: 8px 0 9px 0px;
+  float: left;
+  width: 150px;
+  color: #737577; }
+
+/* RSCV */
+.RSCV {
+  border: solid 1px #7fd8ac;
+  width: 908px;
+  height: 70px;
+  float: left;
+  margin: 5px 0px 15px 0;
+  padding: 10px 15px 10px 15px;
+  line-height: 17px; }
+
+.RSCV h2 {
+  font-size: 15px !important;
+  color: #009b3a !important;
+  font-weight: bold !important;
+  margin: 7px auto !important; }
+
+.RSCV a {
+  color: #0098c3; }
+
+.RSCV a:hover {
+  color: #0098c3;
+  text-decoration: underline; }
+
+/* !! sec-det-II  !!  */
+#content-medio-template {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 620px; }
+
+.content-medio-template {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 620px; }
+
+/* SideBar */
+.sidebar {
+  float: right;
+  line-height: 18px;
+  width: 300px;
+  display: block; }
+
+/* det-producto-pes // Pestanas de productos en CV  */
+.det-producto-pes .sec-det-II {
+  position: relative;
+  height: 469px;
+  border: solid 1px #cdcdcd;
+  border-radius: 0 0 10px 0; }
+
+.det-producto-pes .sec-det-II .feature-dp {
+  width: 585px;
+  height: 415px;
+  position: absolute;
+  margin: 37px 0 0 20px;
+  background: #FFFFFF;
+  overflow: hidden; }
+
+/* detalles List numeros Grandes */
+.content-dp .cvt-content .aumentado, .content-dp .cvt-content .aumentado-II {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 3px; }
+
+.content-dp .cvt-content .aumentado-II {
+  color: #333333;
+  font-size: 26px; }
+
+.content-dp .cvt-content .aumentado-bloque {
+  width: 80px;
+  float: right; }
+
+/* A{s */
+.content-dp .cvt-content a {
+  float: left; }
+
+/* botones A */
+.content-dp .cvt-content .campana {
+  background: url(../images/halcon/btn-azul-regular.png) no-repeat scroll 0 0 transparent;
+  color: #FFFFFF !important;
+  display: block;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  width: 139px;
+  margin: 0px 0 10px 20px; }
+
+.content-dp .cvt-content .campana a {
+  color: #fff;
+  padding-left: 25px; }
+
+.content-dp .cvt-content .nc a {
+  color: #009ac8; }
+
+.content-dp .cvt-content .nc {
+  color: #059cc7;
+  display: block;
+  height: 38px;
+  line-height: 33px;
+  padding: 10px 0 0 10px;
+  margin-left: 10px; }
+
+.content-dp .cvt-content .nc-II {
+  line-height: 33px;
+  text-align: center;
+  width: 139px;
+  margin-top: 10px; }
+
+/* boton verde en header */
+.verdes {
+  margin-top: 15px;
+  float: right; }
+
+.verdes a {
+  color: #fff;
+  font-size: 11px;
+  background: url(../images/halcon/cct-btn.jpg) no-repeat scroll 0 0 transparent;
+  padding: 9px 6px 9px 6px;
+  display: inline-block; }
+
+/* NAO // SIDEBAR: "Necesitas Asisntencia Online" */
+.NAO {
+  width: 292px;
+  height: 110px;
+  background: #fafafa;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px 0 10px 0;
+  margin: 0 auto 10px;
+  padding: 15px 5px 10px 5px; }
+
+.NAO h2 {
+  color: #009ac8;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  width: 235px;
+  text-transform: uppercase; }
+
+.NAO .nao-chat {
+  width: 105px;
+  float: left;
+  margin: 20px 5px 0 10px;
+  border-right: 2px dotted #ccc; }
+
+.NAO .nao-chat a {
+  color: #747678;
+  margin-top: 6px;
+  float: left; }
+
+.NAO .nao-llama a {
+  color: #747678;
+  margin-top: 2px;
+  float: left;
+  width: 85px; }
+
+.NAO .chat-icon {
+  width: 37px;
+  background: url(../images/halcon/ca-sprites.jpg) no-repeat scroll 4px -109px transparent;
+  height: 33px;
+  display: inline-block;
+  float: left;
+  margin-right: 5px; }
+
+.NAO .nao-llama {
+  width: 125px;
+  float: left;
+  line-height: 14px;
+  margin: 20px 5px 20px 5px; }
+
+.NAO .llama-icon {
+  width: 33px;
+  background: url(../images/halcon/ca-sprites.jpg) no-repeat scroll -2px -144px transparent;
+  height: 33px;
+  display: inline-block;
+  float: left;
+  margin-right: 5px; }
+
+.NAO .nao-contact {
+  width: 125px;
+  margin: 0 auto; }
+
+.NAO .nao-contact a {
+  color: #0098C3; }
+
+/* ADS SIDEBAR */
+.ads {
+  background: url(../images/halcon/img-ITC2.jpg) no-repeat scroll 0px 0px transparent;
+  width: 286px;
+  height: 233px;
+  padding: 26px 0 0 20px;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative; }
+
+/* ADS SIDEBAR titulos */
+.ads .ads-title {
+  font-size: 14px;
+  margin-bottom: 5px; }
+
+.ads .ads-conts {
+  width: 280px;
+  float: left;
+  background: #000;
+  margin-bottom: 5px; }
+
+/* ADS SIDEBAR elementos */
+.ads .trform-re .cnt-captch-re .side-left-re {
+  background: #fff;
+  color: #ccc;
+  width: 155px;
+  padding: 3px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  display: inline-block; }
+
+.ads .trform-re .side-left-re .img-captcha {
+  float: left;
+  width: 125px;
+  display: inline-block; }
+
+/* ADS SIDEBAR elementos Captcha*/
+.ads .trform-re .cnt-captch-re {
+  width: 274px;
+  float: left; }
+
+.ads .trform-re .texto-captcha {
+  float: left;
+  font-size: 11px;
+  line-height: 12px;
+  padding-right: 5px !important;
+  width: 125px; }
+
+.ads .btn-descubre {
+  background: url(../images/halcon/bnt-99.jpg) no-repeat scroll 0 0 transparent;
+  border: medium none;
+  cursor: pointer;
+  height: 66px;
+  width: 98px !important;
+  margin-top: 10px;
+  display: inline-block; }
+
+.ads .pad-five {
+  padding-right: 5px;
+  margin-left: 4px; }
+
+/* ADS SIDEBAR elementos warns */
+.ads .warns {
+  background: #fff;
+  border-radius: 3px;
+  height: 15px;
+  float: left;
+  margin-top: 5px;
+  color: #e20076;
+  width: 260px;
+  padding: 3px;
+  line-height: 13px; }
+
+.ads .ads-warn {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #C7C7C7;
+  color: #f00 !important;
+  float: left;
+  font-size: 12px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px !important; }
+
+.ads .pad-five {
+  margin-left: 3px;
+  padding-right: 4px; }
+
+/* list III */
+.TC-detail-noticia {
+  float: left;
+  line-height: 16px !important;
+  margin: 40px 15px 10px 5px;
+  width: 440px; }
+
+.TC-detail-noticia .list-cards-III {
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 220px; }
+
+/* video */
+.fm-video {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #D7D7D7;
+  height: 249px;
+  margin-bottom: 10px;
+  padding: 15px 10px 10px;
+  width: 282px !important; }
+
+.fm-vid-cont {
+  padding-left: 8px;
+  width: 264px; }
+
+.fm-video h2 {
+  /* 	color: #009AC8; */
+  /* 	font-size: 13px; */
+  /* 	margin: 0 auto 7px; */
+  /* 	width: 270px; */
+  color: #747678;
+  font-size: 18px;
+  margin: 3px 0 10px 20px; }
+
+/* Formatos RSFM II */
+/* contenedor RSFM I*/
+.formato-sf-III .RSFM-I {
+  background: #f1f1f1;
+  padding: 10px;
+  display: inline-table;
+  vertical-align: middle; }
+
+.formato-sf-III .RSFM-I a {
+  color: #0098c3;
+  text-decoration: underline; }
+
+.formato-sf-III .RSFM-separador {
+  margin-bottom: 10px; }
+
+.formato-sf-III .RSFM-text {
+  float: left;
+  margin-right: 30px;
+  height: 20px;
+  margin-top: 4px; }
+
+.formato-sf-III .RSFM-right {
+  float: right;
+  margin: 10px 0 5px; }
+
+.formato-sf-III .RSFM-icon {
+  background: url(../images/halcon/sprite-rsfm.jpg) no-repeat scroll 0 1px transparent;
+  width: 22px;
+  height: 15px;
+  float: left;
+  display: block; }
+
+.formato-sf-III .RSFM-icon-I {
+  background: url(../images/halcon/sprite-rsfm.jpg) no-repeat scroll 0 -13px transparent;
+  width: 22px;
+  height: 13px;
+  float: left;
+  display: block; }
+
+.formato-sf-III .RSFM-icon-II {
+  background: url(../images/halcon/sprite-rsfm.jpg) no-repeat scroll 0 -28px transparent;
+  width: 22px;
+  height: 13px;
+  float: left;
+  display: block; }
+
+.formato-sf-III {
+  border: 1px solid #D2D2D2;
+  height: 722px;
+  overflow: hidden;
+  width: 590px;
+  padding: 20px 15px 15px 15px; }
+
+.formato-sf-III p {
+  margin-top: 10px;
+  font-size: 10px;
+  width: 580px; }
+
+.formato-sf-III p a {
+  float: right;
+  font-size: 12px;
+  color: #0098c3;
+  text-decoration: underline;
+  display: inline; }
+
+/* float Left */
+.float-left {
+  float: left; }
+
+/* list cards */
+.TC-detail-noticia .list-cards {
+  float: left;
+  margin: 0 15px 10px 0;
+  width: 220px; }
+
+/* sec dets */
+.det-producto-pes .sec-det {
+  border: 1px solid #CDCDCD;
+  border-radius: 0 0 10px 0;
+  height: 391px;
+  position: relative; }
+
+/* CAZZZ di IE6*/
+/*.det-producto-pes .sec-det {
+    border: 1px solid #CDCDCD;
+    border-radius: 0 0 10px 0;
+    height: 391px;
+    position: relative;
+}*/
+/* Beneficios h2 */
+.beneficios-CV h2 {
+  width: 340px;
+  float: left;
+  background: url(../images/halcon/sprite-vinetas.png) no-repeat scroll 0px -32px transparent;
+  padding: 0px 0 0 8px;
+  font-size: 12px;
+  margin-bottom: 5px; }
+
+.beneficios-CV .sol-asesor-II h2 {
+  background: url(../images/halcon/sprite-beneficios.jpg) no-repeat scroll 40px -128px transparent;
+  color: #464646;
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  padding: 5px 0 0 70px;
+  width: 120px; }
+
+.sol-asesor-cont {
+  float: left;
+  width: 200px; }
+
+.beneficios-CV {
+  float: left;
+  width: 570px; }
+
+.beneficios-CV .beneficios-CV-textos {
+  float: left;
+  margin-right: 20px;
+  width: 340px;
+  display: inline-block; }
+
+.beneficios-CV .sol-asesor, .beneficios-CV .sol-asesor-II {
+  background: none repeat scroll 0 0 #F3F3F3;
+  float: left;
+  margin-bottom: 10px;
+  width: 200px !important; }
+
+.beneficios-CV .sol-asesor li {
+  border-top: 1px solid #CCCCCC;
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 5px 0;
+  width: 160px; }
+
+.beneficios-CV .sol-asesor-II li {
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 1px 0 3px;
+  width: 160px; }
+
+.beneficios-CV .sol-asesor .b-btm, .beneficios-CV .sol-asesor-II .b-btm {
+  background: url(../images/halcon/border-bottom.jpg) no-repeat scroll -5px 0 transparent;
+  height: 15px;
+  width: 200px; }
+
+/****************************************************************************PREGUNTAS-FRECUENTES-N5****************************************************************************/
+.resul-busqueda h2 {
+  width: 513px; }
+
+.resul-busqueda {
+  width: 597px;
+  height: 35px;
+  border: 1px solid #d2d2d2;
+  padding: 7px 0px 0px 26px; }
+
+.resul-busqueda-cont {
+  width: 585px;
+  border-left: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2;
+  padding: 11px 18px 6px 20px !important; }
+
+.pf-productos {
+  width: 585px;
+  padding: 23px 0 24px 0;
+  border-bottom: 1px solid #e8e8e8; }
+
+.pf-productos ul {
+  width: 543px;
+  padding: 0px 21px 21px 0px; }
+
+.pf-productos ul li {
+  width: 554px;
+  padding: 0px 0px 0px 10px; }
+
+.pf-productos .pf-links {
+  width: 585px; }
+
+.pf-productos .pf-url {
+  width: 583px;
+  height: 29px;
+  border: 1px solid #0098c3; }
+
+.pf-links .faq-searching {
+  width: 585px !important; }
+
+.pf-links .faq-searching a.showmore {
+  float: none !important;
+  margin: 0px 376px 0px 0px; }
+
+.resul-total {
+  height: 42px;
+  width: 623px;
+  border-left: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  border-right: 1px solid #d2d2d2; }
+
+.error-busqueda {
+  width: 584px;
+  height: auto;
+  padding: 25px 0px 0px 21px; }
+
+.error-busqueda p {
+  height: 13px; }
+
+.pf-links .faq-searching em {
+  height: 18px;
+  background: url(../images/halcon/sprite-iconos-ie6.jpg) no-repeat; }
+
+.pf-links .faq-searching em.prod-links1 {
+  background-position: 0px -148px; }
+
+.pf-links .faq-searching em.prod-links2 {
+  background-position: 0px -164px; }
+
+.pf-productos ul {
+  padding: 0px 21px 0px 0px; }
+
+.error-busqueda .contac-social {
+  width: 50px; }
+
+.error-busqueda .contac-social em.contac-fb {
+  margin: 0px 6px 0px 0px; }
+
+.resul-total .total-num {
+  height: 13px;
+  margin: 15px 8px 0px 0px; }
+
+/***************************************DETALLE-NOTICIA***************************************/
+.noticias-detalle .next-sol {
+  height: 1px !important;
+  padding: 38px 0px 9px 12px; }
+
+.marginbottom18 {
+  margin-bottom: 21px !important; }
+
+.noticias-detalle .resul-total {
+  height: 23px !important; }
+
+/* Fin Styles IE6 MNU */
+ul.acc .forma-first ol li h4 {
+  color: #919195;
+  font-size: 12px;
+  font-weight: normal; }
+
+.imgBlock {
+  display: block; }
+
+.fixmarging25dp {
+  marging: 12px 0 12px 0 !important; }
+
+.fixheight442dp {
+  height: 440px !important; }
+
+.margintop4 {
+  margin-top: 4px !important; }
+
+.porlet-right-hp .feature-hp .sec-feature .trespacio-pr {
+  /*margin:0px 0 6px 0; */
+  height: 6px !important;
+  overflow: hidden; }
+
+.sidebar .annun {
+  background: #FFFFFF;
+  height: 263px;
+  width: 303px; }
+
+.BCV .sol-asesor li {
+  border-top: 1px solid #CCCCCC;
+  float: left;
+  margin: 0 0 0 10px;
+  padding: 7px 0;
+  width: 160px; }
+
+/* CSP Block */
+               				                                                                                                                                                                   /*.CSP 						{ height:380px; background:#faf8f8;  padding:15px 0 0 10px; 		}
+.CSP-elementos 				{ float:left; width:605px; margin-bottom:10px;    				}
+.CSP-elementos .CSP-IMG		{ width:136px; height:100px; float:left; margin-right:24px;   	}
+.CSP-elementos .CSP-bloques { width:220px;; float:left; }
+
+
+.CSP-elementos h2 			{ color:#00b259; font-size:15px; font-weight:bold;  }
+
+.CSP-txt 					{ margin:12px 0px; float:left; }
+.CSP-txt a 					{ text-decoration:underline; color:#0098c3; margin-top:10px; float:left;  		}
+.CSP-line 					{ border-bottom:solid 1px #ccc; width:430px; float:right; margin-right:25px; 	} 
+
+.CSP a.campana 				{ background: url("../images/halcon/CSP-btn.jpg") no-repeat scroll 0 0 transparent;    color: #FFFFFF;    display: block;    height: 33px;    line-height: 33px;   /* margin: 15px 0 37px;*/
+/*text-align: center;    width:77px; float:left; margin-right:10px;  	}*/
+/* T05 */
+.sidebar .tarjetas-credito-ann-II {
+  background: url(../images/halcon/bg_tarjetas_credito_costado.jpg) repeat-x top left;
+  width: 300px;
+  height: 200px;
+  padding: 11px 0px; }
+
+.sidebar .tarjetas-credito-ann-II h2 {
+  font-size: 13px;
+  color: #005daa;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 5px; }
+
+.sidebar .tarjetas-credito-ann-II .lista {
+  background: none repeat scroll 0 0 #FFFFFF;
+  height: 101px;
+  margin: auto;
+  padding: 12px 10px;
+  width: 260px; }
+
+.sidebar .tarjetas-credito-ann-II .lista ul li a {
+  background: url("../images/halcon/vineta_tarjetas_sidebar_.gif") no-repeat scroll left center transparent;
+  color: #747678;
+  padding: 0 0 0 8px; }
+
+.sidebar .tarjetas-credito-ann-II .lista ul li a.activo {
+  background: url("../images/halcon/vineta_tarjetas_sidebar_act.gif") no-repeat scroll left center transparent;
+  color: #009B3A; }
+
+.sidebar .tarjetas-credito-ann-II .lista ul li {
+  border-bottom: 1px dotted #919195;
+  font-size: 13px;
+  line-height: 35px;
+  padding: 0 0 0 6px; }
+
+.sidebar .tarjetas-credito-ann-II .final {
+  font-size: 12px;
+  margin: 15px 0px 0px 0px;
+  text-align: center;
+  width: auto !important; }
+
+.sidebar .tarjetas-credito-ann-II .final a {
+  color: #005DAA;
+  text-decoration: none; }
+
+.sidebar .descuentos {
+  background-color: #FAFAFA;
+  border: 1px solid #E2E2E2;
+  border-radius: 8px 0 8px 0;
+  height: 209px;
+  margin: 10px 0 0;
+  padding: 30px 0 0 29px !important;
+  width: 274px;
+  color: #444444; }
+
+.sidebar .descuentos h2 {
+  font-size: 13px;
+  color: #444444;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  font-weight: bold; }
+
+.sidebar .descuentos .DSCI {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px; }
+
+.margin10 {
+  margin-top: 10px !important; }
+
+/* CSP Block */
+.CSP {
+  height: 380px;
+  background: #faf8f8;
+  padding: 15px 0 0 10px;
+  float: left;
+  margin-bottom: 10px; }
+
+.CSP-elementos {
+  float: left;
+  width: 605px;
+  margin-bottom: 10px; }
+
+.CSP-elementos .CSP-IMG {
+  width: 136px;
+  height: 100px;
+  float: left;
+  margin-right: 24px;
+  margin-left: 4px !important; }
+
+.CSP-elementos .CSP-bloques {
+  width: 210px;
+  float: left; }
+
+.CSP-elementos .CSP-links {
+  float: right;
+  width: 210px;
+  margin-top: 7px; }
+
+.CSP-elementos h2 {
+  color: #00b259;
+  font-size: 15px;
+  font-weight: bold; }
+
+.CSP-txt {
+  margin: 0 0 6px;
+  width: 100%; }
+
+.CSP-txt a {
+  text-decoration: underline;
+  color: #0098c3;
+  margin-top: 10px;
+  float: left; }
+
+.CSP-line {
+  border-bottom: solid 1px #ccc;
+  width: 420px;
+  float: right;
+  margin-right: 10px; }
+
+.CSP a.campana {
+  background: url("../images/halcon/CSP-btn.jpg") no-repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  display: block;
+  height: 33px;
+  line-height: 33px;
+  /* margin: 15px 0 37px;*/
+  text-align: center;
+  width: 77px;
+  float: left;
+  margin-right: 10px; }
+
+/* CSP Sorpresas */
+.CSP_cSorpresas {
+  width: 620px;
+  height: 350px;
+  float: left; }
+
+.CSP_elementCont {
+  width: 606px;
+  padding: 5px;
+  height: 210px; }
+
+.CSP_cSorpresas .CSP_elemento {
+  width: 116px;
+  height: 190px;
+  float: left;
+  padding: 1px 15px 1px 1px;
+  margin: 0 4px 2px 9px;
+  border-right: dotted #999 1px; }
+
+.CSP_cSorpresas .CSP_elemento-b {
+  border-right: solid 1px #333;
+  float: right;
+  width: 1px; }
+
+.CSP_cSorpresas .CSP_elemento .CSP_social {
+  margin-top: 10px;
+  float: left; }
+
+.CSP_cSorpresas .CSP_elemento p {
+  text-align: left !important;
+  padding: 0px !important; }
+
+.CSP_cSorpresas .CSP_elemento a {
+  color: #61a4c8;
+  text-decoration: underline; }
+
+.CSP_cSorpresas .vermas {
+  color: #61a4c8;
+  text-decoration: underline;
+  text-align: center;
+  margin-left: 200px; }
+
+.CSP_elemento .csp_img {
+  width: 117px;
+  height: 113px; }
+
+a.CSP-tt {
+  color: #0098c3;
+  display: block;
+  margin: 0 0 10px;
+  text-decoration: underline; }
+
+.notplo {
+  color: #747678;
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 17px 0 0; }
+
+.formato-sf {
+  /*border-bottom:#d2d2d2 1px solid;
+  border-left:#d2d2d2 1px solid;
+  border-radius:12px 0 12px 0;
+  border-right:#d2d2d2 1px solid;
+  border-top:#d2d2d2 1px solid;
+  height:249px;
+  moz-border-radius:12px 0 12px 0;
+  ms-border-radius:12px 0 12px 0;
+  o-border-radius:12px 0 12px 0;
+  overflow:hidden;
+  webkit-border-radius:12px 0 12px 0;
+  width:614px;*/
+  BORDER-RIGHT: #d2d2d2 1px solid;
+  BORDER-TOP: #d2d2d2 1px solid;
+  OVERFLOW: hidden;
+  BORDER-LEFT: #d2d2d2 1px solid;
+  WIDTH: 614px;
+  BORDER-BOTTOM: #d2d2d2 1px solid;
+  HEIGHT: 250px;
+  webkit-border-radius: 12px 0 12px 0;
+  moz-border-radius: 12px 0 12px 0;
+  border-radius: 12px 0 12px 0;
+  o-border-radius: 12px 0 12px 0;
+  ms-border-radius: 12px 0 12px 0; }
+
+.LVPI .LVPI_element {
+  background: #fff;
+  border-radius: 12px 0 12px 0;
+  float: left;
+  margin: 15px 4px 10px 0;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 14px;
+  text-align: center;
+  width: 145px; }
+
+.LVPI_slider .before {
+  background: url(../images/halcon/LVPI-L.jpg) no-repeat left top;
+  height: 31px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 33px; }
+
+.LVPI_slider_cont {
+  height: 227px;
+  margin: 0 0 0 40px;
+  overflow: hidden;
+  width: 549px; }
+
+.sidebar .benner {
+  height: 236px;
+  overflow: hidden;
+  width: 305px; }
+
+/* paginador estilo Neil */
+.paginator {
+  padding: 2px 0px 0 500px;
+  width: 780px;
+  z-index: 99; }
+
+.paginator a {
+  float: left;
+  font-size: 12px;
+  padding: 0 10px 0 0;
+  color: #c7c7c7; }
+
+.paginator li {
+  float: left; }
+
+.paginator a:active, .paginator a.active, .paginator a.btn-pag {
+  color: #009ac8;
+  background: none;
+  width: auto;
+  height: auto; }
+
+.paginator a.active {
+  text-decoration: underline; }
+
+.TC-detail-prods-gal {
+  color: #919193;
+  left: 179 !important;
+  line-height: 16px;
+  position: absolute;
+  width: 760px;
+  z-index: 80; }
+
+.TC-gal-det-new .list-cards-IV {
+  float: left !important;
+  /* margin:8px; padding-top: 10px;*/
+  width: 130px !important;
+  margin-left: 10px; }
+
+.im-sp {
+  float: left;
+  width: 120px;
+  height: 140px;
+  display: inline-block; }
+
+/* list cards */
+.TC-detail-prods-gal .TC-gal-det-new {
+  float: left;
+  line-height: 16px !important;
+  padding: 10px 5px 15px 15px;
+  width: 340px;
+  border-bottom: solid 1px #ccc;
+  border-right: solid 1px #ccc; }
+
+.nobd-r {
+  border-right: none !important; }
+
+.nobd-b {
+  border-bottom: none !important; }
+
+.h417 {
+  height: 501px; }
+
+.TC-detail-prods-gal .TC-gal-det-new h2 {
+  float: left;
+  line-height: 16px !important;
+  margin: 10px 5px 15px 0px;
+  width: 340px;
+  color: #444444;
+  font-size: 15px;
+  font-weight: bold; }
+
+.TC-detail-prods-gal .TC-gal-det-new a {
+  color: #009ac8;
+  text-decoration: underline; }
+
+.TC-off .C-center {
+  font-size: 15px;
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 100px;
+  font-weight: bold; }
+
+/* paginador estilo Neil */
+.paginator {
+  padding: 8px 0px 0 500px;
+  z-index: 99;
+  float: left; }
+
+.paginator a {
+  float: left;
+  font-size: 12px;
+  padding: 0 10px 0 0;
+  color: #c7c7c7; }
+
+.paginator li {
+  float: left; }
+
+.paginator a:active, .paginator a.active, .paginator a.btn-pag {
+  color: #009ac8;
+  background: none;
+  width: auto;
+  height: auto; }
+
+.paginator a.active {
+  text-decoration: underline; }
+
+.TC-gal-det-new .list-cards-IV {
+  float: right;
+  margin: 0 15px 10px 10px;
+  width: 170px;
+  padding-top: 10px; }
+
+.TC-gal-det-new .list-cards-IV ul {
+  margin: 0 0 15px 0; }
+
+.TC-gal-det-new .list-cards-IV a {
+  color: #0098C3;
+  text-decoration: underline; }
+
+/******************************************************CONTACTENOS**********************/
+.wd623 {
+  width: 614px !important; }
+
+.mgtp12 {
+  margin-bottom: 0px !important; }
+
+#content-medio .inform ul {
+  margin: 10px 0 0 0; }
+
+#content-medio .inform .linea {
+  border-bottom: 1px solid #c7c7c7;
+  display: block;
+  height: auto;
+  margin: 0 0 19px;
+  width: 100%;
+  background: none !important; }
+
+#content-medio .inform .paraelform {
+  margin: 0 0 0 22px; }
+
+/**************************************************************forms*****************************/
+#content-medio .inform .agree {
+  margin: 15px 0 0 0 !important;
+  padding: 3px 0 0 0; }
+
+#content-medio .inform .uploader_de {
+  margin: 15px auto 23px !important;
+  width: 439px !important; }
+
+#content-medio .inform .uploader_de {
+  margin: 15px auto 0 auto !important;
+  width: 439px; }
+
+.mg17px {
+  margin-bottom: 17px !important; }
+
+.magbt47 {
+  margin-bottom: 47px; }
+
+.mgtp15 {
+  margin-top: 15px !important; }
+
+.f-conoce {
+  height: 285px;
+  width: 940px; }
+
+.f-conoce .flimg {
+  float: left;
+  overflow: hidden;
+  height: 285px;
+  width: 686px; }
+
+.list p {
+  float: left;
+  padding: 2px 0 0;
+  width: 140px; }
+
+#tab2 .list p {
+  float: left;
+  padding: 2px 0 0;
+  width: 153px; }
+
+#content-medio .searching-I .txtfrm {
+  border-bottom: #cacaca 1px solid;
+  border-left: #cacaca 1px solid;
+  border-right: #cacaca 1px solid;
+  border-top: #cacaca 1px solid;
+  color: #919195;
+  float: left;
+  font-size: 12px;
+  height: 16px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  width: 560px; }
+
+.det-producto-pes .sec-pestana a em.fb {
+  background: url(../images/halcon/sprite-redes-tab.jpg) #b2e0ed no-repeat -9px -2px;
+  float: left;
+  height: 25px;
+  width: 14px;
+  overflow: hidden; }
+
+.det-producto-pes .sec-pestana a.active em.fb {
+  background: url(../images/halcon/sprite-redes-tab.jpg) #b2e0ed no-repeat -9px -74px #b2e0ed !important;
+  height: 29px;
+  overflow: hidden; }
+
+.det-producto-pes .sec-pestana a em.tw {
+  background: url(../images/halcon/sprite-redes-tab.jpg) no-repeat scroll -6px -33px #b2e0ed;
+  float: left;
+  height: 30px;
+  width: 21px;
+  overflow: hidden; }
+
+.det-producto-pes .sec-pestana a.active em.tw {
+  background: url(../images/halcon/sprite-redes-tab.jpg) #b2e0ed no-repeat -6px -118px #b2e0ed !important;
+  height: 34px;
+  overflow: hidden; }
+
+.imgslide3 {
+  max-width: 940px;
+  height: 285px !important; }
+
+.fixie6 {
+  float: left; }
+
+.wd940px {
+  height: 646px !important;
+  width: 940px !important; }
+
+.det-producto-pes .sec-pestana a.active {
+  background: url(../images/halcon/bg_pest_red.jpg) repeat-x;
+  border-bottom: #fff 1px solid;
+  border-left: #cdcdcd 1px solid;
+  border-right: #cdcdcd 1px solid;
+  border-top: #cdcdcd 1px solid;
+  color: #005daa;
+  height: 37px;
+  line-height: 44px;
+  margin: 6px 1px 0 0; }
+
+.conttab {
+  float: left;
+  margin: 13px 9px 0 0; }
+
+.conocer .mini-not {
+  background: #ffffff;
+  float: left;
+  height: 165px;
+  margin: 0 10px 0 0;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  width: 276px; }
+
+a.antes {
+  background: url(../images/halcon/slider_exe.gif) no-repeat left top;
+  height: 20px;
+  left: 0;
+  margin: 115px 0px 0px -23px;
+  position: absolute;
+  top: 0;
+  width: 20px; }
+
+.sldexe .bgsldeje li {
+  float: left;
+  height: 170px;
+  padding: 0 14px;
+  position: absolute;
+  width: 115px; }
+
+.nrela h2 {
+  font-weight: bold;
+  font-size: 17px !important;
+  color: #005DAA !important;
+  margin: 2px 0 21px !important;
+  float: left; }
+
+.hg600 {
+  height: 615px !important; }
+
+.wd263px {
+  height: 571px !important;
+  width: 263px !important; }
+
+.det-producto-pes .notint h2 {
+  color: #005daa;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 10px; }
+
+.f-explora {
+  height: 250px !important;
+  width: 940px; }
+
+p.littletext {
+  font-size: 9px !important;
+  line-height: 10px !important;
+  margin: 21px 0 10px 0; }
+
+.sldexe .bgsldeje {
+  background: url("../images/halcon/bgsldeje.jpg") repeat-x scroll center bottom transparent;
+  height: 172px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 850px; }
+
+.sldexe .bgsldeje .ttcom {
+  display: none;
+  height: 110px;
+  margin: 57px 0 0 -73px;
+  position: absolute;
+  width: 140px;
+  z-index: 50; }
+
+.superindice2 {
+  font-size: 9px !important;
+  margin: 0 523px 0 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.superindice {
+  font-size: 9px !important;
+  left: 0;
+  margin: 0 0 0 40px;
+  position: absolute;
+  top: 0; }
+
+.superindice3 {
+  font-size: 9px !important;
+  left: 0;
+  margin: -3px 0 0 47px;
+  position: absolute;
+  top: 0; }
+
+.superindice4 {
+  font-size: 9px !important;
+  left: 0;
+  margin: -3px 0 0 33px;
+  position: absolute;
+  top: 0; }
+
+a.active .tab-text em.percent {
+  background: url(../images/halcon/gm-tab-ico.jpg) 0 -30px no-repeat;
+  display: block;
+  height: 25px;
+  margin: 20px 0 0 60px;
+  width: 25px; }
+
+.formato-sf .ancho1 {
+  float: left;
+  margin: 5px 10px 0 15px;
+  width: 185px !important; }
+
+.social-pie .twitter-interbank em.t-icono {
+  background: url(../images/halcon/sprite-iconos.png) no-repeat scroll -2px -675px transparent;
+  display: block;
+  float: left;
+  height: 18px;
+  margin: 16px 7px 0 10px !important;
+  width: 20px; }
+
+.marg-btm {
+  margin: 8px auto 0 134px !important;
+  float: right !important; }
+
+/**REPORTE-DE-ANALISIS**/
+.pd-btn {
+  padding: 12px 50px 7px 0px !important; }
+
+/*.rp-size{
+	margin: 17px 0px 0px 0px !important; 
+}*/
+.staff-dp {
+  left: 0;
+  margin: 6px 0 !important;
+  position: absolute;
+  top: 0; }
+
+a.antes {
+  background: url(../images/halcon/slider_exe.gif) left top no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin: 115px 0px 0px -23px; }
+
+a.despues {
+  background: url(../images/halcon/slider_exe.gif) -22px top no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 115px 11px 0 0; }
+
+/* extras */
+.header .opciones a {
+  padding: 12px 5px 12px 5px;
+  height: 20px;
+  color: #747678; }
+
+.header .btn-operaciones {
+  width: 251px;
+  height: 16px;
+  float: right;
+  background: url(../images/halcon/btn--ingresar.png) no-repeat;
+  padding: 10px 10px 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  /*	margin-left:15px;*/
+  display: inline-block; }
+
+.header .search-box {
+  width: 100px;
+  height: 23px;
+  float: left;
+  border: #e6e6e6 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  border-right: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #949496;
+  font-size: 11px; }
+
+#socials {
+  width: 80px;
+  display: inline !important;
+  float: left;
+  height: 20px;
+  margin: 0 0 0 2px;
+  overflow: hidden;
+  zoom: 1; }
+
+.porlet-right-hp .feature-hp {
+  margin: 1px 0px 0px 12px !important;
+  height: 330px;
+  /*overflow:hidden;*/ }
+
+.medida-ft {
+  height: 240px !important; }
+
+.submg-left7 {
+  margin-left: 4px !important; }
+
+.rpts-anls {
+  padding: 10px 20px 0px 20px; }
+
+.rpts-anls li {
+  width: 550px; }
+
+.mg-lft22 {
+  margin-left: 8px !important; }
+
+.det-producto-pes .sec-det .feature-dp {
+  background: none repeat scroll 0 0 #FFFFFF;
+  height: 340px;
+  margin: 37px 0 0 20px;
+  overflow: hidden;
+  padding: 0 20px 0 0;
+  position: absolute;
+  width: 564px; }
+
+/*.det-producto-pes .sec-det .feature-dp{
+	width:577px;
+}*/
+.mgsup {
+  margin-top: 12px !important; }
+
+.scrollbar {
+  width: 7px !important;
+  margin-left: 7px !important; }
+
+.scrollbar .knob {
+  margin: 0px !important; }
+
+.sidebar .tarjetas-credito-ann p.doble-lin {
+  line-height: 16px;
+  display: inline;
+  vertical-align: middle;
+  text-align: left !important; }
+
+.sidebar .tarjetas-credito-ann h2 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #005daa;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 13px 0px 8px 0; }
+
+.separar {
+  margin-top: 19px !important; }
+
+.ventajas-blocks {
+  width: 570px; }
+
+.mg-lft13 {
+  margin-left: 8px; }
+
+.C-center {
+  cursor: pointer; }
+
+.TC-detail-TTC {
+  height: 618px !important; }
+
+.error-busqueda .contac-social em.contac-fb {
+  cursor: pointer; }
+
+.error-busqueda .contac-social em.contac-tw {
+  cursor: pointer; }
+
+.des-masmenos {
+  width: 560px !important; }
+
+.hgt-sec-det {
+  height: 460px !important; }
+
+.asesor-descarg {
+  margin: 0 0 0 10px; }
+
+.navslide {
+  padding: 0 25px 0 30px;
+  overflow: hidden; }
+
+.navslide .holder {
+  height: 51px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2; }
+
+.navslide ul {
+  width: 30000px; }
+
+.navslide li {
+  width: 80px !important;
+  overflow: hidden; }
+
+.navslide li a {
+  width: 63px !important;
+  text-align: center;
+  overflow: hidden; }
+
+.navslide li a.active {
+  width: 59px !important;
+  display: block !important;
+  margin: 7px 1px 0 0 !important; }
+
+.navslide .next, .navslide .prev {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: -31px !important;
+  margin-right: 0px !important;
+  width: 0px !important;
+  height: 40px !important;
+  background: url(../images/halcon/tabbtnright.jpg) no-repeat !important;
+  z-index: 20;
+  overflow: hidden;
+  text-indent: -9999px;
+  outline: none;
+  cursor: pointer; }
+
+.navslide .prev {
+  background: url(../images/halcon/tabbtnleft.jpg) no-repeat !important;
+  right: auto;
+  left: 0;
+  top: 0;
+  margin-top: -30px !important;
+  margin-left: -16px !important; }
+
+.navslide .control {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 5px 0 0;
+  position: relative;
+  z-index: 10; }
+
+.hg615 {
+  HEIGHT: 615px; }
+
+.twtr-widget .twtr-tweet {
+  border-bottom: 0 none !important; }
+
+.social .social-pie .tweet {
+  float: left;
+  font-size: 11px;
+  line-height: 13px;
+  margin: 8px 40px 0 0;
+  width: 355px; }
+
+.twtr-widget .twtr-tweet-wrap {
+  border: 0 none !important;
+  height: 30px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 385px !important; }
+
+.wt129 {
+  padding: 6px 5px !important;
+  height: 15px; }
+
+.calendar-title .titleYear {
+  padding: 0 8px 0 0;
+  text-align: right;
+  width: 35px; }
+
+.calendar-title .titleMonth {
+  text-align: center;
+  width: 74px; }
+
+.BCV-textos {
+  float: left;
+  width: 341px !important;
+  margin-right: 15px; }
+
+/*Inicio parches WAS*/
+.header .buscador-btn {
+  background: url("../images/halcon/search-btn.png") no-repeat scroll 0 0 transparent !important;
+  border: 0 none !important;
+  cursor: pointer;
+  float: left;
+  height: 28px !important;
+  width: 28px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  border-radius: 0 5px 5px 0 !important; }
+
+textarea.textform1.text-error {
+  background-color: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+
+textarea.textform.text-error {
+  background-color: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+
+.det-producto-pes .notint .noticia .contenid {
+  margin: 10px 0 0 0 !important;
+  color: #919195;
+  font-size: 12px !important;
+  line-height: 18px; }
+
+#content-medio {
+  width: 625px;
+  float: left;
+  margin: 0 10px 0 0;
+  top: 120px; }
+
+.btnform {
+  background: url("../images/halcon/faq-busca.jpg") no-repeat scroll left top transparent !important;
+  border: 0 none !important;
+  cursor: pointer;
+  float: left;
+  height: 28px !important;
+  width: 32px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  border-radius: 0 0 0 0 !important; }
+
+.header .buscador-box {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #C7C7C7;
+  color: #9F9FA2;
+  float: left;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  height: 24px !important;
+  line-height: 26px;
+  padding: 0 5px !important; }
+
+#content-medio .faq-searching .txtfrm {
+  border: 1px solid #CACACA !important;
+  color: #919195 !important;
+  float: left;
+  font-size: 12px;
+  height: 26px !important;
+  width: 571px !important;
+  background: none repeat scroll 0 0 #FAFAFA;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding: 0 5px !important;
+  text-shadow: none !important; }
+
+#content-medio .inform .tabla-denuncia .txt-s {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #C7C7C7;
+  height: 15px !important;
+  width: 113px !important;
+  padding: 5px !important; }
+
+#content-medio .inform .no-cliente .cheked {
+  background: none !important; }
+
+.textform {
+  background: #fafafa !important;
+  padding: 0 5px 0 5px !important;
+  height: 26px;
+  line-height: 26px !important;
+  border: 1px solid #c7c7c7 !important;
+  color: #9f9fa2;
+  font-size: 12px !important;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  float: left; }
+
+.textform1 {
+  background: #fafafa !important;
+  padding: 0 5px 0 5px !important;
+  height: 26px;
+  line-height: 26px !important;
+  border: 1px solid #c7c7c7 !important;
+  color: #9f9fa2;
+  font-size: 12px !important;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  float: left; }
+
+.anula-fl-mg {
+  width: 243px !important; }
+
+.content-general2 .dest_2 h2 {
+  color: #0039A6;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  padding: 0;
+  width: 160px !important;
+  overflow: hidden; }
+
+input.text.text-error {
+  background: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+
+/*Fin parches WAS*/
+.ie6 textarea.textform1.text-error {
+  background-color: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+.ie6 textarea.textform.text-error {
+  background-color: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+.ie6 .header .buscador-btn {
+  background: url("../images/halcon/search-btn.png") no-repeat scroll 0 0 transparent;
+  border: 0 none;
+  cursor: pointer;
+  float: left;
+  height: 28px !important;
+  width: 28px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  border-radius: 0 5px 5px 0 !important; }
+.ie6 .det-producto-pes .notint .noticia .contenid {
+  margin: 10px 0 0 0 !important;
+  color: #919195;
+  font-size: 12px !important;
+  line-height: 18px; }
+.ie6 #content-medio {
+  width: 625px;
+  float: left;
+  margin: 0 10px 0 0;
+  top: 120px; }
+.ie6 .btnform {
+  background: url("../images/halcon/faq-busca.jpg") no-repeat scroll left top transparent !important;
+  border: 0 none !important;
+  cursor: pointer;
+  float: left;
+  height: 28px !important;
+  width: 32px !important;
+  padding: 0 !important;
+  text-shadow: none !important;
+  border-radius: 0 0 0 0 !important; }
+.ie6 .header .buscador-box {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #C7C7C7;
+  color: #9F9FA2;
+  float: left;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  height: 24px !important;
+  line-height: 26px;
+  padding: 0 5px !important; }
+.ie6 #content-medio .faq-searching .txtfrm {
+  border: 1px solid #CACACA !important;
+  color: #919195 !important;
+  float: left;
+  font-size: 12px;
+  height: 26px !important;
+  width: 571px !important;
+  background: none repeat scroll 0 0 #FAFAFA;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding: 0 5px !important;
+  text-shadow: none !important; }
+.ie6 #content-medio .inform .tabla-denuncia .txt-s {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #C7C7C7;
+  height: 15px !important;
+  width: 113px !important;
+  padding: 5px !important; }
+.ie6 #content-medio .inform .no-cliente .cheked {
+  background: none !important; }
+.ie6 .textform {
+  background: #fafafa !important;
+  padding: 0 5px 0 5px !important;
+  height: 26px;
+  line-height: 26px !important;
+  border: 1px solid #c7c7c7 !important;
+  color: #9f9fa2;
+  font-size: 12px !important;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  float: left; }
+.ie6 .textform1 {
+  background: #fafafa !important;
+  padding: 0 5px 0 5px !important;
+  height: 26px;
+  line-height: 26px !important;
+  border: 1px solid #c7c7c7 !important;
+  color: #9f9fa2;
+  font-size: 12px !important;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  float: left; }
+.ie6 .anula-fl-mg {
+  width: 243px !important; }
+.ie6 .content-general2 .dest_2 h2 {
+  color: #0039A6;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  padding: 0;
+  width: 160px !important;
+  overflow: hidden; }
+.ie6 input.text.text-error {
+  background: #FCE5F1 !important;
+  border: 1px solid #CA005D !important; }
+.ie6 #ultimotweet {
+  position: none;
+  margin: 0 auto;
+  border-radius: 0px 0px 0px 0px;
+  width: 370px;
+  height: 30px; }
+.ie6 .twtr-widget .twtr-tweet-wrap {
+  position: none;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0;
+  zoom: 1;
+  width: 370px;
+  height: 30px; }
+.ie6 .twtr-doc {
+  width: 370px;
+  height: 32px;
+  font-size: 11px; }
+.ie6 .slider-rc .contsld .contsldev {
+  border-right: #000 1px dotted;
+  margin: 0 6px 0 10px;
+  padding: 8px 11px 8px 0;
+  float: left;
+  width: 252px; }
+
+input.button.btnform4 {
+  background: url(../images/halcon/btn4.png) no-repeat top left !important;
+  border: 0 none  !important;
+  color: #FFFFFF  !important;
+  font-family: Trebuchet ms;
+  font-size: 12px;
+  font-weight: normal  !important;
+  height: 33px  !important;
+  line-height: 30px;
+  width: 63px  !important;
+  border-radius: 0 0 0 0 !important; }
+
+.hidden {
+  top: 0 !important;
+  left: 0;
+  z-index: 9;
+  position: absolute;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  width: 310px;
+  height: 28px;
+  cursor: pointer;
+  float: none !important;
+  margin: 8px 0 0 0 !important;
+  display: block !important; }
+
+.wt117 {
+  width: 117px !important; }
+
+.indicador {
+  margin: 29px 10px 0 15px;
+  float: left; }
+
+.tbdesc {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 34px 0 0 0;
+  float: left; }
+
+.mg13 {
+  color: #919195 !important;
+  font-size: 12px;
+  margin: 13px 0 33px 0;
+  width: 320px; }
+
+.error-dialog p {
+  font-size: 12px;
+  text-align: justify;
+  width: 320px;
+  float: left; }
+
+.error-dialog h2 {
+  color: #009B3A !important;
+  font-size: 22px !important;
+  margin: 0  !important;
+  padding-top: 75px;
+  width: 320px;
+  float: left; }
+
+.error-dialog .special {
+  font-size: 12px;
+  color: #919195 !important;
+  margin-top: 30px;
+  float: left; }
+
+.wd120p {
+  width: 250px !important; }
+
+.slider-rc .contsld ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: left;
+  width: 284px;
+  overflow: hidden; }
+
+.SliderBF .FotosBF {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 508px; }
+
+.SliderBF .FotosBF .imgBF {
+  margin-right: 4px !importants;
+  float: left; }
+
+.sub-titulo .social-media {
+  float: left;
+  height: 20px;
+  margin: 16px -11px 0 0;
+  width: 450px; }
+
+.imgslide {
+  max-width: 311px; }
+
+.sldexe .bgsldeje .ttcom .comment {
+  background: url("../images/halcon/labeltxt_02.gif") no-repeat left top;
+  overflow: hidden;
+  text-align: left !important;
+  height: 87px;
+  padding: 7px 3px 10px 5px;
+  margin-top: 0px !important; }
+
+.pie-contactanos .footer-logo {
+  background: url("../images/halcon/logo-footer.png") repeat scroll 0 0 transparent;
+  height: 24px;
+  margin: 65px 0 0 20px;
+  width: 127px; }
+
+.det-producto-pes .sec-pes span.dlinea:hover {
+  cursor: pointer; }
+
+.det-producto-pes .sec-pes span.dlinea {
+  cursor: pointer; }
+
+.descargas-CV .word-icon, .descargas-CV .pdf-icon, .descargas-CV .xcel-icon {
+  padding: 5px 30px 10px -5px; }
+
+.descargas-CV .pdf-icon {
+  padding-left: 0px !important; }
+
+.descargas-CV .descargas {
+  _margin-left: -4px; }
+
+.servicios-hi {
+  PADDING-RIGHT: 10px;
+  PADDING-LEFT: 10px;
+  BACKGROUND: #c3c3c3;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 10px 0px 20px;
+  PADDING-TOP: 5px;
+  BORDER-BOTTOM: #969696 1px solid;
+  HEIGHT: auto;
+  webkit-border-radius: 10px 0 10px 0;
+  moz-border-radius: 10px 0 10px 0;
+  border-radius: 10px 0 10px 0;
+  khtml-border-radius: 10px 0 10px 0;
+  width: 940px; }
+
+.porlet-left-hp li {
+  position: relative;
+  display: block;
+  height: 30px;
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important; }
+
+.campos-oblig {
+  width: 420px !important; }
+

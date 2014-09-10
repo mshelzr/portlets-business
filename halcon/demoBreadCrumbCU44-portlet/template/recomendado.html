@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Recomedado</title>
+<link href="/halcon-theme/css/styles.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+
+body{
+	background:none;
+}
+
+.recomendable {
+	/*border: 1px solid #CECFCB;
+	background: #FAFAFA;*/
+	left: 0;
+	padding: 15px;
+	position: absolute;
+	top: 0;
+	width: 300px;
+	z-index:105;
+}
+.recomendable .inte {
+	/*border: 1px solid #CECFCB;*/
+	background: #FFF;
+	padding: 15px;
+}
+.recomendable .inte h2 {
+	float: left;
+	font-size: 18px;
+	color: #0060A9;
+	padding: 0 !important;
+	margin: 0 18px 0 0 !important;
+	width: 230px;
+}
+.recomendable .inte .equis {
+	float: left;
+	width: 20px;
+	height: 20px;
+}
+.bbot {
+	border-bottom: 1px solid #CECFCB;
+	padding-bottom: 10px;
+	 height: 20px;
+    overflow: hidden;
+}
+.fixw {
+	width: 100% !important;
+	margin-bottom: 5px;
+	float:none !important;
+}
+.hau {
+	height: auto !important;  width: 100% !important;
+}
+.wd5a2 {
+	height: 85px !important;
+
+}
+.cnt {
+	width: 65px;
+	margin: 10px auto 0 auto;
+}
+.fixh{ width:100% !important; margin-top:5px;}
+.partex{ float:none !important; width: 257px;}
+
+.btnform4{
+		background:url(/halcon-theme/images/halcon/btn4.png) no-repeat top left  !important;
+		border: 0 none  !important;
+		color: #FFFFFF  !important;
+		font-family: Trebuchet ms;
+		font-size: 12px;
+		font-weight: normal  !important;
+		height: 33px  !important;
+		line-height: 30px;
+		width: 63px  !important;
+		border-radius: 0 0 0 0 !important;
+	}	
+</style>
+</head>
+
+<body>
+<div class="recomendable">
+              <div class="inte">
+                <div class="bbot">
+                  <h2>Recomendar</h2>
+               
+                </div>
+                <form id="frmrecomendar" action="" method="post" >
+                  <div class="campos-oblig hau">
+                    <label class="fixw">Tu nombre:</label>
+                    <input id="nombreR" name="nombreR" type="text" class="valid['alphabetic'] partex textform" />
+                  </div>
+                  <div id="nombreRemError" class="form-error fixh">Debes ingresar tu Nombre </div>
+                  
+                  <div class="campos-oblig hau">
+                    <label class="fixw">Tu e-mail: (ej, jose@micorreo.com)</label>
+                    <input id="correoR" name="correoR" type="text" class="valid['email'] partex textform" />
+                  </div>
+                  <div class="form-error fixh">Debes ingresar un e-mail v&aacute;lido</div>
+                  
+                  <div class="campos-oblig hau">
+                    <label class="fixw">Nombre de tu amigo:</label>
+                    <input id="nombreD" name="nombreD" type="text" class="valid['alphabetic'] partex textform" />
+                  </div>
+                  <div id="nombreDesError" class="form-error fixh">Debes ingresar el nombre de tu amigo </div>
+                  
+                  <div class="campos-oblig hau">
+                    <label class="fixw">E-mail de tu amigo: (ej, jose@micorreo.com)</label>
+                    <input id="correoD" name="correoD" type="text" class="valid['email'] partex textform "/>
+                  </div>
+                  <div class="form-error fixh">Debes ingresar un e-mail v&aacute;lido</div>
+                  
+                  <div class="campos-oblig hau">
+                    <label class="fixw"> Comentario: (máx.200 caractéres) </label>
+                    <textarea  id="comentario" name="comentario" cols="" rows="" class="valid['{1-200}']  partex textform wd5a2 "></textarea>
+                  </div>
+                  <div class="form-error fixh">Debes ingresar un comentario</div>
+                  
+                  <div class="cnt" >                   
+                    <input id="btnEnviar" name="btnEnviar" type="button" value="Enviar" title="Enviar" class="btnform4" style="cursor:pointer;" onclick="_gaq.push(['_trackEvent', 'Contenidos', 'Recomendacion enviada', '${requestScope.PAGINA_ACTUAL}']);"/>
+                  </div>
+                </form>
+              </div>
+            </div>
+    <script type="text/javascript">/*<![CDATA[*/var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-42149934-1"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";a.setAttribute("async","true");document.documentElement.firstChild.appendChild(a)})();/*]]>*/</script>
+	<script src="http://www.google-analytics.com/ga.js" async="true"></script>        
+    <script type="text/javascript"  src="/halcon-theme/js/halcon/mootools.core.js"></script>
+	<script type="text/javascript" src="/halcon-theme/js/halcon/moovalid.js"></script>   
+	<script type="text/javascript" src="/halcon-theme/js/halcon/moovalid.js"></script>   
+	<script type="text/javascript" >
+   		window.addEvent('domready',function(){
+   			
+   			valid = new moovalid($('frmrecomendar'),{btnValid : "btnEnviar"});
+   			$('btnEnviar').addEvent('click',function(){
+
+   				var localUrl = window.parent.location.href;
+   				if(valid.errorinform){
+ 					parent.enviarRecomendacion(this.form, localUrl);
+   				}
+   			});
+   			
+   		})
+   </script>
+</body>
+</html>

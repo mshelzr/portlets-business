@@ -1,0 +1,3 @@
+[{"id":0,"etiqueta":"Tipo Documento","tool":"tooltip2","orden":"0","defecto":"1"},
+{"id":1,"etiqueta":"DNI","tool":"tooltip2","orden":"1","defecto":"0"},
+{"id":2,"etiqueta":"CARN\u00c9 DE EXTRANJER\u00cdA","tool":"tooltip2","orden":"3","defecto":"0"}]

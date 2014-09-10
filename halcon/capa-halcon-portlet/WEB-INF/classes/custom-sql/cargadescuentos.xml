@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<sql id="CargaDescuento.truncate">
+		<![CDATA[
+		delete from T_CARGA_DESCUENTO
+		]]>
+	</sql>
+	<sql id="CargaDescuento.obtenerDistritosPorUbigeo">
+		<![CDATA[
+		select distinct tu.ubig_IdUbigeo , tu.ubig_Nombre  from 
+		T_CARGA_DESCUENTO tcd , T_UBIGEO tu where  tcd.cade_IdDistrito = tu.ubig_IdUbigeo;
+		]]>
+	</sql>
+	<sql id="CargaDescuento.insert">
+		<![CDATA[
+		INSERT INTO T_CARGA_DESCUENTO
+           (cade_Local
+           ,cade_DescuentoGeneral
+           ,cade_CondicionesRestricciones
+           ,cade_Direccion
+           ,cade_IdDistrito
+           ,cade_Distrito
+           ,cade_Telefono
+           ,cade_Web
+           ,cade_FinVigencia
+           ,cade_Categoria
+           ,cade_Coordenada
+           ,cade_URLImagen
+           ,cade_Latitud
+           ,cade_Longitud)
+     VALUES
+           (?, ?, ?, ?, ?, ?,?,?,?, ?, ?, ?, ?, ?)
+		]]>
+	</sql>
+</custom-sql>
+	

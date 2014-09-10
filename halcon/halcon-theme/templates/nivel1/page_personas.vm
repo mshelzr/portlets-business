@@ -1,0 +1,35 @@
+
+#set($title_personas= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","tooltip",$nav_item.getLayout().getPrimaryKey()))
+
+
+#if($velocityCount == 1)
+	<div class="menu-activo">
+	    <div class="m_a_deco_l"></div>
+	        <a href="$nav_item.getURL()" title="$title_personas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Personas', '$nav_item.getName()']);">$nav_item.getName() </a>
+	    <div class="m_a_deco_r"></div>
+	</div>
+#end
+
+#if($velocityCount == 2)
+	<div class="menu-opts">
+	    	<a href="javascript:void(0);"  title="Servicios bancarios de Interbank para instituciones y Empresas" class="" $nav_item.getTarget()>Empresas <em class="vineta dos">&nbsp;</em></a>
+	    <div class="m_opts_r"></div> 
+	</div>	
+	## float Menu Personas - Empresas   
+	    ##Menu flotante
+	 	<div class="float">
+	             <ul>
+	             	<div class="lead">Empresas &nbsp;<em class="vineta">&nbsp;</em></div>
+#end
+
+#if($velocityCount > 1 && $velocityCount < 6)	
+	               <li><a href="$nav_item.getURL()" title="$title_personas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Personas', '$nav_item.getName()']);">$nav_item.getName()</a></li>
+#if($velocityCount == 5)	
+	            </ul>
+	  	</div>
+#end
+#end
+	
+
+
+

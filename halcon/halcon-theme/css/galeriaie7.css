@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* paginador */
+
+
+	/*.paging li a {
+		width: 10px;
+		height: 10px;
+		display: block;
+		background: url(../images/halcon/puntos2.png) repeat scroll 0  10px transparent !important;
+		cursor: pointer;
+    	text-align: center;
+		text-decoration: none;
+		color:#e2e2e2;
+		font-size:0px; line-height:10px;
+	}
+	.paging li a.active {
+		background: url(../images/halcon/puntos2.png) repeat scroll 10px 20px transparent !important;
+		color: #3ab8c8;
+	}
+	.paging li a:hover {
+		background: url(../images/halcon/puntos2.png) repeat scroll 10px 20px transparent !important;
+		color: #3ab8c8;
+	}	*/
+
+.im-sp 									{  width:140px; height:100px; float:left;  }
+.tab-promo .promos-cont {
+	background:#F5F5F5;	
+	height: 580px;
+	margin: 0 0 0 169px;
+	overflow: hidden;
+	position: absolute;
+	width: 770px;
+	top:0;
+	right:0;
+}

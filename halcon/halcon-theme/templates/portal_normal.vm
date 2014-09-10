@@ -1,0 +1,243 @@
+#parse ($init)
+#if($browserSniffer.isIe($request) && $browserSniffer.getMajorVersion($request)==10)
+	<?xml version="1.0" encoding="UTF-8">
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+#else
+	<!DOCTYPE html>
+#end
+<html class="#language("lang.dir")" dir="#language("lang.dir")" lang="$w3c_language_id" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+	<script src="//cdn.optimizely.com/js/1194860039.js"></script>
+	<meta name="googlebot" content="index, follow"/>
+	<meta name="Generator" content="Interbank" />
+	<meta name="Origen" content="Interbank" />
+	<meta name="Author" content="Interbank" />
+	<meta name="Locality" content="Lima, Peru" />
+	<meta name="language" content="es" />
+	
+	#if($theme_display.getLayout().getFriendlyURL()=="/personas")  
+		<meta name="title" content="$the_title" />
+	#else 
+		<meta name="title" content="$the_title - $company_name" /> 
+	 #end
+	
+    <meta property="og:title" content="$the_title" />
+	<meta property="og:url" content="$theme_display.getURLPortal()$htmlUtil.escapeAttribute($theme_display.getURLCurrent())" />
+	<meta property="og:image" content="$theme_display.getURLPortal()/halcon-theme/images/halcon/IBK_logo_fb.jpg" />
+	<meta property="og:description"  content="No te pierdas esta informaci&oacute;n de Interbank." />
+	<meta property="og:type" content="website"/>
+	#if($browserSniffer.isIe($request) && $browserSniffer.getMajorVersion($request)==10)
+		<meta http-equiv="X-UA-Compatible" content="IE=7"/>
+	#end
+
+	#if($theme_display.getLayout().getFriendlyURL()=="/personas")  
+			<title>$the_title </title>
+	#else 
+			<title>$the_title - $company_name</title>
+	#end
+
+	$theme.include($top_head_include)
+	##Si es IE 6
+	#if($browserSniffer.isIe($request) && $browserSniffer.getMajorVersion($request)==6)
+		<link href="$css_halcon_ie6_galeria" rel="stylesheet" type="text/css" />
+		<link href="$css_halcon_ie6" rel="stylesheet" type="text/css" />
+	#end
+	##Si es IE 7
+	#if($browserSniffer.isIe($request) && $browserSniffer.getMajorVersion($request)==7)
+		<link href="$css_halcon_ie7" rel="stylesheet" type="text/css" />
+		<link href="$css_halcon_ie7_galeria" rel="stylesheet" type="text/css" />
+	#end
+   <script>
+      function Abrir_ventana(dir) {
+		window.open(dir, "", "width=1020, height=620, scrollbars=1, toolbar=0, menubar=0, resizable=yes");
+	  }
+   </script>
+   
+#set($urlF=$theme_display.getURLCurrent())
+#if(!($urlF.contains("_RealizarDenuncia_WAR_RealizarDenunciaportlet_javax.portlet.action=guardarDocumentoIdentidad") || $urlF.contains("_RealizarDenuncia_WAR_RealizarDenunciaportlet_javax.portlet.action=guardarDocumento")))
+   ##Google Analytics Social Button Tracking - Facebook 
+    <script type="text/javascript" src="/halcon-theme/js/halcon/ga_social_tracking.js"></script>
+    <div id="fb-root"></div>
+    
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+   ##Google Analytics Social Button Tracking - Twitter  
+    <script type="text/javascript" charset="utf-8">
+	 window.twttr = (function (d,s,id) {
+	 var t, js, fjs = d.getElementsByTagName(s)[0];
+	 if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+	 js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+	 return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+	 }(document, "script", "twitter-wjs"));
+	
+	 // Wait for the asynchronous resources to load
+	 twttr.ready(function(twttr) {
+	 _ga.trackTwitter(); //Google Analytics tracking
+	 });
+	</script>
+#end
+</head>
+
+<body class="$css_class">
+##Registramos las variables UTM en sesion
+	#set ($var_utm = $paramUtil.get($request, "utm_source",""))
+	#set ($var_medium = $paramUtil.get($request, "utm_medium",""))
+	#set ($var_content = $paramUtil.get($request, "utm_content",""))
+	#set ($var_campaign = $paramUtil.get($request, "utm_campaign",""))
+	
+	#if($var_utm!="")
+	$request.session.setAttribute("LIFERAY_SHARED_UTM_SOURCE",$var_utm)
+	$request.session.setAttribute("LIFERAY_SHARED_UTM_MEDIUM",$var_medium)
+	$request.session.setAttribute("LIFERAY_SHARED_UTM_CONTENT",$var_content)
+	$request.session.setAttribute("LIFERAY_SHARED_UTM_CAMPAIGN",$var_campaign)
+	#end
+	
+	#set ($var_utm_sesion = $getterUtil.getString($request.session.getAttribute("LIFERAY_SHARED_UTM_SOURCE"),""))
+##Procesando de formulario
+<div class="procesandobg" id="procesandobg"></div>
+<div class="procesando" id="procesando">
+	<div class="topesp"></div>
+    <div class="texttit">Procesando...</div>
+    <div class="giftit"><img src="/halcon-theme/images/halcon/load-proceso.gif" width="31" height="31" /></div>
+</div>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper" class="main">
+	
+	##SE elimino no es necesario
+	##<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+
+	##Agregamos el Header del portal
+	#parse ("$full_templates_path/header.vm")
+
+	<div id="content">
+		##SE elimina el breadcrumb
+		#*<nav class="site-breadcrumbs" id="breadcrumbs">
+			<h1>
+				<span>#language("breadcrumbs")</span>
+			</h1>
+
+			#breadcrumbs()
+		</nav>*#
+		
+		##Inicio de breadcrumb 
+			#parse ("$full_templates_path/breadcrumb.vm")
+		##Fin de breadcrumb 
+		
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	##Agregamos el footer
+	#parse ("$full_templates_path/footer.vm")
+	
+</div>
+
+$theme.include($body_bottom_include)
+
+<script type="text/javascript"  src="/halcon-theme/js/halcon/mootools.core.js"></script>
+<script type="text/javascript"  src="/halcon-theme/js/halcon/mootools.more.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/rotater.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/tabs.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/scrollable.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/slimpicker.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/slideGallery.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/milkbox.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/autocompleted.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/DD_roundies.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/validator.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/moovalid.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/moodropdown.js"></script>
+<script type="text/javascript" src="/halcon-theme/js/halcon/functions.js"></script>
+
+##Si es IE 6
+#if($browserSniffer.isIe($request) && $browserSniffer.getMajorVersion($request)==6)
+<script type="text/javascript" src="$js_halcon_ie7"></script>
+<script type="text/javascript" src="$javascript_folder/halcon/pngfix.js"></script>  
+<script>
+	replaceYoutubeViewIE6('video-cab',249,188);
+	replaceYoutubeViewIE6('video-adicional',264,164);
+    DD_belatedPNG.fix('.logo h1');
+    DD_belatedPNG.fix('.destacado-hp a.nov-des');
+    DD_belatedPNG.fix('.btn-operaciones');
+	DD_belatedPNG.fix('.campana');   
+    DD_belatedPNG.fix('.header #socials .soc-fb');
+    DD_belatedPNG.fix('.header .btn-operaciones span');
+    DD_belatedPNG.fix('.porlet-right-hp .feature-hp .sec-feature .continuar-pr');
+    DD_belatedPNG.fix('.porlet-right-hp .feature-hp .sec-feature .regresar-pr');
+    DD_belatedPNG.fix('.content-slider .selector .knob');
+    DD_belatedPNG.fix('.porlet-right-hp .feature-hp .sec-feature .btn-simular-pr');
+    DD_belatedPNG.fix('.servicios-hi .titulo-ser-hi em');
+    DD_belatedPNG.fix('.servicios-hi .lista-ser-hi li');
+    DD_belatedPNG.fix('.servicios-hi .lista-ser-hi2 li');
+    DD_belatedPNG.fix('.regalo-hi .caja-re');
+    DD_belatedPNG.fix('.titulo-social em.mitiempo');
+    DD_belatedPNG.fix('.twitter-interbank em.t-icono');
+    DD_belatedPNG.fix('.siguenos em');
+    DD_belatedPNG.fix('.planes-titulo em');
+    DD_belatedPNG.fix('.regalo-hi');
+    DD_belatedPNG.fix('.planes-hoy em.noticia-vineta');
+    DD_belatedPNG.fix('.tool-hel-pr');
+    DD_belatedPNG.fix('.TC-detail-noticia .list-cards-III li');
+	DD_belatedPNG.fix('.codigo-icons .volver');
+	DD_belatedPNG.fix('.codigo-icons .tool');
+	DD_belatedPNG.fix('.header #socials .soc-fb');
+	DD_belatedPNG.fix('.pie-contactanos');
+	DD_belatedPNG.fix('.ayuda-form em');
+	DD_belatedPNG.fix('.subcabecera-template .sub-titulo .social-media');
+	DD_belatedPNG.fix('.tool-open');
+	DD_belatedPNG.fix('.nrela .socialnt .ytub');
+	DD_belatedPNG.fix('.error-cont a.ant em');
+	DD_belatedPNG.fix('.error-cont a.home em ');
+	##DD_roundies.addRule('.header .menu-drop a', '5px 5px 0 0');
+	DD_belatedPNG.fix('.header .btn-operaciones span ');
+	DD_belatedPNG.fix('.social-media');
+	DD_belatedPNG.fix('.social-media .social-media-google');
+	DD_belatedPNG.fix('.nrela .socialnt .fb');
+	DD_belatedPNG.fix('.nrela .socialnt .tw');
+	DD_belatedPNG.fix('.nrela .socialnt .ytub');
+	DD_belatedPNG.fix('.bluebtn-izq');
+	DD_belatedPNG.fix('.bluebtn-der');
+	DD_belatedPNG.fix('.header .search-btn');
+	DD_belatedPNG.fix('.header #socials');
+	DD_belatedPNG.fix('#socials .soc-fb, #socials .soc-twitter, #socials .soc-youtb, #socials .soc-google');
+	DD_belatedPNG.fix('.soc-twitter');
+	DD_belatedPNG.fix('.soc-youtb');
+	DD_belatedPNG.fix('.soc-google');
+	DD_belatedPNG.fix('.pie-contactanos .operadora');
+	DD_belatedPNG.fix('.pie-contactanos ');
+	DD_belatedPNG.fix('.footer-logo');
+	DD_belatedPNG.fix('.descarga-app em');
+	DD_belatedPNG.fix('.contacto-forma em');
+	DD_belatedPNG.fix('.llamada em.pie-icono');
+    DD_belatedPNG.fix('.knob');
+    DD_belatedPNG.fix('.sidebar .tarjetas-credito-ann em.ico-warning');
+    DD_belatedPNG.fix('.sidebar .tarjetas-credito-ann em');
+    DD_belatedPNG.fix('.soc-google');
+    DD_belatedPNG.fix('.inf-tool');
+</script>
+
+#end
+</body>
+
+$theme.include($bottom_include)
+<script type="text/javascript" src="$js_halcon_seguridad"></script>
+</html>

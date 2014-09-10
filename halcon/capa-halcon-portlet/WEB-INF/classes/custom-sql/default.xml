@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<custom-sql>
+	<sql file="custom-sql/categoriaSubcategoria.xml"/>
+	<sql file="custom-sql/parametro.xml"/>
+	<sql file="custom-sql/contacto.xml"/>
+	<sql file="custom-sql/cargaTienda.xml"/>
+	<sql file="custom-sql/ocurrencia.xml"/>
+	<sql file="custom-sql/cargadescuentos.xml"/>	
+	<sql file="custom-sql/solicitud.xml"/>
+	<sql file="custom-sql/cargaRemesa.xml"/>
+	<sql file="custom-sql/configuracionPerfilador.xml"/>
+	<sql file="custom-sql/cajaSorpresa.xml"/>
+	<sql file="custom-sql/logErrores.xml"/>
+	<sql file="custom-sql/simulador.xml"/>
+</custom-sql>

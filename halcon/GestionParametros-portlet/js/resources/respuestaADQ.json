@@ -1,0 +1,6 @@
+[{"id":9,"etiqueta":"Todos","tool":"tooltip 1","orden":"0","defecto":"0"},
+{"id":0,"etiqueta":"ERROR","tool":"tooltip 1","orden":"1","defecto":"0"},
+{"id":1,"etiqueta":"NO PROCEDE","tool":"tooltip 1","orden":"2","defecto":"0"},
+{"id":2,"etiqueta":"PRE CALIFICA","tool":"tooltip 1","orden":"3","defecto":"0"},
+{"id":3,"etiqueta":"NO DISPONIBLE","tool":"tooltip 1","orden":"4","defecto":"0"},
+{"id":4,"etiqueta":"CUOTA SUPERADA","tool":"tooltip 1","orden":"5","defecto":"0"}]

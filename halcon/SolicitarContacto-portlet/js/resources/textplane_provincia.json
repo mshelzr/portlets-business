@@ -1,0 +1,6 @@
+[{"id":0,"id_departamento":0,"etiqueta":"Seleccione Provincia", "orden":"0","defecto":"1"},
+{"id":1,"id_departamento":1,"etiqueta":"provincia1", "orden":"1","defecto":"0"},
+{"id":2,"id_departamento":1,"etiqueta":"provincia2", "orden":"2","defecto":"0"},
+{"id":3,"id_departamento":2,"etiqueta":"provincia3","orden":"3","defecto":"0"},
+{"id":4,"id_departamento":2,"etiqueta":"provincia4", "orden":"4","defecto":"0"},
+{"id":5,"id_departamento":3,"etiqueta":"provincia5","orden":"5","defecto":"0"}]

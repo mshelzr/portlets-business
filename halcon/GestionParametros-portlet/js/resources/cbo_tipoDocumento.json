@@ -1,0 +1,4 @@
+[{"id":0,"etiqueta":"Todos", "orden":"1","defecto":"1"},
+{"id":1,"etiqueta":"DNI", "orden":"2","defecto":"0"},
+{"id":2,"etiqueta":"Carnet Ext.", "orden":"3","defecto":"0"},
+{"id":3,"etiqueta":"Pasaporte", "orden":"4","defecto":"0"}]

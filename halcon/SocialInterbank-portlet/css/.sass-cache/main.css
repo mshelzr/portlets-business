@@ -1,0 +1,9 @@
+.twtr-tweet-text em {
+  display: none !important; }
+
+#twtr-widget-1 .twtr-tweet-text {
+  margin-left: 0 !important; }
+
+#twtr-widget-1 .twtr-avatar {
+  width: 0 !important; }
+

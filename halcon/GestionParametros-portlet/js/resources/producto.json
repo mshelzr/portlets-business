@@ -1,0 +1,5 @@
+[{"id":0,"etiqueta":"Todos", "orden":"1","defecto":"1"},
+{"id":1,"etiqueta":"Producto 01", "orden":"2","defecto":"0"},
+{"id":2,"etiqueta":"Producto 02", "orden":"3","defecto":"0"},
+{"id":3,"etiqueta":"Producto 03", "orden":"4","defecto":"0"},
+{"id":4,"etiqueta":"Producto 04", "orden":"4","defecto":"0"}]

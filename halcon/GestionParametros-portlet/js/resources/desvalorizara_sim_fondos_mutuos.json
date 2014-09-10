@@ -1,0 +1,4 @@
+[{"id":1,"etiqueta":"No acepto variaci\u00f3n alguna","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"Aceptar\u00eda variaciones ocasionales para un nivel <br /> medio-bajo de rentabilidad","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Aceptar\u00eda variaciones temporales para un <br /> nivel medio-alto de rentabilidad","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Aceptar\u00eda variaciones altas esperando una <br />alta rentabilidad","tool":"tooltip","orden":"4","defecto":"0"}]

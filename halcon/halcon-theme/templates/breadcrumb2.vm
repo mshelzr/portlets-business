@@ -1,0 +1,94 @@
+#foreach ($nav_item in $nav_items)
+
+			#if ($nav_item.hasChildren())
+				#foreach ($nav_item_child in $nav_item.getChildren())
+					#if ($nav_item_child.isSelected())
+						<div class="cadena-template">
+							#if(($nav_item.getName() == "HEADER") || ($nav_item.getName() == "FOOTER"))
+								<a title="Inicio" href="/">Inicio</a></a><span> > </span>
+							#else
+								<a href="$nav_item.getURL()" $nav_item.getTarget()>$nav_item.getName()</a><span> > </span>
+							#end
+							<a class="activo" title="$nav_item_child.getName()" href="#">$nav_item_child.getName()</a>
+						</div>
+					#end
+					
+					#if ($nav_item_child.hasChildren())
+						#foreach ($nav_item_gchild in $nav_item_child.getChildren())
+							#if ($nav_item_gchild.isSelected())
+								<div class="cadena-template">
+									#if(($nav_item.getName() == "HEADER") || ($nav_item.getName() == "FOOTER"))
+										<a title="Inicio" href="/">Inicio</a><span> > </span>
+										<a href="$nav_item_child.getURL()" $nav_item_child.getTarget()>$nav_item_child.getName().replaceAll(";", "")</a><span> > </span>
+									#else
+										<a href="$nav_item.getURL()" $nav_item.getTarget()>$nav_item.getName()</a><span> > </span>
+										<a href="#" $nav_item_child.getTarget()>$nav_item_child.getName().replaceAll(";", "")</a><span> > </span>
+									#end
+									
+									<a class="activo" title="$nav_item_gchild.getName()" href="#">$nav_item_gchild.getName().replaceAll(";", "")</a>
+								</div>
+							#end
+							
+							#if ($nav_item_gchild.hasChildren())
+								#foreach ($nav_item_ggchild in $nav_item_gchild.getChildren())
+											#if ($nav_item_ggchild.isSelected())
+												<div class="cadena-template">
+												#if(($nav_item.getName() == "HEADER") || ($nav_item.getName() == "FOOTER"))
+													<a title="Inicio" href="/">Inicio</a></a><span> > </span>
+													<a href="$nav_item_child.getURL()" $nav_item_child.getTarget()>$nav_item_child.getName().replaceAll(";", "")</a><span> > </span>
+												#else
+													<a href="$nav_item.getURL()" $nav_item.getTarget()>$nav_item.getName().charAt(0)$nav_item.getName().substring(1,$nav_item.getName().length()).toLowerCase() </a><span> > </span>
+													<a href="javascript:void(0)" $nav_item_child.getTarget()>$nav_item_child.getName().replaceAll(";", "")</a></a><span> > </span>
+												#end
+											
+											<a href="$nav_item_gchild.getURL()" $nav_item_gchild.getTarget()>$nav_item_gchild.getName().replaceAll(";", "")</a></a><span> > </span>
+											<a class="activo" title="$nav_item_ggchild.getName()" href="#">$nav_item_ggchild.getName().replaceAll(";", "")</a>
+										</div>
+									#end
+										
+									#if ($nav_item_ggchild.hasChildren())
+										#foreach ($nav_item_gggchild in $nav_item_ggchild.getChildren())
+											#if ($nav_item_gggchild.isSelected())
+										     	<div class="cadena-template">
+													#if(($nav_item.getName() == "HEADER") || ($nav_item.getName() == "FOOTER"))
+														<a title="Inicio" href="/">Inicio</a></a><span> > </span>
+													#else
+														<a href="$nav_item.getURL()" $nav_item.getTarget()>$nav_item.getName()</a><span> > </span>
+													#end
+													<a href="javascript:void(0)" $nav_item_child.getTarget()>$nav_item_child.getName()</a><span> > </span>
+													<a href="$nav_item_gchild.getURL()" $nav_item_gchild.getTarget()>$nav_item_gchild.getName()</a><span> > </span>
+													<a href="$nav_item_ggchild.getURL()" $nav_item_ggchild.getTarget()>$nav_item_ggchild.getName()</a><span> > </span>
+													<a class="activo" title="$nav_item_gggchild.getName()" href="#">$nav_item_gggchild.getName()</a>
+												</div>
+											#end
+											
+											#if($nav_item_gggchild.hasChildren())
+												#foreach ($nav_item_ggggchild in $nav_item_gggchild.getChildren())
+													#if ($nav_item_ggggchild.isSelected())
+												     	<li>
+															<a href="$nav_item_child.getURL()" $nav_item_child.getTarget()>$nav_item_child.getName()</a>
+														</li>
+														<li>
+															<a href="javascript:void(0)" $nav_item_gchild.getTarget()>$nav_item_gchild.getName()</a>
+														</li>
+														<li>
+															<a href="javascript:void(0)" $nav_item_ggchild.getTarget()>$nav_item_ggchild.getName()</a>
+														</li>
+														<li>
+															<a href="$nav_item_gggchild.getURL()" $nav_item_gggchild.getTarget()>$nav_item_gggchild.getName()</a>
+														</li>
+														<li>
+															<span>$nav_item_ggggchild.getName()</span>
+														</li>
+													#end
+												#end
+											#end
+										 #end
+									#end
+								#end
+							#end
+						#end 	
+					#end
+				#end
+			#end
+		#end

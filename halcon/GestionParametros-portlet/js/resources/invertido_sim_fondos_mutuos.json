@@ -1,0 +1,4 @@
+[{"id":1,"etiqueta":"No","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"S\u00ed, en fondos sin acciones","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"S\u00ed, en fondos con acciones","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"B y C","tool":"tooltip","orden":"4","defecto":"0"}]

@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+/* paginador */
+.paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url(../images/halcon/puntos2.gif) repeat scroll 0 10px transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 0px;
+  line-height: 10px; }
+
+.paging li a.active {
+  background: url(../images/halcon/puntos2.gif) repeat scroll 10px 20px transparent;
+  color: #3ab8c8; }
+
+.paging li a:hover {
+  background: url(../images/halcon/puntos2.gif) repeat scroll 10px 20px transparent;
+  color: #3ab8c8; }
+
+.tab-promo .promotiones {
+  height: 574px;
+  left: 0;
+  position: absolute;
+  width: 180px;
+  z-index: 99; }
+
+.tab-promo .promotiones .promotiones-pest {
+  float: left;
+  font-size: 15px;
+  height: 574px;
+  width: 180px; }
+
+.tab-promo .promos-cont {
+  background: #F5F5F5;
+  height: 580px;
+  margin: 0 0 0 84px;
+  overflow: hidden;
+  position: absolute;
+  width: 771px;
+  top: 0;
+  right: 0; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp {
+  border-bottom: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  float: left;
+  padding: 12px 0 19px 29px;
+  width: 325px; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp .disp-msg {
+  float: left;
+  margin: 0 0 10px 15px;
+  padding-top: 10px;
+  width: 170px; }
+
+.paginando {
+  line-height: 45px;
+  width: 770px;
+  background: #FFF;
+  font-size: 12px;
+  padding-right: 0px !important;
+  overflow: hidden; }
+
+.paginando .contright {
+  float: right;
+  padding-right: 10px !important; }
+

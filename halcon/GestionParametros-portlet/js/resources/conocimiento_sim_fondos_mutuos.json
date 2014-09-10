@@ -1,0 +1,4 @@
+[{"id":1,"etiqueta":"No tengo conocimiento","tool":"tooltip","orden":"1","defecto":"1"},
+{"id":2,"etiqueta":"Tengo conocimiento b\u00e1sico","tool":"tooltip","orden":"2","defecto":"0"},
+{"id":3,"etiqueta":"Tengo un buen nivel de conocimiento","tool":"tooltip","orden":"3","defecto":"0"},
+{"id":4,"etiqueta":"Me considero experto en fondos mutuos","tool":"tooltip","orden":"4","defecto":"0"}]

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.ext.portlet.pin.model.Categoria">
+		<field name="categoriaId" type="long" />
+		<field name="idImagen" type="long" />
+		<field name="nombre" type="String" />
+		<field name="estado" type="boolean" />
+		<field name="descripcion" type="String" />
+	</model>
+	<model name="com.ext.portlet.pin.model.Persona">
+		<field name="userId" type="long" />
+		<field name="nombres" type="String" />
+		<field name="apellidoPaterno" type="String" />
+		<field name="apellidoMaterno" type="String" />
+		<field name="dni" type="String" />
+		<field name="tipoDocumento" type="int" />
+	</model>
+</model-hints>

@@ -1,0 +1,7 @@
+[
+{"id":0,"id_provncia":0,"etiqueta":"Seleccione Distrito", "orden":"0","defecto":"1"},
+{"id":1,"id_provncia":1,"etiqueta":"distrito1", "orden":"1","defecto":"0"},
+{"id":2,"id_provncia":1,"etiqueta":"distrito2", "orden":"2","defecto":"0"},
+{"id":3,"id_provncia":2,"etiqueta":"distrito3", "orden":"3","defecto":"0"},
+{"id":4,"id_provncia":2,"etiqueta":"distrito4", "orden":"4","defecto":"0"},
+{"id":5,"id_provncia":3,"etiqueta":"distrito5", "orden":"5","defecto":"0"}]

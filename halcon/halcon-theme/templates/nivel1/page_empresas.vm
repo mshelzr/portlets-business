@@ -1,0 +1,41 @@
+#set($title_empresas= $expandoValueLocalService.getData("com.liferay.portal.model.Layout","CUSTOM_FIELDS","tooltip",$nav_item.getLayout().getPrimaryKey()))
+
+#if($velocityCount == 1)
+      <div class="menu-opts">
+        <div class="menu-l-gris"></div>
+        <a href="$nav_item.getURL()" class="" title="$title_empresas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Empresas', '$nav_item.getName()']);">$nav_item.getName() </a>
+        <div class="m_opts_r"></div>
+      </div>
+#end
+
+
+#if($velocityCount == 2)
+ ## Opt Menu Activo 
+		<div class="menu-opts">
+        <div class="menu-l-gris"></div>
+        <a href="$nav_item.getURL()" class="" title="$title_empresas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Empresas', '$nav_item.getName()']);">$nav_item.getName() </a> 
+        </div>
+#end
+
+#if($velocityCount == 3)
+      <div class="menu-activo">
+        <div class="menu-ll"></div>
+        <a href="$nav_item.getURL()" title="$title_empresas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Empresas', '$nav_item.getName()']);">$nav_item.getName() </a>
+        <div class="menu-r"></div>
+      </div>
+#end
+
+#if($velocityCount == 4)
+      ## Opt Menu Inactivo 
+	  <div class="menu-opts first-child"> 
+	  <a href="$nav_item.getURL()" class="" title="$title_empresas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Empresas', '$nav_item.getName()']);">$nav_item.getName() </a> 
+	  <span class=" separation-dos"></span> 
+	  </div>
+#end
+
+#if($velocityCount == 5)
+      ## Opt Menu Inactivo 
+      <div class="menu-opts"> <a href="$nav_item.getURL()" class="" title="$title_empresas" $nav_item.getTarget() onClick="_gaq.push(['_trackEvent', 'Links internos', 'BPI Empresas', '$nav_item.getName()']);">$nav_item.getName() </a>
+        <div class="m_opts_r"></div>
+      </div>
+#end

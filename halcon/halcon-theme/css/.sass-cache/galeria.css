@@ -1,0 +1,355 @@
+/* CSS Document */
+/* paginador */
+.f-conoce .paging {
+  left: 0;
+  margin-left: 103px !important;
+  margin-top: 260px !important;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  z-index: 40; }
+
+.f-conoce .paging li a {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: url(../images/halcon/puntos2.png) repeat scroll 0 10px transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 0px;
+  line-height: 10px; }
+
+.f-conoce .paging li a.active {
+  background: url(../images/halcon/puntos2.png) repeat scroll 10px 20px transparent;
+  color: #3ab8c8; }
+
+.f-conoce .paging li a:hover {
+  background: url(../images/halcon/puntos2.png) repeat scroll 10px 20px transparent;
+  color: #3ab8c8; }
+
+/* bloques ofertas  */
+.TC-off {
+  left: 0;
+  /*background: url("../images/halcon/bg-cc4.jpg") repeat-y scroll 0 10px transparent;*/
+  height: auto;
+  position: absolute;
+  width: 180px !important;
+  z-index: 99; }
+
+.TC-off .elemento {
+  font-size: 11px;
+  padding-top: 1px;
+  text-align: center; }
+
+.TC-detail-prods-gal {
+  /*background-color: #F5F5F5;*/
+  color: #919193;
+  height: auto;
+  position: absolute;
+  width: 772px;
+  z-index: 80;
+  /*height:530px;*/ }
+
+.TC-off .active, .TC-off a:hover {
+  background: url("../images/halcon/bg-cc3.png") no-repeat scroll 0 0 transparent;
+  color: #FFFFFF;
+  height: 32px;
+  width: 180px !important; }
+
+.TC-off a {
+  /*background: url("../images/halcon/bg-cc33.jpg") no-repeat scroll 0 0 transparent;*/
+  background: url(../images/halcon/bg-cc33.gif) no-repeat scroll 0 0 transparent;
+  color: #939391;
+  display: block;
+  height: 32px;
+  padding: 20px 0 5px;
+  text-align: center;
+  width: 180px !important; }
+
+.TC-off a.doble {
+  background: url(../images/halcon/bg-cc33.gif) no-repeat scroll 0 0 transparent;
+  color: #939391;
+  display: block;
+  height: 42px;
+  padding: 10px 0 5px;
+  text-align: center;
+  width: 180px !important; }
+
+.TC-off .C-center {
+  /*height: 20px;*/
+  overflow: hidden;
+  font-size: 15px;
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 100px;
+  font-weight: bold;
+  line-height: 20px; }
+
+/* list cards */
+.TC-detail-prods-gal .TC-gal-det-new {
+  float: left;
+  line-height: 16px !important;
+  padding: 12px 0 21px 32px;
+  width: 344px;
+  border-bottom: solid 1px #ccc;
+  border-right: solid 1px #ccc; }
+
+.nobd-r {
+  border-right: none !important; }
+
+.nobd-b {
+  border-bottom: none !important; }
+
+.h417 {
+  height: 530px; }
+
+.h566 {
+  height: 574px !important; }
+
+.TC-detail-prods-gal .TC-gal-det-new h2 {
+  float: left;
+  line-height: 16px !important;
+  margin: 10px 5px 17px 0px;
+  width: 340px;
+  color: #444444;
+  font-size: 15px;
+  font-weight: bold; }
+
+.TC-detail-prods-gal .TC-gal-det-new a {
+  color: #009ac8;
+  text-decoration: underline; }
+
+/* Paginador Resultados de Busqueda */
+.TC-detail-cont .paginator {
+  z-index: 99;
+  float: right;
+  padding: 19px 0 25px 355px;
+  width: 415px;
+  background: none repeat scroll 0 0 #FFFFFF; }
+
+.TC-detail-cont .paginator p {
+  /*float:left;*/
+  margin-right: 15px; }
+
+.TC-detail-cont .paginator .res-dest {
+  margin-right: 5px;
+  color: #0098c3; }
+
+.TC-detail-cont .paginator a {
+  /*float:left;*/
+  font-size: 12px;
+  padding: 0 10px 0 0;
+  color: #c7c7c7; }
+
+.TC-detail-cont .paginator li {
+  float: left; }
+
+.TC-detail-cont .paginator a:active, .TC-detail-cont .paginator a.active, .TC-detail-cont .paginator a.btn-pag {
+  color: #009ac8;
+  background: none;
+  width: auto;
+  height: auto; }
+
+.TC-detail-cont .paginator a.active {
+  text-decoration: underline; }
+
+.TC-gal-det-new .list-cards-IV {
+  float: left;
+  margin: 0 0 10px 20px;
+  width: 170px;
+  padding-top: 10px; }
+
+.TC-gal-det-new .list-cards-IV ul {
+  margin: 0 0 15px 0; }
+
+.TC-gal-det-new .list-cards-IV a {
+  color: #0098C3;
+  text-decoration: underline; }
+
+.im-sp {
+  width: 140px;
+  height: 100px;
+  float: left; }
+
+.mg9x {
+  float: left !important;
+  margin: 0 0 0 169px;
+  width: 770px !important; }
+
+/***************************************************/
+.tab-promo {
+  height: 574px;
+  width: 940px;
+  overflow: hidden;
+  position: relative;
+  margin: 0; }
+
+.tab-promo .promotiones {
+  height: 574px;
+  left: 0;
+  position: absolute;
+  width: 180px;
+  z-index: 99;
+  overflow: hidden; }
+
+.tab-promo .promotiones .promotiones-pest {
+  float: left;
+  font-size: 15px;
+  height: 574px;
+  overflow: hidden;
+  width: 180px; }
+
+.tab-promo .promotiones .promotiones-pest a {
+  background: url(../images/halcon/bg-cc33.gif) no-repeat left top;
+  color: #939391;
+  margin-top: 1px;
+  text-align: center;
+  display: block;
+  line-height: 18px;
+  height: 32px;
+  padding: 20px 0 5px; }
+
+.tab-promo .promotiones .promotiones-pest a:hover, .tab-promo .promotiones .promotiones-pest a.active {
+  background: url(../images/halcon/bg-cc3.png) no-repeat left top;
+  color: #FFFFFF; }
+
+.tab-promo .promotiones .promotiones-pest a.doblado {
+  background: url(../images/halcon/bg-cc33.gif) no-repeat left top;
+  color: #939391;
+  margin-top: 1px;
+  text-align: center;
+  display: block;
+  line-height: 18px;
+  padding: 10px 0 5px;
+  height: 42px; }
+
+.tab-promo .promotiones .promotiones-pest a.doblado:hover, .tab-promo .promotiones .promotiones-pest a.doblado.active {
+  background: url(../images/halcon/bg-cc3.png) no-repeat left top;
+  color: #FFFFFF; }
+
+.tab-promo .promos-cont {
+  background: #F5F5F5;
+  float: left;
+  height: 580px;
+  margin: 0 0 0 169px;
+  overflow: hidden;
+  position: relative;
+  width: 770px; }
+
+.tab-promo .promos-cont .cont-pro {
+  color: #919193;
+  height: 580px;
+  position: absolute;
+  width: 760px;
+  display: block;
+  visibility: visible; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont {
+  padding-left: 10px;
+  height: 543px;
+  width: 750px;
+  overflow: hidden; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp {
+  border-bottom: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+  float: left;
+  padding: 12px 0 21px 32px;
+  width: 342px; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp h2 {
+  color: #444444;
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 16px !important;
+  margin: 10px 5px 17px 0;
+  width: 340px; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp .disp-img {
+  float: left;
+  height: 100px;
+  width: 140px; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp .disp-msg {
+  float: left;
+  margin: 0 0 10px 20px;
+  padding-top: 10px;
+  width: 170px; }
+
+.tab-promo .promos-cont .cont-pro .despl-cont .disp a {
+  color: #0098C3;
+  text-decoration: underline;
+  line-height: 15px; }
+
+.tab-promo .promos-cont .cont-pro .paginator {
+  z-index: 99;
+  float: left;
+  padding: 19px 0 25px 355px !important;
+  width: 415px;
+  background: none repeat scroll 0 0 #FFFFFF; }
+
+.tab-promo .promos-cont .cont-pro .paginator p {
+  /*float:left;*/
+  margin-right: 15px; }
+
+.tab-promo .promos-cont .cont-pro .paginator .res-dest {
+  margin-right: 5px;
+  color: #0098c3; }
+
+.tab-promo .promos-cont .cont-pro .paginator a {
+  /*float:left;*/
+  font-size: 12px;
+  padding: 0 10px 0 0;
+  color: #c7c7c7;
+  float: none !important; }
+
+.tab-promo .promos-cont .cont-pro .paginator li {
+  float: left; }
+
+.tab-promo .promos-cont .cont-pro .paginator a:active, .tab-promo .promos-cont .cont-pro .paginator a.active, .tab-promo .promos-cont .cont-pro .paginator a.btn-pag {
+  color: #009ac8;
+  background: none;
+  width: auto;
+  height: auto; }
+
+.tab-promo .promos-cont .cont-pro .paginator a.active {
+  text-decoration: underline; }
+
+.centrado {
+  font-weight: bold;
+  width: 110px;
+  margin: 0 auto;
+  padding-right: 10px; }
+
+.paginando {
+  line-height: 45px;
+  width: 770px;
+  background: #FFF;
+  font-size: 12px; }
+
+.paginando .contright {
+  float: right; }
+
+.relace {
+  color: #0098c3 !important;
+  text-decoration: none !important;
+  float: left;
+  margin-left: 6px; }
+
+.paginando .contright a {
+  /*	margin-left:10px;
+  	color:#c7c7c7;*/
+  color: #C7C7C7;
+  display: block;
+  float: left;
+  margin-left: 6px;
+  text-align: center;
+  width: 15px; }
+
+.paginando .contright a.actv, .paginando .contright a:hover {
+  color: #0098c3 !important;
+  text-decoration: underline; }
+

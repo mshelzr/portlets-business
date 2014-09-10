@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource-action-mapping>
+    <portlet-resource>
+        <portlet-name>parametroscontroller</portlet-name>
+        <supports>
+        	<action-key>ADD_TO_PAGE</action-key>
+            <action-key>ACCESS_IN_CONTROL_PANEL</action-key>
+            <action-key>CONFIGURATION</action-key>
+            <action-key>VIEW</action-key>
+        </supports>
+      	<site-member-defaults>
+				<action-key>VIEW</action-key>
+		</site-member-defaults>
+        <guest-defaults>
+            <action-key>VIEW</action-key>
+        </guest-defaults>
+        <guest-unsupported>
+            <action-key>ADD_TO_PAGE</action-key>
+            <action-key>ACCESS_IN_CONTROL_PANEL</action-key>
+            <action-key>CONFIGURATION</action-key>
+        </guest-unsupported>
+    </portlet-resource>
+</resource-action-mapping>

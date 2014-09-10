@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Simulador.consultarFondoMutuoZona">
+		<![CDATA[
+			SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3 
+		FROM T_PARAMETRO 
+		WHERE parm_Dato2 = ? and  
+		? between CAST(CAST(parm_ValorMonto2 as float)AS int) and CAST(CAST(parm_ValorMonto3 as float)AS int) and
+		parm_IdParametroPadre =  ( SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = ?)
+		]]>
+	</sql>
+	<sql id="Simulador.consultarPlazosFondoMutuo">
+		<![CDATA[
+		Select parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+ 		From T_PARAMETRO
+  		Where parm_IdParametroPadre   = 
+            (   SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = ? )
+		]]>
+	</sql>
+	<sql id="Simulador.consultarFondoMutuo">
+		<![CDATA[
+		Select fomu_IdValorCuota, 
+			fomu_CodigoMoneda, 
+			fomu_TipoFondo, 
+			fomu_ValorCuota, 
+			fomu_Fecha
+		From T_FONDOS_MUTUOS
+		Where 
+		fomu_CodigoMoneda = ?
+		and  fomu_TipoFondo = ?
+		and fomu_Fecha in (
+		]]>
+	</sql>
+	<sql id="Simulador.insertarFondoMutuo">
+		<![CDATA[
+		INSERT INTO T_FONDOS_MUTUOS (
+			fomu_CodigoMoneda, 
+			fomu_TipoFondo, 
+			fomu_ValorCuota, 
+			fomu_FechaValorCuota,
+			fomu_Fecha)
+		VALUES (?, ?, ?, ?, ?)
+		]]>
+	</sql>
+	<sql id="Simulador.consultarUltimaFecha">
+		<![CDATA[
+		SELECT TOP 1  fomu_IdValorCuota, 
+			fomu_CodigoMoneda, 
+			fomu_TipoFondo, 
+			fomu_ValorCuota, 
+			fomu_Fecha
+		FROM T_FONDOS_MUTUOS
+		ORDER BY fomu_FechaValorCuota desc
+		]]>
+	</sql>
+	<sql id="Simulador.consultarFondoMutuoTipos">
+		<![CDATA[
+		declare @puntaje int
+		set @puntaje = ?
+		
+		declare @moneda varchar(2)
+		set @moneda = ?
+		
+		declare @etiqueta varchar(40)
+		set @etiqueta = ?
+
+SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+FROM 
+(SELECT  Top 1 zonas1.*
+		  FROM T_PARAMETRO zonas1
+		  Where zonas1.[parm_IdParametro] <
+			(	SELECT [parm_IdParametro]      
+				FROM [T_PARAMETRO]
+				Where parm_Dato4  <> '99' and parm_Num1 = 1 and
+				parm_Dato2 = @moneda and 
+				
+				(@puntaje between CAST(CAST(parm_ValorMonto2 as float)AS int) and CAST(CAST(parm_ValorMonto3 as float)AS int))
+			) 
+			and zonas1.[parm_Dato4] <> '99'
+			and zonas1.[parm_Dato2] = @moneda and zonas1.[parm_Num1] = 1 
+			and zonas1.[parm_IdParametroPadre] =  ( SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = @etiqueta and parm_Num1 = 1 ) 
+			Order by zonas1.[parm_IdParametro] desc
+		) as Tb
+		
+		UNION
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+		FROM  [T_PARAMETRO]
+		  Where [parm_Dato2] = @moneda and [parm_Num1] = 1
+			and [parm_IdParametroPadre] =  ( SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = @etiqueta and parm_Num1 = 1)
+             and  (@puntaje between CAST(CAST(parm_ValorMonto2 as float)AS int) and CAST(CAST(parm_ValorMonto3 as float)AS int))
+			
+		UNION
+		
+		SELECT parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+FROM 
+(SELECT  Top 1 zonas2.*
+		  FROM T_PARAMETRO zonas2
+		  Where zonas2.[parm_IdParametro] >
+			(	SELECT [parm_IdParametro]      
+				FROM [T_PARAMETRO]
+				Where parm_Dato4  <> '99' and 
+				parm_Dato2 = @moneda and  parm_Num1 = 1 and
+				
+				(@puntaje between CAST(CAST(parm_ValorMonto2 as float)AS int) and CAST(CAST(parm_ValorMonto3 as float)AS int))
+			) 
+			and zonas2.[parm_Dato4] <> '99'
+			and zonas2.[parm_Dato2] = @moneda and zonas2.[parm_Num1] = 1
+			and zonas2.[parm_IdParametroPadre] =  ( SELECT parm_IdParametro 
+                  FROM T_PARAMETRO  
+                  WHERE parm_Dato3 = @etiqueta and parm_Num1 = 1 ) 
+			Order by zonas2.[parm_IdParametro] asc
+		) as Tc
+ 
+		]]>
+	</sql>
+	<sql id="Simulador.consultarFondosMutuosPuntos">
+		<![CDATA[
+		SELECT 
+			parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+		FROM dbo.T_PARAMETRO
+		WHERE 	
+		parm_Dato1 = ? and
+			parm_IdParametroPadre =  (   SELECT parm_IdParametro
+					FROM dbo.T_PARAMETRO
+					WHERE parm_Dato3 = ?  )
+		]]>
+	</sql>
+	<sql id="Simulador.consultarFondosMutuosParte01">
+		<![CDATA[
+			declare @moneda nvarchar(max)
+			declare @tipo_fondo nvarchar(max)
+			declare @tipo_fondo2 nvarchar(max)
+			declare @tipo_fondo3 nvarchar(max)
+			declare @dias_separacion int
+			
+			
+			set @moneda = ?
+			set @tipo_fondo = ?
+			set @tipo_fondo2 = ?
+			set @tipo_fondo3 = ?
+			set @dias_separacion = ?
+			
+			Select *
+			From 
+			(
+			Select 
+			T_FONDOS_MUTUOS.fomu_TipoFondo,
+			T_FONDOS_MUTUOS.fomu_ValorCuota,
+			T_FONDOS_MUTUOS.fomu_Fecha,
+			(			
+						(T_FONDOS_MUTUOS.fomu_ValorCuota/
+						(
+							Select tf2.fomu_ValorCuota
+							From T_FONDOS_MUTUOS as tf2
+							Where tf2.fomu_Fecha = DATEADD(DAY, -@dias_separacion,T_FONDOS_MUTUOS.fomu_Fecha)
+							and tf2.fomu_CodigoMoneda = @moneda and tf2.fomu_TipoFondo = @tipo_fondo
+						))-1
+						
+			) as rentabilidad,
+			T_FONDOS_MUTUOS2.fomu_TipoFondo as fomu_TipoFondo2,
+			T_FONDOS_MUTUOS2.fomu_ValorCuota as fomu_ValorCuota2,
+			T_FONDOS_MUTUOS2.rentabilidad as rentabilidad2
+			From (
+			  Select *	From T_FONDOS_MUTUOS Where fomu_CodigoMoneda = @moneda and fomu_Fecha in 
+					(
+	]]>
+	</sql>
+	<sql id="Simulador.consultarFondosMutuosParte02">
+		<![CDATA[
+			)  
+					and fomu_TipoFondo = @tipo_fondo
+			) as T_FONDOS_MUTUOS
+			Left JOIN (
+			Select 
+			T_FONDOS_MUTUOS.fomu_IdValorCuota,
+			T_FONDOS_MUTUOS.fomu_TipoFondo,
+			T_FONDOS_MUTUOS.fomu_ValorCuota,
+			T_FONDOS_MUTUOS.fomu_Fecha,
+			(			
+						(T_FONDOS_MUTUOS.fomu_ValorCuota/
+						(
+							Select tf2.fomu_ValorCuota
+							From T_FONDOS_MUTUOS as tf2
+							Where tf2.fomu_Fecha = DATEADD(DAY, -@dias_separacion,T_FONDOS_MUTUOS.fomu_Fecha)
+							and tf2.fomu_CodigoMoneda = @moneda and tf2.fomu_TipoFondo = @tipo_fondo2
+						))-1
+						
+			) as rentabilidad
+			From 
+			(
+			  Select 
+			  T_FONDOS_MUTUOS.fomu_TipoFondo,
+			T_FONDOS_MUTUOS.fomu_ValorCuota,
+			T_FONDOS_MUTUOS.fomu_Fecha,
+			T_FONDOS_MUTUOS.fomu_IdValorCuota
+			  From T_FONDOS_MUTUOS WHERE fomu_CodigoMoneda = @moneda and
+			  fomu_Fecha in 
+					(
+	]]>
+	</sql>
+	<sql id="Simulador.consultarFondosMutuosParte03">
+		<![CDATA[
+			)  
+					and fomu_TipoFondo = @tipo_fondo2
+			) as T_FONDOS_MUTUOS
+			) as T_FONDOS_MUTUOS2 on
+			T_FONDOS_MUTUOS2.fomu_Fecha = T_FONDOS_MUTUOS.fomu_Fecha
+			) as T_FONDOS_MUTUOS_NUEVO
+			Left Join 
+			(
+			Select 
+			T_FONDOS_MUTUOS.fomu_TipoFondo  as fomu_TipoFondo3,
+			T_FONDOS_MUTUOS.fomu_ValorCuota as fomu_ValorCuota3,
+			T_FONDOS_MUTUOS.fomu_Fecha,
+			(			
+						(T_FONDOS_MUTUOS.fomu_ValorCuota/
+						(
+							Select tf2.fomu_ValorCuota
+							From T_FONDOS_MUTUOS as tf2
+							Where tf2.fomu_Fecha = DATEADD(DAY, -@dias_separacion,T_FONDOS_MUTUOS.fomu_Fecha)
+							and tf2.fomu_CodigoMoneda = @moneda and tf2.fomu_TipoFondo = @tipo_fondo3
+						))-1			
+			) as rentabilidad3
+			From 
+			(
+			  Select 
+			  T_FONDOS_MUTUOS.fomu_TipoFondo,
+			T_FONDOS_MUTUOS.fomu_ValorCuota,
+			T_FONDOS_MUTUOS.fomu_Fecha		
+					From T_FONDOS_MUTUOS
+					Where 
+					fomu_CodigoMoneda = @moneda
+					and
+					fomu_Fecha in 
+					(
+	]]>
+	</sql>
+	<sql id="Simulador.consultarFondosMutuosParte04">
+		<![CDATA[
+			)  
+				and fomu_TipoFondo = @tipo_fondo3
+			) as T_FONDOS_MUTUOS
+			) as T_FONDOS_MUTUOS3 On
+			T_FONDOS_MUTUOS3.fomu_Fecha = T_FONDOS_MUTUOS_NUEVO.fomu_Fecha
+	]]>
+	</sql>
+	<sql id="Simulador.consultarTarifaDepositoPlazo">
+		<![CDATA[
+		SELECT 
+			parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+		FROM dbo.T_PARAMETRO
+		WHERE 
+		(? between CAST(CAST(parm_ValorMonto2 as float)AS int) and CAST(CAST(parm_ValorMonto3 as float)AS int)) and
+  		parm_ValorMonto1 = ?	and		
+		parm_Dato1 = ? and
+			parm_IdParametroPadre =  (   SELECT parm_IdParametro
+					FROM dbo.T_PARAMETRO
+					WHERE parm_Dato3 = ?  )
+		]]>
+	</sql>	
+	<sql id="Simulador.consultarDiasDesdeIdentificadorSlider">
+		<![CDATA[
+		SELECT 
+			parm_IdParametro, 
+			parm_IdParametroPadre, 
+			parm_ValorMonto1, 
+			parm_ValorMonto2, 
+			parm_ValorMonto3, 
+			parm_Dato1, 
+			parm_Dato2, 
+			parm_Dato3, 
+			parm_Dato4, 
+			parm_Num1, 
+			parm_Num2, 
+			parm_Num3
+		From t_parametro
+		where  parm_idparametroPadre = ( Select parm_IdParametro
+										From t_parametro
+										where parm_Dato3 = ? )
+		and parm_Dato4 = ?
+		]]>
+	</sql>	
+	<sql id="Simulador.insertarAuditoriaSimulador">
+		<![CDATA[
+		INSERT INTO T_AUDITORIA_SIMULADOR (
+			ausm_TipoSimulador, 
+			ausm_IdTransaccion, 
+			ausm_TipoDocumento, 
+			ausm_NumeroDocumento, 
+			ausm_Moneda, 
+			ausm_TipoProducto, 
+			ausm_InvirtioFondMut, 
+			ausm_NivelConocimFondMut, 
+			ausm_ReaccionVarMerc, 
+			ausm_ValorBien, 
+			ausm_MontoPrestamo, 
+			ausm_CuotaInicial, 
+			ausm_PeriodoInvers, 
+			ausm_Tasa, 
+			ausm_SegDesgrav, 
+			ausm_TipoCuota, 
+			ausm_IP, 
+			ausm_FechaHora, 
+			ausm_UTMSource, 
+			ausm_UTMMedium, 
+			ausm_UTMCampaing, 
+			ausm_UTMContent)
+		VALUES (?,?,?,?,?,?,?,?,?,?,?,
+			?,?,?,?,?,?,?,?,?,?,?)
+		]]>
+	</sql>	
+</custom-sql>

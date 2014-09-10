@@ -1,0 +1,25 @@
+.profile .body .title {
+	margin: 25px 0 0;
+    padding: 0 0 6px;
+}
+		
+.profile .body .content-head {
+    padding: 1px 0 0 19px;
+}
+
+.seguros {
+    height: 345px;
+}
+
+
+.sidebar {
+    float: left;
+    line-height: 18px;
+    position: relative;
+    width: 305px;
+    z-index: 99;
+}
+
+.profile .content-body {
+    margin: -22px 0 0 19px !important;
+}

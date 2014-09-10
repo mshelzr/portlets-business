@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<custom-sql >
+	<sql id="Cabecera.listar">
+		<![CDATA[
+		SELECT CODFACTURA, RUC FROM CABECERA
+		]]>
+	</sql>
+	<sql id="Cabecera.insertarCabecera">
+		<![CDATA[
+		INSERT INTO CABECERA (RUC) VALUES (?)
+		]]>
+	</sql>
+</custom-sql>

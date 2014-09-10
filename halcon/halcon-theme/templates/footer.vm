@@ -1,0 +1,96 @@
+<footer id="footer" role="contentinfo">
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0014/1004.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+
+		##Se elimina ya no va
+		#*<p class="powered-by">
+			#language("powered-by") <a href="http://www.liferay.com" rel="external">Liferay</a>
+		</p>*#
+		
+		<!--PIE-->
+		<div class="pie">
+		    <ul>
+		      <li class="titulo">Acerca de Interbank</li>
+		      <li><a href="/conocenos" title="Con&oacute;cenos" rel="nofollow">Con&oacute;cenos</a></li>
+		      <li><a href="/vision-mision-valores" title="Visi&oacute;n, Misi&oacute;n y Valores" rel="nofollow">Visi&oacute;n, Misi&oacute;n y Valores</a></li>
+		      <li><a href="/nuestra-historia" title="Nuestra historia" rel="nofollow">Nuestra historia</a></li>
+		      <li><a href="http://www.interbank.com.pe/noticias" title="Noticias" rel="nofollow">Noticias</a></li>
+		      <li><a href="/notas-de-prensa" title="Sala de prensa" rel="nofollow">Sala de prensa</a></li>
+		      <li><a href="/buen-gobierno-corporativo" title="Buen gobierno corporativo" rel="nofollow">Buen gobierno corporativo</a></li>
+		      <li><a href="/memoria-anual" title="Memoria Anual" rel="nofollow">Memoria Anual</a></li>     
+		    </ul>
+		    <ul>
+		      <li class="titulo">Sitios</li>
+		      <li><a href="http://interbankcasapropia.pe" title="Interbank Casa Propia" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Interbank Casa Propia', true]);">Interbank Casa Propia</a> </li>
+		      <li><a href="https://www.programasueldointerbank.pe" title="Interbank Programa Sueldo" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Interbank Programa Sueldo', true]);">Interbank Programa Sueldo</a> </li>
+		      <li><a href="http://www.remesasinterbank.pe/" title="Interbank Remesas" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Interbank Remesas', true]);">Interbank Remesas</a> </li>
+		      <li><a href="http://www.interbankagente.pe" title="Interbank Agente" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Interbank Agente', true]);">Interbank Agente</a> </li>
+		      <li><a href="https://www.puntosinterbank.pe/" title="Puntos Interbank" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Puntos Interbank', true]);">Puntos Interbank</a> </li>
+		      <li><a href="http://www.trabajaeninterbank.pe" title="Trabaja en Interbank" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'Trabaja en Interbank', true]);">Trabaja en Interbank</a> </li>
+		      <li><a href="http://www.globalnet.com.pe" title="GlobalNet.pe" target="_BLANK" onClick="_gaq.push(['_trackEvent', 'Redirecciones', 'Pagina externa', 'GlobalNet.pe', true]);">GlobalNet.pe</a> </li>
+		    </ul>
+		    <ul>
+		      <li class="titulo">Servicio al cliente</li>
+		      <li><a href="/puntos-de-atencion" title="Nuestros puntos de atenci&oacute;n" rel="nofollow">Nuestros puntos de atenci&oacute;n</a></li>		      
+		      <li><a href="/contactanos" title="Cont&aacute;ctanos" rel="nofollow">Cont&aacute;ctanos</a></li>
+		      <li><a href="/protegete-de-fraudes" title="Tu seguridad ante todo" rel="nofollow">Tu seguridad ante todo</a></li>
+		      <li><a href="/porque-somos-transparentes" title="Porque somos transparentes" rel="nofollow">Porque somos transparentes</a></li>
+		      <li><a href="/interbank-te-ensena" title="Interbank te ense&ntilde;a" rel="nofollow">Interbank te ense&ntilde;a</a></li>
+		      <li><a href="https://www.netinterbank.com.pe/sim-interbank/Process?AID=VER_CCI" title="Consulta de c&oacute;digo interbancario" rel="nofollow"  target="_BLANK">Consulta de c&oacute;digo interbancario</a></li>
+		      <li><a href="/servicio-al-cliente" title="Preguntas frecuentes" rel="nofollow">Preguntas frecuentes</a></li>
+		    </ul>
+		<!--pie-contactanos-->  
+		   <div class="pie-contactanos">
+		      <div class="operadora"></div>
+		      <h4>Cont&aacute;ctanos</h4>
+		      <div class="llamada">
+		        <p>Nuestra banca telef&oacute;nica</p>
+		        <em class="pie-icono"></em>
+		        <p class="pie-numero">311 9000</p>
+		        <p class="pie-texto">311 9000 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Lima)</p>
+		        <p class="pie-texto">0 801 00802 &nbsp;(Provincias)</p>
+		      </div>
+		      <div class="contacto-forma"> <em class="icono-p1"></em>
+		        <div class="forma-texto"><a href="/servicio-al-cliente" title="Servicio al cliente">Servicio al cliente</a></div>
+		        <br class="both" />
+		      </div>
+		      <div class="contacto-forma"> <em class="icono-p2"></em>
+		        <div class="forma-texto sin-border"><a href="/puntos-de-atencion" title="Nuestros puntos de atenci&oacute;n">Nuestros puntos de atenci&oacute;n</a></div>
+		        <br class="both" />
+		      </div>
+		     <!-- <div class="contacto-forma"> <em class="icono-p3"></em>
+		        <div class="forma-texto sin-border"><a href="#" title="Chat online">Chat online</a></div>
+		        <br class="both" />
+		      </div> -->
+		      <div class="footer-logo"></div>
+		    </div>
+		<!--descarga-app-->
+		   <div class="descarga-app">
+		      <div class="mg">
+		        <p class="descarga-titulo">Canales electr&oacute;nicos</p>
+		        <a href="/banca-internet" title="Banca por Internet">Banca por Internet</a> <a href="/banca-movil" title="Banca M&oacute;vil Interbank">Banca M&oacute;vil Interbank</a> <a href="/banca-electronica" title="Banca Electr&oacute;nica">Banca Electr&oacute;nica</a> <a href="/banca-telefonica" title="Banca Telef&oacute;nica">Banca Telef&oacute;nica</a> </div>
+		      <div class="mg2">
+		        <p>Descarga la aplicaci&oacute;n para tu smartphone</p>
+		        <a href="/banca-smartphone" title="Descarga la aplicaci&oacute;n para tu smartphone"><em class="smart"></em></a>
+		        <p>Banca SMS</p>
+		         <a href="/banca-celular-sms" title="Banca SMS"><em class="globo"></em></a></div>
+		      <div class="both"></div>
+		    </div>
+		<!--columnas-->
+		   <div class="columnas"> <span class="columna"> <a href="$custom_url_home" title="Inicio">Inicio</a> <a href="/mapa-del-sitio" title="Mapa del sitio">Mapa del sitio</a> </span> <span class="columna"> <a href="/protegete-de-fraudes" title="Prot&eacute;gete de los fraudes">Prot&eacute;gete de los fraudes</a> <a href="/tasas-tarifas" title="Tasas y Tarifas">Tasas y Tarifas</a> </span> <span class="columna sin-margin"> <a href="/trabaja-con-nosotros" title="Trabaja con Nosotros">Trabaja con Nosotros</a><a>&nbsp;</a></span> </div>
+		</div>
+		
+		<!--pie-copyright-->
+		<div class="pie-copyright">
+		<p>"La empresa tiene la obligaci&oacute;n de difundir informaci&oacute;n de conformidad con la Ley N&deg; 28587 y el Reglamento de Transparencia de Informaci&oacute;n y 
+            Disposiciones Aplicables a la Contrataci&oacute;n con Usuarios del Sistema Financiero, aprobado mediante Resoluci&oacute;n SBS N&deg 8181-2012."</p>
+        <br>
+		   <p>&copy; Copyright 2013 - Todos los derechos reservados</p>
+		</div>
+		
+</footer>

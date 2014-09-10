@@ -1,0 +1,4 @@
+[{"id":1,"etiqueta":"Hipotecario","tool":"<b>Hipotecario</b> <br /> La mejor opción para comprar o remodelar tu casa","orden":"1","defecto":"1"},
+{"id":12,"etiqueta":"Mi Vivienda","tool":"<b>Mi Vivienda</b> <br /> Compra tu primera casa y accede al bono del buen pagador","orden":"2","defecto":"0"},
+{"id":5,"etiqueta":"Techo Propio","tool":"<b>Techo Propio</b> <br /> Construye tu casa y accede a un bono de hasta S/. 18,250","orden":"3","defecto":"0"},
+{"id":6,"etiqueta":"Pr\u00e9stamo con <br />Garant\u00eda Hipotecaria","tool":"<b>Préstamo con Garantía Hipotecaria </b> <br /> Financia lo que quieras con este crédito","orden":"4","defecto":"0"}]
